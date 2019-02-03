@@ -1,0 +1,1110 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+    
+    
+      
+        <title>Commands - Poetry documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Poetry documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Poetry documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Commands
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Poetry documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Poetry documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../basic-usage/" title="Basic Usage" class="md-nav__link">
+      Basic Usage
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/" title="Libraries" class="md-nav__link">
+      Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Commands
+      </label>
+    
+    <a href="./" title="Commands" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global-options" title="Global options" class="md-nav__link">
+    Global options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new" title="new" class="md-nav__link">
+    new
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#init" title="init" class="md-nav__link">
+    init
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="install" class="md-nav__link">
+    install
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_1" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="update" class="md-nav__link">
+    update
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_2" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add" title="add" class="md-nav__link">
+    add
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build" title="build" class="md-nav__link">
+    build
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_4" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish" title="publish" class="md-nav__link">
+    publish
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_5" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="config" class="md-nav__link">
+    config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_6" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" title="shell" class="md-nav__link">
+    shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check" title="check" class="md-nav__link">
+    check
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" title="search" class="md-nav__link">
+    search
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_7" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock" title="lock" class="md-nav__link">
+    lock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" title="version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../repositories/" title="Repositories" class="md-nav__link">
+      Repositories
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../versions/" title="Versions" class="md-nav__link">
+      Versions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pyproject/" title="The pyproject.toml file" class="md-nav__link">
+      The pyproject.toml file
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global-options" title="Global options" class="md-nav__link">
+    Global options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new" title="new" class="md-nav__link">
+    new
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#init" title="init" class="md-nav__link">
+    init
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="install" class="md-nav__link">
+    install
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_1" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="update" class="md-nav__link">
+    update
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_2" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add" title="add" class="md-nav__link">
+    add
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build" title="build" class="md-nav__link">
+    build
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_4" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish" title="publish" class="md-nav__link">
+    publish
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_5" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="config" class="md-nav__link">
+    config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_6" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" title="shell" class="md-nav__link">
+    shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check" title="check" class="md-nav__link">
+    check
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" title="search" class="md-nav__link">
+    search
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_7" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock" title="lock" class="md-nav__link">
+    lock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" title="version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">コマンド<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<p>You've already learned how to use the command-line interface to do some
+things.  This chapter documents all the available commands.</p>
+<p>To get help from the command-line, simply call <code>poetry</code> or <code>poetry list</code> to
+see the complete list of commands, then <code>--help</code> combined with any of those
+can give you more information.</p>
+<p>As <code>Poetry</code> uses <a href="https://github.com/sdispater/cleo">cleo</a> you can call
+commands by short name if it's not ambiguous.</p>
+<p><code>bash poetry up</code></p>
+<p>calls <code>poetry update</code>.</p>
+<h2 id="global-options">Global options<a class="headerlink" href="#global-options" title="Permanent link"></a></h2>
+<ul>
+<li><code>--verbose (-v|vv|vvv)</code>: Increase the verbosity of messages: 1 for normal
+  output, 2 for more verbose output and 3 for debug.</li>
+<li><code>--help (-h)</code> : Display help information.</li>
+<li><code>--quiet (-q)</code> : Do not output any message.</li>
+<li><code>--ansi</code>: Force ANSI output.</li>
+<li><code>--no-ansi</code>: Disable ANSI output.</li>
+<li><code>--version (-V)</code>: Display this application version.</li>
+</ul>
+<h2 id="new">new<a class="headerlink" href="#new" title="Permanent link"></a></h2>
+<p>This command will help you kickstart your new Python project by creating a
+directory structure suitable for most projects.</p>
+<p><code>bash poetry new my-package</code></p>
+<p>will create a folder as follows:</p>
+<div class="codehilite"><pre><span></span>my-package
+├── pyproject.toml
+├── README.rst
+├── my_package
+│   └── __init__.py
+└── tests
+    ├── __init__.py
+    └── test_my_package
+</pre></div>
+
+<p>If you want to name your project differently than the folder, you can pass
+the <code>--name</code> option:</p>
+<p><code>bash poetry new my-folder --name my-package</code></p>
+<p>If you want to use a src folder, you can use the <code>--src</code> option:</p>
+<p><code>bash poetry new --src my-package</code></p>
+<p>That will create a folder structure as follows:</p>
+<div class="codehilite"><pre><span></span>my-package
+├── pyproject.toml
+├── README.rst
+├── src
+│   └── my_package
+│       └── __init__.py
+└── tests
+    ├── __init__.py
+    └── test_my_package
+</pre></div>
+
+<h2 id="init">init<a class="headerlink" href="#init" title="Permanent link"></a></h2>
+<p>This command will help you create a <code>pyproject.toml</code> file interactively by
+prompting you to provide basic information about your package.</p>
+<p>It will interactively ask you to fill in the fields, while using some smart
+defaults.</p>
+<p><code>bash poetry init</code></p>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link"></a></h3>
+<ul>
+<li><code>--name</code>: Name of the package.</li>
+<li><code>--description</code>: Description of the package.</li>
+<li><code>--author</code>: Author of the package.</li>
+<li><code>--dependency</code>: Package to require with a version constraint. Should be in
+  format <code>foo:1.0.0</code>.</li>
+<li><code>--dev-dependency</code>: Development requirements, see <code>--require</code>.</li>
+</ul>
+<h2 id="install">install<a class="headerlink" href="#install" title="Permanent link"></a></h2>
+<p>The <code>install</code> command reads the <code>pyproject.toml</code> file from the current
+project, resolves the dependencies, and installs them.</p>
+<p><code>bash poetry install</code></p>
+<p>If there is a <code>poetry.lock</code> file in the current directory, it will use the
+exact versions from there instead of resolving them.  This ensures that
+everyone using the library will get the same versions of the dependencies.</p>
+<p>If there is no <code>poetry.lock</code> file, Poetry will create one after dependency
+resolution.</p>
+<p>You can specify to the command that you do not want the development
+dependencies installed by passing the <code>--no-dev</code> option.</p>
+<p><code>bash poetry install --no-dev</code></p>
+<p>You can also specify the extras you want installed by passing the
+<code>--E|--extras</code> option (See <a href="#extras">Extras</a> for more info)</p>
+<p><code>bash poetry install --extras "mysql pgsql" poetry install -E mysql -E
+pgsql</code></p>
+<h3 id="options_1">Options<a class="headerlink" href="#options_1" title="Permanent link"></a></h3>
+<ul>
+<li><code>--no-dev</code>: Do not install dev dependencies.</li>
+<li><code>--extras (-E)</code>: Features to install (multiple values allowed).</li>
+</ul>
+<h2 id="update">update<a class="headerlink" href="#update" title="Permanent link"></a></h2>
+<p>In order to get the latest versions of the dependencies and to update the
+<code>poetry.lock</code> file, you should use the <code>update</code> command.</p>
+<p><code>bash poetry update</code></p>
+<p>This will resolve all dependencies of the project and write the exact
+versions into <code>poetry.lock</code>.</p>
+<p>If you just want to update a few packages and not all, you can list them as
+such:</p>
+<p><code>bash poetry update requests toml</code></p>
+<h3 id="options_2">Options<a class="headerlink" href="#options_2" title="Permanent link"></a></h3>
+<ul>
+<li><code>--dry-run</code> : Outputs the operations but will not execute anything
+  (implicitly enables --verbose).</li>
+<li><code>--no-dev</code> : Do not install dev dependencies.</li>
+<li><code>--lock</code> : Do not perform install (only update the lockfile).</li>
+</ul>
+<h2 id="add">add<a class="headerlink" href="#add" title="Permanent link"></a></h2>
+<p>The <code>add</code> command adds required packages to your <code>pyproject.toml</code> and
+installs them.</p>
+<p>If you do not specify a version constraint, poetry will choose a suitable
+one based on the available package versions.</p>
+<p><code>bash poetry add requests pendulum</code></p>
+<p>You can also add <code>git</code> dependencies:</p>
+<p>```bash poetry add pendulum --git https://github.com/sdispater/pendulum.git
+<div class="codehilite"><pre><span></span>or make them point to a local directory or file:
+
+```bash poetry add my-package --path ../my-package/ poetry add my-package
+--path ../my-package/dist/my-package-0.1.0.tar.gz poetry add my-package
+--path ../my-package/dist/my_package-0.1.0.whl ```
+
+### Options
+
+* `--dev (-D)`: Add package as development dependency.
+* `--git`: The url of the Git repository.
+* `--path`: The path to a dependency.
+* `--extras (-E)`: Extras to activate for the dependency.
+* `--optional` : Add as an optional dependency.
+* `--dry-run` : Outputs the operations but will not execute anything
+  (implicitly enables --verbose).
+
+
+## remove
+
+The `remove` command removes a package from the current list of installed
+packages.
+
+```bash poetry remove pendulum ```
+
+### Options
+
+* `--dev (-D)`: Removes a package from the development dependencies.
+* `--dry-run` : Outputs the operations but will not execute anything
+  (implicitly enables --verbose).
+
+
+## show
+
+To list all of the available packages, you can use the `show` command.
+
+```bash poetry show ```
+
+If you want to see the details of a certain package, you can pass the
+package name.
+
+```bash poetry show pendulum
+
+name        : pendulum
+version     : 1.4.2
+description : Python datetimes made easy
+
+dependencies:
+ - python-dateutil &gt;=2.6.1
+ - tzlocal &gt;=1.4
+ - pytzdata &gt;=2017.2.2
+</pre></div></p>
+<h3 id="options_3">Options<a class="headerlink" href="#options_3" title="Permanent link"></a></h3>
+<ul>
+<li><code>--no-dev</code>: Do not list the dev dependencies.</li>
+<li><code>--tree</code>: List the dependencies as a tree.</li>
+<li><code>--latest (-l)</code>: Show the latest version.</li>
+<li><code>--outdated (-o)</code>: Show the latest version but only for packages that are
+  outdated.</li>
+</ul>
+<h2 id="build">build<a class="headerlink" href="#build" title="Permanent link"></a></h2>
+<p>The <code>build</code> command builds the source and wheels archives.</p>
+<p><code>bash poetry build</code></p>
+<p>Note that, at the moment, only pure python wheels are supported.</p>
+<h3 id="options_4">Options<a class="headerlink" href="#options_4" title="Permanent link"></a></h3>
+<ul>
+<li><code>--format (-F)</code>: Limit the format to either wheel or sdist.</li>
+</ul>
+<h2 id="publish">publish<a class="headerlink" href="#publish" title="Permanent link"></a></h2>
+<p>This command publishes the package, previously built with the
+<a href="#build"><code>build</code></a> command, to the remote repository.</p>
+<p>It will automatically register the package before uploading if this is the
+first time it is submitted.</p>
+<p><code>bash poetry publish</code></p>
+<p>It can also build the package if you pass it the <code>--build</code> option.</p>
+<h3 id="options_5">Options<a class="headerlink" href="#options_5" title="Permanent link"></a></h3>
+<ul>
+<li><code>--repository (-r)</code>: The repository to register the package to (default: <code>pypi</code>).
+Should match a repository name set by the <a href="#config"><code>config</code></a> command.</li>
+<li><code>--username (-u)</code>: The username to access the repository.</li>
+<li><code>--password (-p)</code>: The password to access the repository.</li>
+</ul>
+<h2 id="config">config<a class="headerlink" href="#config" title="Permanent link"></a></h2>
+<p>The <code>config</code> command allows you to edit poetry config settings and
+repositories.</p>
+<p><code>bash poetry config --list</code></p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link"></a></h3>
+<p><code>bash poetry config [options] [setting-key] [setting-value1]
+... [setting-valueN]</code></p>
+<p><code>setting-key</code> is a configuration option name and <code>setting-value1</code> is a
+configuration value.  See <a href="/docs/configuration/">Configuration</a> for all
+available settings.</p>
+<h3 id="options_6">Options<a class="headerlink" href="#options_6" title="Permanent link"></a></h3>
+<ul>
+<li><code>--unset</code>: Remove the configuration element named by <code>setting-key</code>.</li>
+<li><code>--list</code>: Show the list of current config variables.</li>
+</ul>
+<h2 id="run">run<a class="headerlink" href="#run" title="Permanent link"></a></h2>
+<p>The <code>run</code> command executes the given command inside the project's
+virtualenv.</p>
+<p><code>bash poetry run python -V</code></p>
+<p>It can also execute one of the scripts defined in <code>pyproject.toml</code>.</p>
+<p>So, if you have a script defined like this:</p>
+<p><code>toml [tool.poetry.scripts] my-script = "my_module:main"</code></p>
+<p>You can execute it like so:</p>
+<p><code>bash poetry run my-script</code></p>
+<p>Note that this command has no option.</p>
+<h2 id="shell">shell<a class="headerlink" href="#shell" title="Permanent link"></a></h2>
+<p>The <code>shell</code> command spawns a shell, according to the <code>$SHELL</code> environment
+variable, within the virtual environment.  If one doesn't exist yet, it will
+be created.</p>
+<p><code>bash poetry shell</code></p>
+<h2 id="check">check<a class="headerlink" href="#check" title="Permanent link"></a></h2>
+<p>The <code>check</code> command validates the structure of the <code>pyproject.toml</code> file and
+returns a detailed report if there are any errors.</p>
+<p><code>bash poetry check</code></p>
+<h2 id="search">search<a class="headerlink" href="#search" title="Permanent link"></a></h2>
+<p>This command searches for packages on a remote index.</p>
+<p><code>bash poetry search requests pendulum</code></p>
+<h3 id="options_7">Options<a class="headerlink" href="#options_7" title="Permanent link"></a></h3>
+<ul>
+<li><code>--only-name (-N)</code>: Search only in name.</li>
+</ul>
+<h2 id="lock">lock<a class="headerlink" href="#lock" title="Permanent link"></a></h2>
+<p>This command locks (without installing) the dependencies specified in
+<code>pyproject.toml</code>.</p>
+<p><code>bash poetry lock</code></p>
+<h2 id="version">version<a class="headerlink" href="#version" title="Permanent link"></a></h2>
+<p>This command bumps the version of the project and writes the new version
+back to <code>pyproject.toml</code></p>
+<p>The new version should ideally be a valid semver string or a valid bump
+rule: <code>patch</code>, <code>minor</code>, <code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>,
+<code>prerelease</code>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../libraries/" title="Libraries" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Libraries
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../configuration/" title="Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configuration
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a353778b.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
