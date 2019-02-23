@@ -340,6 +340,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#python-restricted-dependencies" title="Python restricted dependencies" class="md-nav__link">
+    Python restricted dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-constraints-dependencies" title="Multiple constraints dependencies" class="md-nav__link">
+    Multiple constraints dependencies
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -482,6 +496,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#python-restricted-dependencies" title="Python restricted dependencies" class="md-nav__link">
+    Python restricted dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-constraints-dependencies" title="Multiple constraints dependencies" class="md-nav__link">
+    Multiple constraints dependencies
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -504,9 +532,8 @@
               
                 
                 
-                <h1 id="_1">バージョンと制限<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<p>Poetry recommends following <a href="https://semver.org">semantic versioning</a> but
-will not enforce it.</p>
+                <h1 id="_1">バージョンと制約<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<p>Poetry recommends following <a href="https://semver.org">semantic versioning</a> but will not enforce it.</p>
 <h2 id="version-constraints">Version constraints<a class="headerlink" href="#version-constraints" title="Permanent link"></a></h2>
 <h3 id="caret-requirements">Caret requirements<a class="headerlink" href="#caret-requirements" title="Permanent link"></a></h3>
 <p><strong>Caret requirements</strong> allow SemVer compatible updates to a specified version.
@@ -515,8 +542,7 @@ In this case, if we ran <code>poetry update requests</code>, poetry would update
 but would not update us to <code>3.0.0</code>.
 If instead we had specified the version string as <code>^0.1.13</code>, poetry would update to <code>0.1.14</code> but not <code>0.2.0</code>.
 <code>0.0.x</code> is not considered compatible with any other version.</p>
-<p>Here are some more examples of caret requirements and the versions that
-would be allowed with them:</p>
+<p>Here are some more examples of caret requirements and the versions that would be allowed with them:</p>
 <table>
 <thead>
 <tr>
@@ -610,68 +636,87 @@ If you only specify a major version, then minor- and patch-level changes are all
 <h3 id="inequality-requirements">Inequality requirements<a class="headerlink" href="#inequality-requirements" title="Permanent link"></a></h3>
 <p><strong>Inequality requirements</strong> allow manually specifying a version range or an exact version to depend on.</p>
 <p>Here are some examples of inequality requirements:</p>
-<p><code>text &gt;= 1.2.0 &gt; 1 &lt; 2 != 1.2.3</code></p>
+<div class="codehilite"><pre><span></span>&gt;= 1.2.0
+
+&gt; 1
+
+&lt; 2
+
+!= 1.2.3
+</pre></div>
+
 <h3 id="exact-requirements">Exact requirements<a class="headerlink" href="#exact-requirements" title="Permanent link"></a></h3>
-<p>You can specify the exact version of a package.  This will tell Poetry to
-install this version and this version only.  If other dependencies require a
-different version, the solver will ultimately fail and abort any install or
-update procedures.</p>
+<p>You can specify the exact version of a package.
+This will tell Poetry to install this version and this version only.
+If other dependencies require a different version, the solver will ultimately fail and abort any install or update procedures.</p>
 <h4 id="multiple-requirements">Multiple requirements<a class="headerlink" href="#multiple-requirements" title="Permanent link"></a></h4>
-<p>Multiple version requirements can also be separated with a comma, e.g. <code>&gt;=
-1.2, &lt; 1.5</code>.</p>
+<p>Multiple version requirements can also be separated with a comma, e.g. <code>&gt;= 1.2, &lt; 1.5</code>.</p>
 <h3 id="git-dependencies"><code>git</code> dependencies<a class="headerlink" href="#git-dependencies" title="Permanent link"></a></h3>
-<p>To depend on a library located in a <code>git</code> repository, the minimum
-information you need to specify is the location of the repository with the
-git key:</p>
-<p><code>toml [tool.poetry.dependencies] requests = { git =
-"https://github.com/requests/requests.git" }</code></p>
-<p>Since we haven’t specified any other information, Poetry assumes that we
-intend to use the latest commit on the <code>master</code> branch to build our
-project.  You can combine the <code>git</code> key with the <code>rev</code>, <code>tag</code>, or <code>branch</code>
-keys to specify something else.  Here's an example of specifying that you
-want to use the latest commit on a branch named <code>next</code>:</p>
-<p><code>toml [tool.poetry.dependencies] requests = { git =
-"https://github.com/kennethreitz/requests.git", branch = "next" }</code></p>
+<p>To depend on a library located in a <code>git</code> repository,
+the minimum information you need to specify is the location of the repository with the git key:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
+
+<span class="na">requests</span> <span class="o">=</span> <span class="s">{ git = &quot;https://github.com/requests/requests.git&quot; }</span>
+</pre></div>
+
+<p>Since we haven’t specified any other information,
+Poetry assumes that we intend to use the latest commit on the <code>master</code> branch to build our project.
+You can combine the <code>git</code> key with the <code>rev</code>, <code>tag</code>, or <code>branch</code> keys to specify something else.
+Here's an example of specifying that you want to use the latest commit on a branch named <code>next</code>:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
+
+<span class="na">requests</span> <span class="o">=</span> <span class="s">{ git = &quot;https://github.com/kennethreitz/requests.git&quot;, branch = &quot;next&quot; }</span>
+</pre></div>
+
 <h3 id="path-dependencies"><code>path</code> dependencies<a class="headerlink" href="#path-dependencies" title="Permanent link"></a></h3>
-<p>To depend on a library located in a local directory or file, you can use the
-<code>path</code> property:</p>
-<p>```toml [tool.poetry.dependencies] # directory my-package = { path =
-"../my-package/" }</p>
-<h1 id="file-my-package-path-my-packagedistmy-package-010targz">file my-package = { path = "../my-package/dist/my-package-0.1.0.tar.gz" }<a class="headerlink" href="#file-my-package-path-my-packagedistmy-package-010targz" title="Permanent link"></a></h1>
-<div class="codehilite"><pre><span></span>!!!note
+<p>To depend on a library located in a local directory or file,
+you can use the <code>path</code> property:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
-    You can install path dependencies in editable/development mode.
-    Just pass `--develop my-package` (repeatable as much as you want) to
-    the `install` command.
+<span class="c1"># directory</span>
+
+<span class="na">my-package</span> <span class="o">=</span> <span class="s">{ path = &quot;../my-package/&quot; }</span>
 
 
-### Python restricted dependencies
 
-You can also specify that a dependency should be installed only for specific
-Python versions:
+<span class="c1"># file</span>
 
-```toml [tool.poetry.dependencies] pathlib2 = { version = &quot;^2.2&quot;, python =
-&quot;~2.7&quot; } ```
+<span class="na">my-package</span> <span class="o">=</span> <span class="s">{ path = &quot;../my-package/dist/my-package-0.1.0.tar.gz&quot; }</span>
+</pre></div>
 
-```toml [tool.poetry.dependencies] pathlib2 = { version = &quot;^2.2&quot;, python =
-[&quot;~2.7&quot;, &quot;^3.2&quot;] } ```
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can install path dependencies in editable/development mode.
+Just pass <code>--develop my-package</code> (repeatable as much as you want) to
+the <code>install</code> command.</p>
+</div>
+<h3 id="python-restricted-dependencies">Python restricted dependencies<a class="headerlink" href="#python-restricted-dependencies" title="Permanent link"></a></h3>
+<p>You can also specify that a dependency should be installed only for specific Python versions:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
+<span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = &quot;~2.7&quot; }</span>
+</pre></div>
 
-### Multiple constraints dependencies
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
-Sometimes, one of your dependency may have different version ranges
-depending on the target Python versions.
+<span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = [&quot;~2.7&quot;, &quot;^3.2&quot;] }</span>
+</pre></div>
 
-Let&#39;s say you have a dependency on the package `foo` which is only
-compatible with Python &lt;3.0 up to version 1.9 and compatible with Python
-3.4+ from version 2.0: you would declare it like so:
+<h3 id="multiple-constraints-dependencies">Multiple constraints dependencies<a class="headerlink" href="#multiple-constraints-dependencies" title="Permanent link"></a></h3>
+<p>Sometimes, one of your dependency may have different version ranges depending
+on the target Python versions.</p>
+<p>Let's say you have a dependency on the package <code>foo</code> which is only compatible
+with Python &lt;3.0 up to version 1.9 and compatible with Python 3.4+ from version 2.0:
+you would declare it like so:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
-```toml
-[tool.poetry.dependencies]
-foo = [
-    {version = &quot;&lt;=1.9&quot;, python = &quot;^2.7&quot;},
-    {version = &quot;^2.0&quot;, python = &quot;^3.4&quot;}
-]
+<span class="na">foo</span> <span class="o">=</span> <span class="s">[</span>
+
+    <span class="na">{version</span> <span class="o">=</span> <span class="s">&quot;&lt;=1.9&quot;, python = &quot;^2.7&quot;},</span>
+
+    <span class="na">{version</span> <span class="o">=</span> <span class="s">&quot;^2.0&quot;, python = &quot;^3.4&quot;}</span>
+
+<span class="na">]</span>
 </pre></div>
 
 <div class="admonition note">

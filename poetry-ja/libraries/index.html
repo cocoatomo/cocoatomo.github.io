@@ -439,43 +439,41 @@
                 
                 
                 <h1 id="_1">ライブラリ<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<p>This chapter will tell you how to make your library installable through
-Poetry.</p>
+<p>This chapter will tell you how to make your library installable through Poetry.</p>
 <h2 id="every-project-is-a-package">Every project is a package<a class="headerlink" href="#every-project-is-a-package" title="Permanent link"></a></h2>
-<p>As soon as you have a <code>pyproject.toml</code> in a directory, that directory is a
-package.  However, to make it accessible to others you will need to package
-and publish it.</p>
+<p>As soon as you have a <code>pyproject.toml</code> in a directory, that directory is a package.
+However, to make it accessible to others you will need to package and publish it.</p>
 <h2 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link"></a></h2>
 <p>While Poetry does not enforce any convention regarding package versioning,
-it <strong>strongly</strong> recommends to follow <a href="https://semver.org">semantic
-versioning</a>.</p>
-<p>This has many advantages for the end users and allows them to set
-appropriate <a href="/docs/versions/">version constraints</a>.</p>
+it <strong>strongly</strong> recommends to follow <a href="https://semver.org">semantic versioning</a>.</p>
+<p>This has many advantages for the end users and allows them to set appropriate
+<a href="/docs/versions/">version constraints</a>.</p>
 <h2 id="lock-file">Lock file<a class="headerlink" href="#lock-file" title="Permanent link"></a></h2>
 <p>For your library, you may commit the <code>poetry.lock</code> file if you want to.
-This can help your team to always test against the same dependency
-versions.  However, this lock file will not have any effect on other
-projects that depend on it.  It only has an effect on the main project.</p>
-<p>If you do not want to commit the lock file and you are using git, add it to
-the <code>.gitignore</code>.</p>
+This can help your team to always test against the same dependency versions.
+However, this lock file will not have any effect on other projects that depend on it.
+It only has an effect on the main project.</p>
+<p>If you do not want to commit the lock file and you are using git, add it to the <code>.gitignore</code>.</p>
 <h2 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link"></a></h2>
 <p>Before you can actually publish your library, you will need to package it.</p>
-<p><code>bash poetry build</code></p>
-<p>This command will package your library in two different formats: <code>sdist</code>
-which is the source format, and <code>wheel</code> which is a <code>compiled</code> package.</p>
+<div class="codehilite"><pre><span></span>poetry build
+</pre></div>
+
+<p>This command will package your library in two different formats: <code>sdist</code> which is
+the source format, and <code>wheel</code> which is a <code>compiled</code> package.</p>
 <p>Once that's done you are ready to publish your library</p>
 <h2 id="publishing-to-pypi">Publishing to PyPI<a class="headerlink" href="#publishing-to-pypi" title="Permanent link"></a></h2>
 <p>Alright, so now you can publish packages.</p>
-<p>Poetry will publish to <a href="https://pypi.org">PyPI</a> by default. Anything that is
-published to PyPI is available automatically through Poetry. Since
-<a href="https://pypi.org/project/pendulum/">pendulum</a>  is on PyPI we can depend on
-it without having to specify any additional repositories.</p>
-<p>If we wanted to share <code>poetry-demo</code> with the Python community, we would
-publish on PyPI as well.  Doing so is really easy.</p>
-<p><code>bash poetry publish</code></p>
-<p>This will package and publish the library to PyPI, at the condition that you
-are a registered user and you have <a href="/docs/repositories/#adding-credentials">configured your
-credentials</a> properly.</p>
+<p>Poetry will publish to <a href="https://pypi.org">PyPI</a> by default. Anything that is published to PyPI
+is available automatically through Poetry. Since <a href="https://pypi.org/project/pendulum/">pendulum</a>
+is on PyPI we can depend on it without having to specify any additional repositories.</p>
+<p>If we wanted to share <code>poetry-demo</code> with the Python community, we would publish on PyPI as well.
+Doing so is really easy.</p>
+<div class="codehilite"><pre><span></span>poetry publish
+</pre></div>
+
+<p>This will package and publish the library to PyPI, at the condition that you are a registered user
+and you have <a href="/docs/repositories/#adding-credentials">configured your credentials</a> properly.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>publish</code> command does not execute <code>build</code> by default.</p>
@@ -484,14 +482,14 @@ just pass the <code>--build</code> option.</p>
 </div>
 <p>Once this is done, your library will be available to anyone.</p>
 <h2 id="publishing-to-a-private-repository">Publishing to a private repository<a class="headerlink" href="#publishing-to-a-private-repository" title="Permanent link"></a></h2>
-<p>Sometimes, you may want to keep your library private but also being
-accessible to your team.</p>
+<p>Sometimes, you may want to keep your library private but also being accessible to your team.</p>
 <p>In this case, you will need to use a private repository.</p>
 <p>In order to publish to a private repository, you will need to add it to your
-global list of repositories. See <a href="/docs/repositories/#adding-a-repository">Adding a
-repository</a>  for more information.</p>
+global list of repositories. See <a href="/docs/repositories/#adding-a-repository">Adding a repository</a>
+for more information.</p>
 <p>Once this is done, you can actually publish to it like so:</p>
-<p><code>bash poetry publish -r my-repository</code></p>
+<div class="codehilite"><pre><span></span>poetry publish -r my-repository
+</pre></div>
                 
                   
                 

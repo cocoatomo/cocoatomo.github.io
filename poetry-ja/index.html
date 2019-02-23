@@ -210,6 +210,53 @@
     インストール
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="他のインストール方法 (非推奨)" class="md-nav__link">
+    他のインストール方法 (非推奨)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" title="pip でインストール" class="md-nav__link">
+    pip でインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipsi" title="pipsi でインストール" class="md-nav__link">
+    pipsi でインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry" title="poetry のアップデート" class="md-nav__link">
+    poetry のアップデート
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-fish-zsh" title="Bash, Fish, Zshでの補完の有効化" class="md-nav__link">
+    Bash, Fish, Zshでの補完の有効化
+  </a>
+  
 </li>
       
       
@@ -363,6 +410,53 @@
     インストール
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="他のインストール方法 (非推奨)" class="md-nav__link">
+    他のインストール方法 (非推奨)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" title="pip でインストール" class="md-nav__link">
+    pip でインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipsi" title="pipsi でインストール" class="md-nav__link">
+    pipsi でインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry" title="poetry のアップデート" class="md-nav__link">
+    poetry のアップデート
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-fish-zsh" title="Bash, Fish, Zshでの補完の有効化" class="md-nav__link">
+    Bash, Fish, Zshでの補完の有効化
+  </a>
+  
 </li>
       
       
@@ -389,133 +483,135 @@ Poetryを使うとプロジェクトが依存しているライブラリを宣�
 <p>PoetryはPython 2.7あるいはPython 3.4以降を必要とします。
 Poetryはマルチプラットフォームに対応していて、Windows, Linux, OSXで同じように動作することを目標としています。</p>
 <h2 id="_3">インストール<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
-<p>Poetry provides a custom installer that will install <code>poetry</code> isolated from
-the rest of your system by vendorizing its dependencies. This is the
-recommended way of installing <code>poetry</code>.</p>
-<p><code>bash curl -sSL
-https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py |
-python</code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You only need to install Poetry once. It will automatically pick up the current
-Python version and use it to <a href="/docs/basic-usage/#poetry-and-virtualenvs">create virtualenvs</a> accordingly.</p>
+<p>Poetryは独自のインストーラーを提供していて、依存パッケージをベンダー化 (vendorizing) によって <code>poetry</code> を、システムの他のものから隔離された状態でインストールします。
+これは推奨された <code>poetry</code> のインストール方法です。</p>
+<div class="codehilite"><pre><span></span>curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py <span class="p">|</span> python
+</pre></div>
+
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>Poetryは一度だけインストールすれば良いです。Poetryは現在使われているPythonバージョンを自動的に読み取り、
+それを踏まえて適切に <a href="/docs/basic-usage/#poetry-and-virtualenvs">仮想環境を作成</a> します。</p>
 </div>
-<p>The installer installs the <code>poetry</code> tool to Poetry's <code>bin</code> directory.  On
-Unix it is located at <code>$HOME/.poetry/bin</code> and on Windows at
-<code>%USERPROFILE%\.poetry\bin</code>.</p>
-<p>This directory will be in your <code>$PATH</code> environment variable, which means you
-can run them from the shell without further configuration.  Open a new shell
-and type the following:</p>
-<p><code>bash poetry --version</code></p>
-<p>If you see something like <code>Poetry 0.12.0</code> then you are ready to use Poetry.
-If you decide Poetry isn't your thing, you can completely remove it from
-your system by running the installer again with the <code>--uninstall</code> option or
-by setting the <code>POETRY_UNINSTALL</code> environment variable before executing the
-installer.</p>
-<p><code>bash python get-poetry.py --uninstall POETRY_UNINSTALL=1 python
-get-poetry.py</code></p>
-<p>If you want to install prerelease versions, you can do so by passing
-<code>--preview</code> to <code>get-poetry.py</code> or by using the <code>POETRY_PREVIEW</code> environment
-variable:</p>
-<p>```bash python get-poetry.py --preview POETRY_PREVIEW=1 python get-poetry.py
-<div class="codehilite"><pre><span></span><span class="n">Similarly</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">install</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">version</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">use</span>
-<span class="err">`</span><span class="o">--</span><span class="n">version</span><span class="err">`</span> <span class="n">or</span> <span class="n">the</span> <span class="err">`</span><span class="n">POETRY_VERSION</span><span class="err">`</span> <span class="n">environment</span> <span class="nl">variable</span><span class="p">:</span>
+<p>このインストーラーは、 <code>poetry</code> ツールをPoetryの <code>bin</code> ディレクトリにインストールします。
+そのディレクトリの位置は、Unixでは <code>$HOME/.poetry/bin</code> で、Windowsでは <code>%USERPROFILE%\.poetry\bin</code> です。</p>
+<p>このディレクトリは <code>$PATH</code> 環境変数に含まれ、何かしらの設定をしなくてもシェルから実行できるということになります。
+シェルを新たに開き、次のコマンドを打ち込んでください:</p>
+<div class="codehilite"><pre><span></span>poetry --version
+</pre></div>
 
-<span class="err">```</span><span class="n">bash</span> <span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">poetry</span><span class="p">.</span><span class="n">py</span> <span class="o">--</span><span class="n">version</span> <span class="mf">0.12.0</span> <span class="n">POETRY_VERSION</span><span class="o">=</span><span class="mf">0.12.0</span> <span class="n">python</span>
-<span class="n">get</span><span class="o">-</span><span class="n">poetry</span><span class="p">.</span><span class="n">py</span> <span class="err">```</span>
+<p><code>Poetry 0.12.0</code> のような出力が見えたら、Poetryを使う準備が整いました。
+もしPoetryが自分には向かないと判断したら、 <code>--uninstall</code> オプションを付けるか、インストーラーを実行する前に <code>POETRY_UNINSTALL</code> 環境変数を設定するかして、先程のインストーラーを再度実行すると、システムからPoetryを完全に消去できます。</p>
+<div class="codehilite"><pre><span></span>python get-poetry.py --uninstall
+<span class="nv">POETRY_UNINSTALL</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
+</pre></div>
 
-<span class="o">!!!</span><span class="n">note</span>
+<p>プレリリースバージョンをインストールしたい場合は、 <code>get-poetry.py</code> に <code>--preview</code> を渡すか <code>POETRY_PREVIEW</code> 環境変数を使えばできます:</p>
+<div class="codehilite"><pre><span></span>python get-poetry.py --preview
+<span class="nv">POETRY_PREVIEW</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
+</pre></div>
 
-    <span class="n">Note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">installer</span> <span class="n">does</span> <span class="n">not</span> <span class="n">support</span> <span class="n">Poetry</span> <span class="n">releases</span> <span class="o">&lt;</span> <span class="mf">0.12.0</span><span class="p">.</span>
+<p>同様に、特定のバージョンをインストールしたい場合は、 <code>--version</code> や <code>POETRY_VERSION</code> 環境変数が使えます:</p>
+<div class="codehilite"><pre><span></span>python get-poetry.py --version <span class="m">0</span>.12.0
+<span class="nv">POETRY_VERSION</span><span class="o">=</span><span class="m">0</span>.12.0 python get-poetry.py
+</pre></div>
 
-<span class="cp">### Alternative installation methods (not recommended)</span>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>インストーラーはリリースバージョンが0.12.0より前のPoetryはサポートしていないことに注意してください。</p>
+</div>
+<h3 id="_4">他のインストール方法 (非推奨)<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>他のインストール方法を使うと、Poetryは常に、
+仮想環境を作成するためにインストールされたバージョンのPythonを使います。</p>
+</div>
+<p>そのため、使いたいPythonのバージョンごとにPoetryをインストールし、切り替える必要があります。</p>
+<h4 id="pip"><code>pip</code> でインストール<a class="headerlink" href="#pip" title="Permanent link"></a></h4>
+<p><code>pip</code> を使ってPoetryがインストールできます。</p>
+<div class="codehilite"><pre><span></span>pip install --user poetry
+</pre></div>
 
-<span class="o">!!!</span><span class="n">note</span>
+<div class="admonition 警告">
+<p class="admonition-title">警告</p>
+<p>他のパッケージと衝突を起こすかもしれないPoetryの依存パッケージを
+インストールすることにもなることを認識しておいてください。</p>
+</div>
+<h4 id="pipsi"><code>pipsi</code> でインストール<a class="headerlink" href="#pipsi" title="Permanent link"></a></h4>
+<p><a href="https://github.com/mitsuhiko/pipsi"><code>pipsi</code></a> を使ってもPoetryはインストールできます。</p>
+<div class="codehilite"><pre><span></span>pipsi install poetry
+</pre></div>
 
-    <span class="n">Using</span> <span class="n">alternative</span> <span class="n">installation</span> <span class="n">methods</span> <span class="n">will</span> <span class="n">make</span> <span class="n">Poetry</span> <span class="n">always</span>
-    <span class="n">use</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">version</span> <span class="k">for</span> <span class="n">which</span> <span class="n">it</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span> <span class="n">to</span> <span class="n">create</span>
-    <span class="n">virtualenvs</span><span class="p">.</span>
+<p>Make sure your installed version of <code>pipsi</code> is at least version <code>0.10</code>,
+otherwise Poetry will not function properly. You can get it from its
+<a href="https://github.com/mitsuhiko/pipsi">Github repository</a>.</p>
+<h2 id="poetry"><code>poetry</code> のアップデート<a class="headerlink" href="#poetry" title="Permanent link"></a></h2>
+<p>Poetryを最新バージョンにアップデートするのは簡単で <code>self:update</code> コマンドを呼ぶだけです。</p>
+<div class="codehilite"><pre><span></span>poetry self:update
+</pre></div>
 
-    <span class="n">So</span><span class="p">,</span> <span class="n">you</span> <span class="n">will</span> <span class="n">need</span> <span class="n">to</span> <span class="n">install</span> <span class="n">Poetry</span> <span class="k">for</span> <span class="n">each</span> <span class="n">Python</span> <span class="n">version</span> <span class="n">you</span>
-    <span class="n">want</span> <span class="n">to</span> <span class="n">use</span> <span class="n">and</span> <span class="k">switch</span> <span class="n">between</span> <span class="n">them</span><span class="p">.</span>
+<p>プレリリースバージョンをインストールしたい場合は、 <code>--preview</code> オプションが使えます。</p>
+<div class="codehilite"><pre><span></span>poetry self:update --preview
+</pre></div>
 
-<span class="cp">#### Installing with `pip`</span>
+<p>最後に、特定のバージョンをインストールしたい場合は、引数としてバージョンを <code>self:update</code> に渡せます。</p>
+<div class="codehilite"><pre><span></span>poetry self:update <span class="m">0</span>.8.0
+</pre></div>
 
-<span class="n">Using</span> <span class="err">`</span><span class="n">pip</span><span class="err">`</span> <span class="n">to</span> <span class="n">install</span> <span class="n">Poetry</span> <span class="n">is</span> <span class="n">possible</span><span class="p">.</span>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p><code>self:update</code> コマンドが使えるのは、推奨インストーラーを使って
+Poetryをインストールしたときだけです。</p>
+</div>
+<h2 id="bash-fish-zsh">Bash, Fish, Zshでの補完の有効化<a class="headerlink" href="#bash-fish-zsh" title="Permanent link"></a></h2>
+<p><code>poetry</code> supports generating completion scripts for Bash, Fish, and Zsh.
+See <code>poetry help completions</code> for full details, but the gist is as simple as using one of the following:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Bash</span>
 
-<span class="err">```</span><span class="n">bash</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">poetry</span> <span class="err">```</span>
-
-<span class="o">!!!</span><span class="n">warning</span>
-
-    <span class="n">Be</span> <span class="n">aware</span> <span class="n">that</span> <span class="n">it</span> <span class="n">will</span> <span class="n">also</span> <span class="n">install</span> <span class="n">Poetry</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">dependencies</span>
-    <span class="n">which</span> <span class="n">might</span> <span class="n">cause</span> <span class="n">conflicts</span> <span class="n">with</span> <span class="n">other</span> <span class="n">packages</span><span class="p">.</span>
-
-<span class="cp">#### Installing with `pipsi`</span>
-
-<span class="n">Using</span> <span class="p">[</span><span class="err">`</span><span class="n">pipsi</span><span class="err">`</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/mitsuhiko/pipsi) to install Poetry is</span>
-<span class="n">also</span> <span class="n">possible</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">bash</span> <span class="n">pipsi</span> <span class="n">install</span> <span class="n">poetry</span> <span class="err">```</span>
-
-<span class="n">Make</span> <span class="n">sure</span> <span class="n">your</span> <span class="n">installed</span> <span class="n">version</span> <span class="n">of</span> <span class="err">`</span><span class="n">pipsi</span><span class="err">`</span> <span class="n">is</span> <span class="n">at</span> <span class="n">least</span> <span class="n">version</span> <span class="err">`</span><span class="mf">0.10</span><span class="err">`</span><span class="p">,</span>
-<span class="n">otherwise</span> <span class="n">Poetry</span> <span class="n">will</span> <span class="n">not</span> <span class="n">function</span> <span class="n">properly</span><span class="p">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">get</span> <span class="n">it</span> <span class="n">from</span> <span class="n">its</span> <span class="p">[</span><span class="n">Github</span>
-<span class="n">repository</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/mitsuhiko/pipsi).</span>
-
-
-<span class="cp">## Updating `poetry`</span>
-
-<span class="n">Updating</span> <span class="n">poetry</span> <span class="n">to</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">stable</span> <span class="n">version</span> <span class="n">is</span> <span class="n">as</span> <span class="n">simple</span> <span class="n">as</span> <span class="n">calling</span> <span class="n">the</span>
-<span class="err">`</span><span class="nb">self</span><span class="o">:</span><span class="n">update</span><span class="err">`</span> <span class="n">command</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">bash</span> <span class="n">poetry</span> <span class="nb">self</span><span class="o">:</span><span class="n">update</span> <span class="err">```</span>
-
-<span class="n">If</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">install</span> <span class="n">prerelease</span> <span class="n">versions</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">use</span> <span class="n">the</span> <span class="err">`</span><span class="o">--</span><span class="n">preview</span><span class="err">`</span>
-<span class="n">option</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">bash</span> <span class="n">poetry</span> <span class="nb">self</span><span class="o">:</span><span class="n">update</span> <span class="o">--</span><span class="n">preview</span> <span class="err">```</span>
-
-<span class="n">And</span> <span class="n">finally</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">install</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">version</span> <span class="n">you</span> <span class="n">can</span> <span class="n">pass</span> <span class="n">it</span> <span class="n">as</span> <span class="n">an</span>
-<span class="n">argument</span> <span class="n">to</span> <span class="err">`</span><span class="nb">self</span><span class="o">:</span><span class="n">update</span><span class="err">`</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">bash</span> <span class="n">poetry</span> <span class="nb">self</span><span class="o">:</span><span class="n">update</span> <span class="mf">0.8.0</span> <span class="err">```</span>
-
-<span class="o">!!!</span><span class="n">note</span>
-
-    <span class="n">The</span> <span class="err">`</span><span class="nb">self</span><span class="o">:</span><span class="n">update</span><span class="err">`</span> <span class="n">command</span> <span class="n">will</span> <span class="n">only</span> <span class="n">work</span> <span class="k">if</span> <span class="n">you</span> <span class="n">used</span> <span class="n">the</span> <span class="n">recommended</span>
-    <span class="n">installer</span> <span class="n">to</span> <span class="n">install</span> <span class="n">Poetry</span><span class="p">.</span>
+poetry completions bash &gt; /etc/bash_completion.d/poetry.bash-completion
 
 
-<span class="cp">## Enable tab completion for Bash, Fish, or Zsh</span>
 
-<span class="err">`</span><span class="n">poetry</span><span class="err">`</span> <span class="n">supports</span> <span class="n">generating</span> <span class="n">completion</span> <span class="n">scripts</span> <span class="k">for</span> <span class="n">Bash</span><span class="p">,</span> <span class="n">Fish</span><span class="p">,</span> <span class="n">and</span> <span class="n">Zsh</span><span class="p">.</span>
-<span class="n">See</span> <span class="err">`</span><span class="n">poetry</span> <span class="n">help</span> <span class="n">completions</span><span class="err">`</span> <span class="k">for</span> <span class="n">full</span> <span class="n">details</span><span class="p">,</span> <span class="n">but</span> <span class="n">the</span> <span class="n">gist</span> <span class="n">is</span> <span class="n">as</span> <span class="n">simple</span> <span class="n">as</span>
-<span class="n">using</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="nl">following</span><span class="p">:</span>
+<span class="c1"># Bash (macOS/Homebrew)</span>
+
+poetry completions bash &gt; <span class="k">$(</span>brew --prefix<span class="k">)</span>/etc/bash_completion.d/poetry.bash-completion
 
 
-<span class="err">```</span><span class="n">bash</span> <span class="err">#</span> <span class="n">Bash</span> <span class="n">poetry</span> <span class="n">completions</span> <span class="n">bash</span> <span class="o">&gt;</span>
-<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">bash_completion</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">poetry</span><span class="p">.</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span>
 
-<span class="cp"># Bash (macOS/Homebrew)  poetry completions bash &gt; $(brew</span>
-<span class="o">--</span><span class="n">prefix</span><span class="p">)</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">bash_completion</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">poetry</span><span class="p">.</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span>
+<span class="c1"># Fish</span>
 
-<span class="cp"># Fish poetry completions fish &gt; ~/.config/fish/completions/poetry.fish</span>
+poetry completions fish &gt; ~/.config/fish/completions/poetry.fish
 
-<span class="cp"># Zsh poetry completions zsh &gt; ~/.zfunc/_poetry</span>
 
-<span class="cp"># Oh-My-Zsh mkdir $ZSH/plugins/poetry poetry completions zsh &gt;</span>
-<span class="err">$</span><span class="n">ZSH</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">poetry</span><span class="o">/</span><span class="n">_poetry</span>
-</pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+
+<span class="c1"># Zsh</span>
+
+poetry completions zsh &gt; ~/.zfunc/_poetry
+
+
+
+<span class="c1"># Oh-My-Zsh</span>
+
+mkdir <span class="nv">$ZSH</span>/plugins/poetry
+
+poetry completions zsh &gt; <span class="nv">$ZSH</span>/plugins/poetry/_poetry
+</pre></div>
+
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>You may need to restart your shell in order for the changes to take effect.</p>
 </div>
-<p>For <code>zsh</code>, you must then add the following line in your <code>~/.zshrc</code> before
-<code>compinit</code>:</p>
-<p><code>bash fpath+=~/.zfunc</code></p>
+<p>For <code>zsh</code>, you must then add the following line in your <code>~/.zshrc</code> before <code>compinit</code>:</p>
+<div class="codehilite"><pre><span></span><span class="nv">fpath</span><span class="o">+=</span>~/.zfunc
+</pre></div>
+
 <p>For <code>oh-my-zsh</code>, you must then enable poetry in your <code>~/.zshrc</code> plugins</p>
 <div class="codehilite"><pre><span></span>plugins(
+
     poetry
+
     ...
+
     )
 </pre></div>
                 

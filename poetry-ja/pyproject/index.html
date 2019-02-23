@@ -394,6 +394,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#plugins" title="plugins" class="md-nav__link">
+    plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-and-pep-517" title="Poetry and PEP-517" class="md-nav__link">
+    Poetry and PEP-517
+  </a>
+  
+</li>
+      
       
       
       
@@ -561,6 +575,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#plugins" title="plugins" class="md-nav__link">
+    plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-and-pep-517" title="Poetry and PEP-517" class="md-nav__link">
+    Poetry and PEP-517
+  </a>
+  
+</li>
+      
       
       
       
@@ -579,14 +607,13 @@
                 
                 
                 <h1 id="pyprojecttoml"><code>pyproject.toml</code> ファイル<a class="headerlink" href="#pyprojecttoml" title="Permanent link"></a></h1>
-<p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of
-multiple sections.</p>
+<p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of multiple sections.</p>
 <h2 id="name">name<a class="headerlink" href="#name" title="Permanent link"></a></h2>
 <p>The name of the package. <strong>Required</strong></p>
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link"></a></h2>
 <p>The version of the package. <strong>Required</strong></p>
-<p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it
-will not be enforced and you remain free to follow another specification.</p>
+<p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it will not be enforced and you remain
+free to follow another specification.</p>
 <h2 id="description">description<a class="headerlink" href="#description" title="Permanent link"></a></h2>
 <p>A short description of the package. <strong>Required</strong></p>
 <h2 id="license">license<a class="headerlink" href="#license" title="Permanent link"></a></h2>
@@ -607,12 +634,10 @@ will not be enforced and you remain free to follow another specification.</p>
 <li>LGPL-3.0+</li>
 <li>MIT</li>
 </ul>
-<p>Optional, but it is highly recommended to supply this.  More identifiers are
-listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License
-Registry</a>.</p>
+<p>Optional, but it is highly recommended to supply this.
+More identifiers are listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License Registry</a>.</p>
 <h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link"></a></h2>
-<p>The authors of the package. This is a list of authors and should contain at
-least one author.</p>
+<p>The authors of the package. This is a list of authors and should contain at least one author.</p>
 <p>Authors must be in the form <code>name &lt;email&gt;</code>.</p>
 <h2 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link"></a></h2>
 <p>The readme file of the package. <strong>Optional</strong></p>
@@ -626,13 +651,17 @@ least one author.</p>
 <h2 id="keywords">keywords<a class="headerlink" href="#keywords" title="Permanent link"></a></h2>
 <p>A list of keywords (max: 5) that the package is related to. <strong>Optional</strong></p>
 <h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link"></a></h2>
-<p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that
-describe the project. <strong>Optional</strong></p>
+<p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that describe the project. <strong>Optional</strong></p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+
 <span class="c1"># ...</span>
+
 <span class="na">classifiers</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    &quot;Topic :: Software Development :: Build Tools&quot;,</span>
-<span class="s">    &quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
+
+    <span class="na">&quot;Topic :: Software Development :: Build Tools&quot;,</span>
+
+    <span class="na">&quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
+
 <span class="na">]</span>
 </pre></div>
 
@@ -643,22 +672,30 @@ describe the project. <strong>Optional</strong></p>
 </div>
 <h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link"></a></h2>
 <p>A list of packages and modules to include in the final distribution.</p>
-<p>If your project structure differs from the standard one supported by
-<code>poetry</code>, you can specify the packages you want to include in the final
-distribution.</p>
+<p>If your project structure differs from the standard one supported by <code>poetry</code>,
+you can specify the packages you want to include in the final distribution.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+
 <span class="c1"># ...</span>
+
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;mypackage&quot; },</span>
-<span class="s">    { include = &quot;extra_package/**/*.py&quot; },</span>
+
+    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;mypackage&quot; },</span>
+
+    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;extra_package/**/*.py&quot; },</span>
+
 <span class="na">]</span>
 </pre></div>
 
 <p>If your package is stored inside a "source" directory, you must specify it:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+
 <span class="c1"># ...</span>
+
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;mypackage&quot;, from = &quot;lib&quot; },</span>
+
+    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;mypackage&quot;, from = &quot;lib&quot; },</span>
+
 <span class="na">]</span>
 </pre></div>
 
@@ -682,22 +719,35 @@ another package named <code>extra_package</code>, you will need to specify <code
 </div>
 <h2 id="include-and-exclude">include and exclude<a class="headerlink" href="#include-and-exclude" title="Permanent link"></a></h2>
 <p>A list of patterns that will be included in the final package.</p>
-<p>You can explicitly specify to Poetry that a set of globs should be ignored
-or included for the purposes of packaging.  The globs specified in the
-exclude field identify a set of files that are not included when a package
-is built.</p>
-<p>If a VCS is being used for a package, the exclude field will be seeded with
-the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
-<p><code>toml [tool.poetry] # ...  include = ["CHANGELOG.md"]</code></p>
-<p><code>toml exclude = ["my_package/excluded.py"]</code></p>
+<p>You can explicitly specify to Poetry that a set of globs should be ignored or included for the purposes of packaging.
+The globs specified in the exclude field identify a set of files that are not included when a package is built.</p>
+<p>If a VCS is being used for a package, the exclude field will be seeded with the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+
+<span class="c1"># ...</span>
+
+<span class="na">include</span> <span class="o">=</span> <span class="s">[&quot;CHANGELOG.md&quot;]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>exclude = [&quot;my_package/excluded.py&quot;]
+</pre></div>
+
 <h2 id="dependencies-and-dev-dependencies"><code>dependencies</code> and <code>dev-dependencies</code><a class="headerlink" href="#dependencies-and-dev-dependencies" title="Permanent link"></a></h2>
-<p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by
-default.  Only the name and a version string are required in this case.</p>
-<p><code>toml [tool.poetry.dependencies] requests = "^2.13.0"</code></p>
-<p>If you want to use a private repository, you can add it to your
-<code>pyproject.toml</code> file, like so:</p>
-<p><code>toml [[tool.poetry.source]] name = 'private' url =
-'http://example.com/simple'</code></p>
+<p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by default.
+Only the name and a version string are required in this case.</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
+
+<span class="na">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
+</pre></div>
+
+<p>If you want to use a private repository, you can add it to your <code>pyproject.toml</code> file, like so:</p>
+<div class="codehilite"><pre><span></span><span class="k">[[tool.poetry.source]]</span>
+
+<span class="na">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
+
+<span class="na">url</span> <span class="o">=</span> <span class="s">&#39;http://example.com/simple&#39;</span>
+</pre></div>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Be aware that declaring the python version for which your package
@@ -708,45 +758,82 @@ is compatible is mandatory:</p>
 
 </div>
 <h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link"></a></h2>
-<p>This section describe the scripts or executable that will be installed when
-installing the package</p>
-<p><code>toml [tool.poetry.scripts] poetry = 'poetry:console.run'</code></p>
-<p>Here, we will have the <code>poetry</code> script installed which will execute
-<code>console.run</code> in the <code>poetry</code> package.</p>
+<p>This section describe the scripts or executable that will be installed when installing the package</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
+
+<span class="na">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry:console.run&#39;</span>
+</pre></div>
+
+<p>Here, we will have the <code>poetry</code> script installed which will execute <code>console.run</code> in the <code>poetry</code> package.</p>
 <h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link"></a></h2>
 <p>Poetry supports extras to allow expression of:</p>
 <ul>
 <li>optional dependencies, which enhance a package, but are not required; and</li>
 <li>clusters of optional dependencies.</li>
 </ul>
-<p>```toml [tool.poetry] name = "awesome"</p>
-<p>[tool.poetry.dependencies] # These packages are mandatory and form the core
-of this package’s distribution.  mandatory = "^1.0"</p>
-<h1 id="a-list-of-all-of-the-optional-dependencies-some-of-which-are-included-in">A list of all of the optional dependencies, some of which are included in<a class="headerlink" href="#a-list-of-all-of-the-optional-dependencies-some-of-which-are-included-in" title="Permanent link"></a></h1>
-<p>the # below <code>extras</code>. They can be opted into by apps.  psycopg2 = { version
-= "^2.7", optional = true } mysqlclient = { version = "^1.3", optional =
-true }</p>
-<p>[tool.poetry.extras] mysql = ["mysqlclient"] pgsql = ["psycopg2"] ```</p>
-<p>When installing packages, you can specify extras by using the <code>-E|--extras</code>
-option:</p>
-<p><code>bash poetry install --extras "mysql pgsql" poetry install -E mysql -E
-pgsql</code></p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+
+<span class="na">name</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span>
+
+
+
+<span class="k">[tool.poetry.dependencies]</span>
+
+<span class="c1"># These packages are mandatory and form the core of this package’s distribution.</span>
+
+<span class="na">mandatory</span> <span class="o">=</span> <span class="s">&quot;^1.0&quot;</span>
+
+
+
+<span class="c1"># A list of all of the optional dependencies, some of which are included in the</span>
+
+<span class="c1"># below `extras`. They can be opted into by apps.</span>
+
+<span class="na">psycopg2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.7&quot;, optional = true }</span>
+
+<span class="na">mysqlclient</span> <span class="o">=</span> <span class="s">{ version = &quot;^1.3&quot;, optional = true }</span>
+
+
+
+<span class="k">[tool.poetry.extras]</span>
+
+<span class="na">mysql</span> <span class="o">=</span> <span class="s">[&quot;mysqlclient&quot;]</span>
+
+<span class="na">pgsql</span> <span class="o">=</span> <span class="s">[&quot;psycopg2&quot;]</span>
+</pre></div>
+
+<p>When installing packages, you can specify extras by using the <code>-E|--extras</code> option:</p>
+<div class="codehilite"><pre><span></span>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
+
+poetry install -E mysql -E pgsql
+</pre></div>
+
 <h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link"></a></h2>
-<p>Poetry supports arbitrary plugins which work similarly to <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry
-points</a>.  To
-match the example in the setuptools documentation, you would use the
-following:</p>
-<p>```toml [tool.poetry.plugins] # Optional super table</p>
-<p>[tool.poetry.plugins."blogtool.parsers"] ".rst" = "some_module:SomeClass"
-```</p>
+<p>Poetry supports arbitrary plugins which work similarly to
+<a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry points</a>.
+To match the example in the setuptools documentation, you would use the following:</p>
+<div class="codehilite"><pre><span></span>[tool.poetry.plugins] # Optional super table
+
+
+
+[tool.poetry.plugins.&quot;blogtool.parsers&quot;]
+
+&quot;.rst&quot; = &quot;some_module:SomeClass&quot;
+</pre></div>
+
 <h2 id="poetry-and-pep-517">Poetry and PEP-517<a class="headerlink" href="#poetry-and-pep-517" title="Permanent link"></a></h2>
-<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard
-way to define alternative build systems to build a Python project.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard way
+to define alternative build systems to build a Python project.</p>
 <p>Poetry is compliant with PEP-517 so if you use Poetry to manage your Python
-project you should reference it in the <code>build-system</code> section of the
-<code>pyproject.toml</code> file like so:</p>
-<p><code>toml [build-system] requires = ["poetry&gt;=0.12"] build-backend =
-"poetry.masonry.api"</code></p>
+project you should reference it in the <code>build-system</code> section of the <code>pyproject.toml</code>
+file like so:</p>
+<div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
+
+<span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
+
+<span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
+</pre></div>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When using the <code>new</code> or <code>init</code> command this section will be automatically added.</p>
