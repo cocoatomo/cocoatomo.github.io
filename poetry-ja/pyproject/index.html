@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -96,22 +96,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Poetry documentation
-              </span>
-              <span class="md-header-nav__topic">
-                The pyproject.toml file
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Poetry documentation
+            </span>
+            <span class="md-header-nav__topic">
+              The pyproject.toml file
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -134,7 +131,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -607,13 +603,14 @@
                 
                 
                 <h1 id="pyprojecttoml"><code>pyproject.toml</code> ファイル<a class="headerlink" href="#pyprojecttoml" title="Permanent link"></a></h1>
-<p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of multiple sections.</p>
+<p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of
+multiple sections.</p>
 <h2 id="name">name<a class="headerlink" href="#name" title="Permanent link"></a></h2>
 <p>The name of the package. <strong>Required</strong></p>
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link"></a></h2>
 <p>The version of the package. <strong>Required</strong></p>
-<p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it will not be enforced and you remain
-free to follow another specification.</p>
+<p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it
+will not be enforced and you remain free to follow another specification.</p>
 <h2 id="description">description<a class="headerlink" href="#description" title="Permanent link"></a></h2>
 <p>A short description of the package. <strong>Required</strong></p>
 <h2 id="license">license<a class="headerlink" href="#license" title="Permanent link"></a></h2>
@@ -634,11 +631,12 @@ free to follow another specification.</p>
 <li>LGPL-3.0+</li>
 <li>MIT</li>
 </ul>
-<p>Optional, but it is highly recommended to supply this.
-More identifiers are listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License Registry</a>.</p>
+<p>Optional, but it is highly recommended to supply this.  More identifiers are
+listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License
+Registry</a>.</p>
 <h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link"></a></h2>
-<p>The authors of the package. This is a list of authors and should contain at least one author.</p>
-<p>Authors must be in the form <code>name &lt;email&gt;</code>.</p>
+<p>The authors of the package. <strong>Required</strong></p>
+<p>This is a list of authors and should contain at least one author. Authors must be in the form <code>name &lt;email&gt;</code>.</p>
 <h2 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link"></a></h2>
 <p>The readme file of the package. <strong>Optional</strong></p>
 <p>The file can be either <code>README.rst</code> or <code>README.md</code>.</p>
@@ -651,7 +649,8 @@ More identifiers are listed at the <a href="https://www.spdx.org/licenses/">SPDX
 <h2 id="keywords">keywords<a class="headerlink" href="#keywords" title="Permanent link"></a></h2>
 <p>A list of keywords (max: 5) that the package is related to. <strong>Optional</strong></p>
 <h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link"></a></h2>
-<p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that describe the project. <strong>Optional</strong></p>
+<p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that
+describe the project. <strong>Optional</strong></p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 
 <span class="c1"># ...</span>
@@ -672,8 +671,9 @@ More identifiers are listed at the <a href="https://www.spdx.org/licenses/">SPDX
 </div>
 <h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link"></a></h2>
 <p>A list of packages and modules to include in the final distribution.</p>
-<p>If your project structure differs from the standard one supported by <code>poetry</code>,
-you can specify the packages you want to include in the final distribution.</p>
+<p>If your project structure differs from the standard one supported by
+<code>poetry</code>, you can specify the packages you want to include in the final
+distribution.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 
 <span class="c1"># ...</span>
@@ -719,9 +719,12 @@ another package named <code>extra_package</code>, you will need to specify <code
 </div>
 <h2 id="include-and-exclude">include and exclude<a class="headerlink" href="#include-and-exclude" title="Permanent link"></a></h2>
 <p>A list of patterns that will be included in the final package.</p>
-<p>You can explicitly specify to Poetry that a set of globs should be ignored or included for the purposes of packaging.
-The globs specified in the exclude field identify a set of files that are not included when a package is built.</p>
-<p>If a VCS is being used for a package, the exclude field will be seeded with the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
+<p>You can explicitly specify to Poetry that a set of globs should be ignored
+or included for the purposes of packaging.  The globs specified in the
+exclude field identify a set of files that are not included when a package
+is built.</p>
+<p>If a VCS is being used for a package, the exclude field will be seeded with
+the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 
 <span class="c1"># ...</span>
@@ -733,14 +736,15 @@ The globs specified in the exclude field identify a set of files that are not in
 </pre></div>
 
 <h2 id="dependencies-and-dev-dependencies"><code>dependencies</code> and <code>dev-dependencies</code><a class="headerlink" href="#dependencies-and-dev-dependencies" title="Permanent link"></a></h2>
-<p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by default.
-Only the name and a version string are required in this case.</p>
+<p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by
+default.  Only the name and a version string are required in this case.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
 <span class="na">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
 </pre></div>
 
-<p>If you want to use a private repository, you can add it to your <code>pyproject.toml</code> file, like so:</p>
+<p>If you want to use a private repository, you can add it to your
+<code>pyproject.toml</code> file, like so:</p>
 <div class="codehilite"><pre><span></span><span class="k">[[tool.poetry.source]]</span>
 
 <span class="na">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
@@ -758,13 +762,15 @@ is compatible is mandatory:</p>
 
 </div>
 <h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link"></a></h2>
-<p>This section describe the scripts or executable that will be installed when installing the package</p>
+<p>This section describe the scripts or executable that will be installed when
+installing the package</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
 
 <span class="na">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry:console.run&#39;</span>
 </pre></div>
 
-<p>Here, we will have the <code>poetry</code> script installed which will execute <code>console.run</code> in the <code>poetry</code> package.</p>
+<p>Here, we will have the <code>poetry</code> script installed which will execute
+<code>console.run</code> in the <code>poetry</code> package.</p>
 <h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link"></a></h2>
 <p>Poetry supports extras to allow expression of:</p>
 <ul>
@@ -802,16 +808,18 @@ is compatible is mandatory:</p>
 <span class="na">pgsql</span> <span class="o">=</span> <span class="s">[&quot;psycopg2&quot;]</span>
 </pre></div>
 
-<p>When installing packages, you can specify extras by using the <code>-E|--extras</code> option:</p>
+<p>When installing packages, you can specify extras by using the <code>-E|--extras</code>
+option:</p>
 <div class="codehilite"><pre><span></span>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
 
 poetry install -E mysql -E pgsql
 </pre></div>
 
 <h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link"></a></h2>
-<p>Poetry supports arbitrary plugins which work similarly to
-<a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry points</a>.
-To match the example in the setuptools documentation, you would use the following:</p>
+<p>Poetry supports arbitrary plugins which work similarly to <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry
+points</a>.  To
+match the example in the setuptools documentation, you would use the
+following:</p>
 <div class="codehilite"><pre><span></span>[tool.poetry.plugins] # Optional super table
 
 
@@ -822,11 +830,11 @@ To match the example in the setuptools documentation, you would use the followin
 </pre></div>
 
 <h2 id="poetry-and-pep-517">Poetry and PEP-517<a class="headerlink" href="#poetry-and-pep-517" title="Permanent link"></a></h2>
-<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard way
-to define alternative build systems to build a Python project.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard
+way to define alternative build systems to build a Python project.</p>
 <p>Poetry is compliant with PEP-517 so if you use Poetry to manage your Python
-project you should reference it in the <code>build-system</code> section of the <code>pyproject.toml</code>
-file like so:</p>
+project you should reference it in the <code>build-system</code> section of the
+<code>pyproject.toml</code> file like so:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
 
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
@@ -901,15 +909,13 @@ file like so:</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

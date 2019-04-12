@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -96,22 +96,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Poetry documentation
-              </span>
-              <span class="md-header-nav__topic">
-                Introduction
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Poetry documentation
+            </span>
+            <span class="md-header-nav__topic">
+              Introduction
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -134,7 +131,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -229,8 +225,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pipsi" title="pipsi でインストール" class="md-nav__link">
-    pipsi でインストール
+  <a href="#installing-with-pipx" title="Installing with pipx" class="md-nav__link">
+    Installing with pipx
   </a>
   
 </li>
@@ -429,8 +425,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pipsi" title="pipsi でインストール" class="md-nav__link">
-    pipsi でインストール
+  <a href="#installing-with-pipx" title="Installing with pipx" class="md-nav__link">
+    Installing with pipx
   </a>
   
 </li>
@@ -483,7 +479,8 @@ Poetryを使うとプロジェクトが依存しているライブラリを宣�
 <p>PoetryはPython 2.7あるいはPython 3.4以降を必要とします。
 Poetryはマルチプラットフォームに対応していて、Windows, Linux, OSXで同じように動作することを目標としています。</p>
 <h2 id="_3">インストール<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
-<p>Poetryは独自のインストーラーを提供していて、依存パッケージをベンダー化 (vendorizing) によって <code>poetry</code> を、システムの他のものから隔離された状態でインストールします。
+<p>Poetryは独自のインストーラーを提供していて、依存パッケージをベンダー化 (vendorizing) によって <code>poetry</code>
+を、システムの他のものから隔離された状態でインストールします。
 これは推奨された <code>poetry</code> のインストール方法です。</p>
 <div class="codehilite"><pre><span></span>curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py <span class="p">|</span> python
 </pre></div>
@@ -494,78 +491,95 @@ Poetryはマルチプラットフォームに対応していて、Windows, Linux
 それを踏まえて適切に <a href="/docs/basic-usage/#poetry-and-virtualenvs">仮想環境を作成</a> します。</p>
 </div>
 <p>このインストーラーは、 <code>poetry</code> ツールをPoetryの <code>bin</code> ディレクトリにインストールします。
-そのディレクトリの位置は、Unixでは <code>$HOME/.poetry/bin</code> で、Windowsでは <code>%USERPROFILE%\.poetry\bin</code> です。</p>
+そのディレクトリの位置は、Unixでは <code>$HOME/.poetry/bin</code> で、Windowsでは
+<code>%USERPROFILE%\.poetry\bin</code> です。</p>
 <p>このディレクトリは <code>$PATH</code> 環境変数に含まれ、何かしらの設定をしなくてもシェルから実行できるということになります。
 シェルを新たに開き、次のコマンドを打ち込んでください:</p>
 <div class="codehilite"><pre><span></span>poetry --version
 </pre></div>
 
 <p><code>Poetry 0.12.0</code> のような出力が見えたら、Poetryを使う準備が整いました。
-もしPoetryが自分には向かないと判断したら、 <code>--uninstall</code> オプションを付けるか、インストーラーを実行する前に <code>POETRY_UNINSTALL</code> 環境変数を設定するかして、先程のインストーラーを再度実行すると、システムからPoetryを完全に消去できます。</p>
+もしPoetryが自分には向かないと判断したら、 <code>--uninstall</code> オプションを付けるか、インストーラーを実行する前に
+<code>POETRY_UNINSTALL</code> 環境変数を設定するかして、先程のインストーラーを再度実行すると、システムからPoetryを完全に消去できます。</p>
 <div class="codehilite"><pre><span></span>python get-poetry.py --uninstall
 <span class="nv">POETRY_UNINSTALL</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
 </pre></div>
 
-<p>プレリリースバージョンをインストールしたい場合は、 <code>get-poetry.py</code> に <code>--preview</code> を渡すか <code>POETRY_PREVIEW</code> 環境変数を使えばできます:</p>
+<p>If you want to install prerelease versions, you can do so by passing
+<code>--preview</code> to <code>get-poetry.py</code> or by using the <code>POETRY_PREVIEW</code> environment
+variable:</p>
 <div class="codehilite"><pre><span></span>python get-poetry.py --preview
 <span class="nv">POETRY_PREVIEW</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
 </pre></div>
 
-<p>同様に、特定のバージョンをインストールしたい場合は、 <code>--version</code> や <code>POETRY_VERSION</code> 環境変数が使えます:</p>
+<p>Similarly, if you want to install a specific version, you can use
+<code>--version</code> or the <code>POETRY_VERSION</code> environment variable:</p>
 <div class="codehilite"><pre><span></span>python get-poetry.py --version <span class="m">0</span>.12.0
 <span class="nv">POETRY_VERSION</span><span class="o">=</span><span class="m">0</span>.12.0 python get-poetry.py
 </pre></div>
 
-<div class="admonition 注意">
-<p class="admonition-title">注意</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>インストーラーはリリースバージョンが0.12.0より前のPoetryはサポートしていないことに注意してください。</p>
 </div>
 <h3 id="_4">他のインストール方法 (非推奨)<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
-<div class="admonition 注意">
-<p class="admonition-title">注意</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>他のインストール方法を使うと、Poetryは常に、
 仮想環境を作成するためにインストールされたバージョンのPythonを使います。</p>
 </div>
 <p>そのため、使いたいPythonのバージョンごとにPoetryをインストールし、切り替える必要があります。</p>
 <h4 id="pip"><code>pip</code> でインストール<a class="headerlink" href="#pip" title="Permanent link"></a></h4>
-<p><code>pip</code> を使ってPoetryがインストールできます。</p>
+<p>Using <code>pip</code> to install Poetry is possible.</p>
 <div class="codehilite"><pre><span></span>pip install --user poetry
 </pre></div>
 
-<div class="admonition 警告">
-<p class="admonition-title">警告</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>他のパッケージと衝突を起こすかもしれないPoetryの依存パッケージを
 インストールすることにもなることを認識しておいてください。</p>
 </div>
-<h4 id="pipsi"><code>pipsi</code> でインストール<a class="headerlink" href="#pipsi" title="Permanent link"></a></h4>
-<p><a href="https://github.com/mitsuhiko/pipsi"><code>pipsi</code></a> を使ってもPoetryはインストールできます。</p>
-<div class="codehilite"><pre><span></span>pipsi install poetry
+<h4 id="installing-with-pipx">Installing with <code>pipx</code><a class="headerlink" href="#installing-with-pipx" title="Permanent link"></a></h4>
+<p>Using <a href="https://github.com/cs01/pipx"><code>pipx</code></a> to install Poetry is also
+possible. [pipx] is used to install Python CLI applications globally while
+still isolating them in virtual environments. This allows for clean upgrades
+and uninstalls. pipx supports Python 3.6 and later. If using an earlier
+version of Python, consider <a href="https://github.com/mitsuhiko/pipsi">pipsi</a>.</p>
+<div class="codehilite"><pre><span></span>pipx install poetry
 </pre></div>
 
-<p>Make sure your installed version of <code>pipsi</code> is at least version <code>0.10</code>,
-otherwise Poetry will not function properly. You can get it from its
-<a href="https://github.com/mitsuhiko/pipsi">Github repository</a>.</p>
+<div class="codehilite"><pre><span></span>pipx upgrade poetry
+</pre></div>
+
+<div class="codehilite"><pre><span></span>pipx uninstall poetry
+</pre></div>
+
+<p><a href="https://github.com/cs01/pipx">Github repository</a>.</p>
 <h2 id="poetry"><code>poetry</code> のアップデート<a class="headerlink" href="#poetry" title="Permanent link"></a></h2>
-<p>Poetryを最新バージョンにアップデートするのは簡単で <code>self:update</code> コマンドを呼ぶだけです。</p>
+<p>Updating poetry to the latest stable version is as simple as calling the
+<code>self:update</code> command.</p>
 <div class="codehilite"><pre><span></span>poetry self:update
 </pre></div>
 
-<p>プレリリースバージョンをインストールしたい場合は、 <code>--preview</code> オプションが使えます。</p>
+<p>If you want to install prerelease versions, you can use the <code>--preview</code>
+option.</p>
 <div class="codehilite"><pre><span></span>poetry self:update --preview
 </pre></div>
 
-<p>最後に、特定のバージョンをインストールしたい場合は、引数としてバージョンを <code>self:update</code> に渡せます。</p>
+<p>And finally, if you want to install a specific version you can pass it as an
+argument to <code>self:update</code>.</p>
 <div class="codehilite"><pre><span></span>poetry self:update <span class="m">0</span>.8.0
 </pre></div>
 
-<div class="admonition 注意">
-<p class="admonition-title">注意</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><code>self:update</code> コマンドが使えるのは、推奨インストーラーを使って
 Poetryをインストールしたときだけです。</p>
 </div>
 <h2 id="bash-fish-zsh">Bash, Fish, Zshでの補完の有効化<a class="headerlink" href="#bash-fish-zsh" title="Permanent link"></a></h2>
 <p><code>poetry</code> supports generating completion scripts for Bash, Fish, and Zsh.
-See <code>poetry help completions</code> for full details, but the gist is as simple as using one of the following:</p>
+See <code>poetry help completions</code> for full details, but the gist is as simple as
+using one of the following:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Bash</span>
 
 poetry completions bash &gt; /etc/bash_completion.d/poetry.bash-completion
@@ -601,7 +615,8 @@ poetry completions zsh &gt; <span class="nv">$ZSH</span>/plugins/poetry/_poetry
 <p class="admonition-title">注意</p>
 <p>You may need to restart your shell in order for the changes to take effect.</p>
 </div>
-<p>For <code>zsh</code>, you must then add the following line in your <code>~/.zshrc</code> before <code>compinit</code>:</p>
+<p>For <code>zsh</code>, you must then add the following line in your <code>~/.zshrc</code> before
+<code>compinit</code>:</p>
 <div class="codehilite"><pre><span></span><span class="nv">fpath</span><span class="o">+=</span>~/.zfunc
 </pre></div>
 
@@ -663,15 +678,13 @@ poetry completions zsh &gt; <span class="nv">$ZSH</span>/plugins/poetry/_poetry
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="assets/javascripts/application.a353778b.js"></script>
+      <script src="assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
       

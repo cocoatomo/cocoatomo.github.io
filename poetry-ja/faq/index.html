@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -96,22 +96,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Poetry documentation
-              </span>
-              <span class="md-header-nav__topic">
-                FAQ
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Poetry documentation
+            </span>
+            <span class="md-header-nav__topic">
+              FAQ
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -134,7 +131,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -413,12 +409,14 @@
                 <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link"></a></h1>
 <h2 id="why-is-the-dependency-resolution-process-slow">Why is the dependency resolution process slow?<a class="headerlink" href="#why-is-the-dependency-resolution-process-slow" title="Permanent link"></a></h2>
 <p>While the dependency resolver at the heart of Poetry is highly optimized and
-should be fast enough for most cases, sometimes, with some specific set of dependencies,
-it can take time to find a valid solution.</p>
-<p>This is due to the fact that not all libraries on PyPI have properly declared their metadata
-and, as such, they are not available via the PyPI JSON API. At this point, Poetry has no choice
-but downloading the packages and inspect them to get the necessary information. This is an expensive
-operation, both in bandwidth and time, which is why it seems this is a long process.</p>
+should be fast enough for most cases, sometimes, with some specific set of
+dependencies, it can take time to find a valid solution.</p>
+<p>This is due to the fact that not all libraries on PyPI have properly
+declared their metadata and, as such, they are not available via the PyPI
+JSON API. At this point, Poetry has no choice but downloading the packages
+and inspect them to get the necessary information. This is an expensive
+operation, both in bandwidth and time, which is why it seems this is a long
+process.</p>
 <p>At the moment there is no way around it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -428,17 +426,21 @@ will be much faster.</p>
 <h2 id="why-are-unbound-version-constraints-a-bad-idea">Why are unbound version constraints a bad idea?<a class="headerlink" href="#why-are-unbound-version-constraints-a-bad-idea" title="Permanent link"></a></h2>
 <p>A version constraint without an upper bound such as <code>*</code> or <code>&gt;=3.4</code> will allow updates to any future version of the dependency.
 This includes major versions breaking backward compatibility.</p>
-<p>Once a release of your package is published, you cannot tweak its dependencies anymore in case a dependency breaks BC
-- you have to do a new release but the previous one stays broken.</p>
+<p>Once a release of your package is published, you cannot tweak its
+dependencies anymore in case a dependency breaks BC - you have to do a new
+release but the previous one stays broken.</p>
 <p>The only good alternative is to define an upper bound on your constraints,
-which you can increase in a new release after testing that your package is compatible
-with the new major version of your dependency.</p>
+which you can increase in a new release after testing that your package is
+compatible with the new major version of your dependency.</p>
 <p>For example instead of using <code>&gt;=3.4</code> you should use <code>~3.4</code> which allows all versions <code>&lt;4.0</code>.
 The <code>^</code> operator works very well with libraries following <a href="https://semver.org">semantic versioning</a>.</p>
 <h2 id="is-tox-supported">Is tox supported?<a class="headerlink" href="#is-tox-supported" title="Permanent link"></a></h2>
-<p>Yes. By using the <a href="https://tox.readthedocs.io/en/latest/config.html#conf-isolated_build">isolated builds</a> <code>tox</code> provides,
-you can use it in combination with the PEP 517 compliant build system provided by Poetry.</p>
-<p>So, in your <code>pyproject.toml</code> file, add this section if it does not already exist:</p>
+<p>Yes. By using the <a href="https://tox.readthedocs.io/en/latest/config.html#conf-isolated_build">isolated
+builds</a>
+<code>tox</code> provides, you can use it in combination with the PEP 517 compliant
+build system provided by Poetry.</p>
+<p>So, in your <code>pyproject.toml</code> file, add this section if it does not already
+exist:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
 
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
@@ -467,10 +469,11 @@ you can use it in combination with the PEP 517 compliant build system provided b
 </pre></div>
 
 <h2 id="i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it">I don't want Poetry to manage my virtualenvs. Can I disable it?<a class="headerlink" href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="Permanent link"></a></h2>
-<p>While Poetry automatically creates virtualenvs to always work isolated
-from the global Python installation, there are valid reasons why it's not necessary
-and is an overhead, like when working with containers.</p>
-<p>In this case, you can disable this feature by setting the <code>virtualenvs.create</code> setting to <code>false</code>:</p>
+<p>While Poetry automatically creates virtualenvs to always work isolated from
+the global Python installation, there are valid reasons why it's not
+necessary and is an overhead, like when working with containers.</p>
+<p>In this case, you can disable this feature by setting the
+<code>virtualenvs.create</code> setting to <code>false</code>:</p>
 <div class="codehilite"><pre><span></span>poetry config settings.virtualenvs.create <span class="nb">false</span>
 </pre></div>
                 
@@ -522,15 +525,13 @@ and is an overhead, like when working with containers.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

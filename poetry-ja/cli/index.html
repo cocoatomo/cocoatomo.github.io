@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -96,22 +96,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Poetry documentation
-              </span>
-              <span class="md-header-nav__topic">
-                Commands
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Poetry documentation
+            </span>
+            <span class="md-header-nav__topic">
+              Commands
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -134,7 +131,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -867,11 +863,13 @@
                 
                 
                 <h1 id="_1">コマンド<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<p>You've already learned how to use the command-line interface to do some things.
-This chapter documents all the available commands.</p>
-<p>To get help from the command-line, simply call <code>poetry</code> or <code>poetry list</code> to see the complete list of commands,
-then <code>--help</code> combined with any of those can give you more information.</p>
-<p>As <code>Poetry</code> uses <a href="https://github.com/sdispater/cleo">cleo</a> you can call commands by short name if it's not ambiguous.</p>
+<p>You've already learned how to use the command-line interface to do some
+things.  This chapter documents all the available commands.</p>
+<p>To get help from the command-line, simply call <code>poetry</code> or <code>poetry list</code> to
+see the complete list of commands, then <code>--help</code> combined with any of those
+can give you more information.</p>
+<p>As <code>Poetry</code> uses <a href="https://github.com/sdispater/cleo">cleo</a> you can call
+commands by short name if it's not ambiguous.</p>
 <div class="codehilite"><pre><span></span>poetry up
 </pre></div>
 
@@ -887,8 +885,8 @@ then <code>--help</code> combined with any of those can give you more informatio
 <li><code>--version (-V)</code>: Display this application version.</li>
 </ul>
 <h2 id="new">new<a class="headerlink" href="#new" title="Permanent link"></a></h2>
-<p>This command will help you kickstart your new Python project by creating
-a directory structure suitable for most projects.</p>
+<p>This command will help you kickstart your new Python project by creating a
+directory structure suitable for most projects.</p>
 <div class="codehilite"><pre><span></span>poetry new my-package
 </pre></div>
 
@@ -940,9 +938,10 @@ the <code>--name</code> option:</p>
 </pre></div>
 
 <h2 id="init">init<a class="headerlink" href="#init" title="Permanent link"></a></h2>
-<p>This command will help you create a <code>pyproject.toml</code> file interactively
-by prompting you to provide basic information about your package.</p>
-<p>It will interactively ask you to fill in the fields, while using some smart defaults.</p>
+<p>This command will help you create a <code>pyproject.toml</code> file interactively by
+prompting you to provide basic information about your package.</p>
+<p>It will interactively ask you to fill in the fields, while using some smart
+defaults.</p>
 <div class="codehilite"><pre><span></span>poetry init
 </pre></div>
 
@@ -956,22 +955,23 @@ by prompting you to provide basic information about your package.</p>
 <li><code>--dev-dependency</code>: Development requirements, see <code>--require</code>.</li>
 </ul>
 <h2 id="install">install<a class="headerlink" href="#install" title="Permanent link"></a></h2>
-<p>The <code>install</code> command reads the <code>pyproject.toml</code> file from the current project,
-resolves the dependencies, and installs them.</p>
+<p>The <code>install</code> command reads the <code>pyproject.toml</code> file from the current
+project, resolves the dependencies, and installs them.</p>
 <div class="codehilite"><pre><span></span>poetry install
 </pre></div>
 
-<p>If there is a <code>poetry.lock</code> file in the current directory,
-it will use the exact versions from there instead of resolving them.
-This ensures that everyone using the library will get the same versions of the dependencies.</p>
-<p>If there is no <code>poetry.lock</code> file, Poetry will create one after dependency resolution.</p>
-<p>You can specify to the command that you do not want the development dependencies installed by passing
-the <code>--no-dev</code> option.</p>
+<p>If there is a <code>poetry.lock</code> file in the current directory, it will use the
+exact versions from there instead of resolving them.  This ensures that
+everyone using the library will get the same versions of the dependencies.</p>
+<p>If there is no <code>poetry.lock</code> file, Poetry will create one after dependency
+resolution.</p>
+<p>You can specify to the command that you do not want the development
+dependencies installed by passing the <code>--no-dev</code> option.</p>
 <div class="codehilite"><pre><span></span>poetry install --no-dev
 </pre></div>
 
-<p>You can also specify the extras you want installed
-by passing the <code>--E|--extras</code> option (See <a href="#extras">Extras</a> for more info)</p>
+<p>You can also specify the extras you want installed by passing the
+<code>--E|--extras</code> option (See <a href="#extras">Extras</a> for more info)</p>
 <div class="codehilite"><pre><span></span>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
 
 poetry install -E mysql -E pgsql
@@ -983,13 +983,15 @@ poetry install -E mysql -E pgsql
 <li><code>--extras (-E)</code>: Features to install (multiple values allowed).</li>
 </ul>
 <h2 id="update">update<a class="headerlink" href="#update" title="Permanent link"></a></h2>
-<p>In order to get the latest versions of the dependencies and to update the <code>poetry.lock</code> file,
-you should use the <code>update</code> command.</p>
+<p>In order to get the latest versions of the dependencies and to update the
+<code>poetry.lock</code> file, you should use the <code>update</code> command.</p>
 <div class="codehilite"><pre><span></span>poetry update
 </pre></div>
 
-<p>This will resolve all dependencies of the project and write the exact versions into <code>poetry.lock</code>.</p>
-<p>If you just want to update a few packages and not all, you can list them as such:</p>
+<p>This will resolve all dependencies of the project and write the exact
+versions into <code>poetry.lock</code>.</p>
+<p>If you just want to update a few packages and not all, you can list them as
+such:</p>
 <div class="codehilite"><pre><span></span>poetry update requests toml
 </pre></div>
 
@@ -1001,9 +1003,10 @@ you should use the <code>update</code> command.</p>
 <li><code>--lock</code> : Do not perform install (only update the lockfile).</li>
 </ul>
 <h2 id="add">add<a class="headerlink" href="#add" title="Permanent link"></a></h2>
-<p>The <code>add</code> command adds required packages to your <code>pyproject.toml</code> and installs them.</p>
-<p>If you do not specify a version constraint,
-poetry will choose a suitable one based on the available package versions.</p>
+<p>The <code>add</code> command adds required packages to your <code>pyproject.toml</code> and
+installs them.</p>
+<p>If you do not specify a version constraint, poetry will choose a suitable
+one based on the available package versions.</p>
 <div class="codehilite"><pre><span></span>poetry add requests pendulum
 </pre></div>
 
@@ -1019,6 +1022,16 @@ poetry add my-package --path ../my-package/dist/my-package-0.1.0.tar.gz
 poetry add my-package --path ../my-package/dist/my_package-0.1.0.whl
 </pre></div>
 
+<p>Path dependencies pointing to a local directory will be installed in
+editable mode (i.e. setuptools "develop mode").  It means that changes in
+the local directory will be reflected directly in environment.</p>
+<p>If you don't want the dependency to be installed in editable mode you can
+specify it in the <code>pyproject.toml</code> file:</p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
+
+<span class="na">my-package</span> <span class="o">=</span> <span class="s">{path = &quot;../my/path&quot;, develop = false}</span>
+</pre></div>
+
 <h3 id="options_3">Options<a class="headerlink" href="#options_3" title="Permanent link"></a></h3>
 <ul>
 <li><code>--dev (-D)</code>: Add package as development dependency.</li>
@@ -1030,8 +1043,8 @@ poetry add my-package --path ../my-package/dist/my_package-0.1.0.whl
   (implicitly enables --verbose).</li>
 </ul>
 <h2 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link"></a></h2>
-<p>The <code>remove</code> command removes a package from the current
-list of installed packages.</p>
+<p>The <code>remove</code> command removes a package from the current list of installed
+packages.</p>
 <div class="codehilite"><pre><span></span>poetry remove pendulum
 </pre></div>
 
@@ -1046,7 +1059,8 @@ list of installed packages.</p>
 <div class="codehilite"><pre><span></span>poetry show
 </pre></div>
 
-<p>If you want to see the details of a certain package, you can pass the package name.</p>
+<p>If you want to see the details of a certain package, you can pass the
+package name.</p>
 <div class="codehilite"><pre><span></span>poetry show pendulum
 
 
@@ -1087,8 +1101,10 @@ dependencies:
 <li><code>--format (-F)</code>: Limit the format to either wheel or sdist.</li>
 </ul>
 <h2 id="publish">publish<a class="headerlink" href="#publish" title="Permanent link"></a></h2>
-<p>This command publishes the package, previously built with the <a href="#build"><code>build</code></a> command, to the remote repository.</p>
-<p>It will automatically register the package before uploading if this is the first time it is submitted.</p>
+<p>This command publishes the package, previously built with the
+<a href="#build"><code>build</code></a> command, to the remote repository.</p>
+<p>It will automatically register the package before uploading if this is the
+first time it is submitted.</p>
 <div class="codehilite"><pre><span></span>poetry publish
 </pre></div>
 
@@ -1101,7 +1117,8 @@ Should match a repository name set by the <a href="#config"><code>config</code><
 <li><code>--password (-p)</code>: The password to access the repository.</li>
 </ul>
 <h2 id="config">config<a class="headerlink" href="#config" title="Permanent link"></a></h2>
-<p>The <code>config</code> command allows you to edit poetry config settings and repositories.</p>
+<p>The <code>config</code> command allows you to edit poetry config settings and
+repositories.</p>
 <div class="codehilite"><pre><span></span>poetry config --list
 </pre></div>
 
@@ -1109,15 +1126,17 @@ Should match a repository name set by the <a href="#config"><code>config</code><
 <div class="codehilite"><pre><span></span>poetry config <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>setting-key<span class="o">]</span> <span class="o">[</span>setting-value1<span class="o">]</span> ... <span class="o">[</span>setting-valueN<span class="o">]</span>
 </pre></div>
 
-<p><code>setting-key</code> is a configuration option name and <code>setting-value1</code> is a configuration value.
-See <a href="/docs/configuration/">Configuration</a> for all available settings.</p>
+<p><code>setting-key</code> is a configuration option name and <code>setting-value1</code> is a
+configuration value.  See <a href="/docs/configuration/">Configuration</a> for all
+available settings.</p>
 <h3 id="options_8">Options<a class="headerlink" href="#options_8" title="Permanent link"></a></h3>
 <ul>
 <li><code>--unset</code>: Remove the configuration element named by <code>setting-key</code>.</li>
 <li><code>--list</code>: Show the list of current config variables.</li>
 </ul>
 <h2 id="run">run<a class="headerlink" href="#run" title="Permanent link"></a></h2>
-<p>The <code>run</code> command executes the given command inside the project's virtualenv.</p>
+<p>The <code>run</code> command executes the given command inside the project's
+virtualenv.</p>
 <div class="codehilite"><pre><span></span>poetry run python -V
 </pre></div>
 
@@ -1134,16 +1153,15 @@ See <a href="/docs/configuration/">Configuration</a> for all available settings.
 
 <p>Note that this command has no option.</p>
 <h2 id="shell">shell<a class="headerlink" href="#shell" title="Permanent link"></a></h2>
-<p>The <code>shell</code> command spawns a shell,
-according to the <code>$SHELL</code> environment variable,
-within the virtual environment.
-If one doesn't exist yet, it will be created.</p>
+<p>The <code>shell</code> command spawns a shell, according to the <code>$SHELL</code> environment
+variable, within the virtual environment.  If one doesn't exist yet, it will
+be created.</p>
 <div class="codehilite"><pre><span></span>poetry shell
 </pre></div>
 
 <h2 id="check">check<a class="headerlink" href="#check" title="Permanent link"></a></h2>
-<p>The <code>check</code> command validates the structure of the <code>pyproject.toml</code> file
-and returns a detailed report if there are any errors.</p>
+<p>The <code>check</code> command validates the structure of the <code>pyproject.toml</code> file and
+returns a detailed report if there are any errors.</p>
 <div class="codehilite"><pre><span></span>poetry check
 </pre></div>
 
@@ -1157,15 +1175,17 @@ and returns a detailed report if there are any errors.</p>
 <li><code>--only-name (-N)</code>: Search only in name.</li>
 </ul>
 <h2 id="lock">lock<a class="headerlink" href="#lock" title="Permanent link"></a></h2>
-<p>This command locks (without installing) the dependencies specified in <code>pyproject.toml</code>.</p>
+<p>This command locks (without installing) the dependencies specified in
+<code>pyproject.toml</code>.</p>
 <div class="codehilite"><pre><span></span>poetry lock
 </pre></div>
 
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link"></a></h2>
-<p>This command bumps the version of the project
-and writes the new version back to <code>pyproject.toml</code></p>
-<p>The new version should ideally be a valid semver string or a valid bump rule:
-<code>patch</code>, <code>minor</code>, <code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>, <code>prerelease</code>.</p>
+<p>This command bumps the version of the project and writes the new version
+back to <code>pyproject.toml</code></p>
+<p>The new version should ideally be a valid semver string or a valid bump
+rule: <code>patch</code>, <code>minor</code>, <code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>,
+<code>prerelease</code>.</p>
                 
                   
                 
@@ -1229,15 +1249,13 @@ and writes the new version back to <code>pyproject.toml</code></p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

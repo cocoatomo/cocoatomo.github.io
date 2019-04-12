@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -96,22 +96,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Poetry documentation
-              </span>
-              <span class="md-header-nav__topic">
-                Basic Usage
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Poetry documentation
+            </span>
+            <span class="md-header-nav__topic">
+              Basic Usage
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -134,7 +131,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -211,8 +207,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-setup" title="Project setup" class="md-nav__link">
-    Project setup
+  <a href="#_2" title="プロジェクトのセットアップ" class="md-nav__link">
+    プロジェクトのセットアップ
   </a>
   
     <nav class="md-nav">
@@ -413,8 +409,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-setup" title="Project setup" class="md-nav__link">
-    Project setup
+  <a href="#_2" title="プロジェクトのセットアップ" class="md-nav__link">
+    プロジェクトのセットアップ
   </a>
   
     <nav class="md-nav">
@@ -505,9 +501,10 @@
                 
                 
                 <h1 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<p>For the basic usage introduction we will be installing <code>pendulum</code>, a datetime library.
-If you have not yet installed Poetry, refer to the <a href="/docs/">Introduction</a> chapter.</p>
-<h2 id="project-setup">Project setup<a class="headerlink" href="#project-setup" title="Permanent link"></a></h2>
+<p>For the basic usage introduction we will be installing <code>pendulum</code>, a
+datetime library.  If you have not yet installed Poetry, refer to the
+<a href="/docs/">Introduction</a> chapter.</p>
+<h2 id="_2">プロジェクトのセットアップ<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <p>First, let's create our new project, let's call it <code>poetry-demo</code>:</p>
 <div class="codehilite"><pre><span></span>poetry new poetry-demo
 </pre></div>
@@ -530,8 +527,8 @@ If you have not yet installed Poetry, refer to the <a href="/docs/">Introduction
     └── test_poetry_demo.py
 </pre></div>
 
-<p>The <code>pyproject.toml</code> file is what is the most important here. This will orchestrate
-your project and its dependencies. For now, it looks like this:</p>
+<p>The <code>pyproject.toml</code> file is what is the most important here. This will
+orchestrate your project and its dependencies. For now, it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 
 <span class="na">name</span> <span class="o">=</span> <span class="s">&quot;poetry-demo&quot;</span>
@@ -556,24 +553,30 @@ your project and its dependencies. For now, it looks like this:</p>
 </pre></div>
 
 <h3 id="specifying-dependencies">Specifying dependencies<a class="headerlink" href="#specifying-dependencies" title="Permanent link"></a></h3>
-<p>If you want to add dependencies to your project, you can specify them in the <code>tool.poetry.dependencies</code> section.</p>
+<p>If you want to add dependencies to your project, you can specify them in the
+<code>tool.poetry.dependencies</code> section.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
 <span class="na">pendulum</span> <span class="o">=</span> <span class="s">&quot;^1.4&quot;</span>
 </pre></div>
 
-<p>As you can see, it takes a mapping of <strong>package names</strong> and <strong>version constraints</strong>.</p>
-<p>Poetry uses this information to search for the right set of files in package "repositories" that you register
-in the <code>tool.poetry.repositories</code> section, or on <a href="https://pypi.org">PyPI</a> by default.</p>
-<p>Also, instead of modifying the <code>pyproject.toml</code> file by hand, you can use the <code>add</code> command.</p>
+<p>As you can see, it takes a mapping of <strong>package names</strong> and <strong>version
+constraints</strong>.</p>
+<p>Poetry uses this information to search for the right set of files in package
+"repositories" that you register in the <code>tool.poetry.repositories</code> section,
+or on <a href="https://pypi.org">PyPI</a> by default.</p>
+<p>Also, instead of modifying the <code>pyproject.toml</code> file by hand, you can use
+the <code>add</code> command.</p>
 <div class="codehilite"><pre><span></span>$ poetry add pendulum
 </pre></div>
 
-<p>It will automatically find a suitable version constraint <strong>and install</strong> the package and subdependencies.</p>
+<p>It will automatically find a suitable version constraint <strong>and install</strong> the
+package and subdependencies.</p>
 <h3 id="version-constraints">Version constraints<a class="headerlink" href="#version-constraints" title="Permanent link"></a></h3>
 <p>In our example, we are requesting the <code>pendulum</code> package with the version constraint <code>^1.4</code>.
 This means any version greater or equal to 1.4.0 and less than 2.0.0 (<code>&gt;=1.4.0 &lt;2.0.0</code>).</p>
-<p>Please read <a href="/docs/versions/">versions</a> for more in-depth information on versions, how versions relate to each other, and on version constraints.</p>
+<p>Please read <a href="/docs/versions/">versions</a> for more in-depth information on
+versions, how versions relate to each other, and on version constraints.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>How does Poetry download the right files?</strong></p>
@@ -585,56 +588,67 @@ repositories you have specified, it falls back on PyPI.</p>
 for the version constraint you have specified.</p>
 </div>
 <h2 id="installing-dependencies">Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permanent link"></a></h2>
-<p>To install the defined dependencies for your project, just run the <code>install</code> command.</p>
+<p>To install the defined dependencies for your project, just run the <code>install</code>
+command.</p>
 <div class="codehilite"><pre><span></span>poetry install
 </pre></div>
 
 <p>When you run this command, one of two things may happen:</p>
 <h3 id="installing-without-poetrylock">Installing without <code>poetry.lock</code><a class="headerlink" href="#installing-without-poetrylock" title="Permanent link"></a></h3>
-<p>If you have never run the command before and there is also no <code>poetry.lock</code> file present,
-Poetry simply resolves all dependencies listed in your <code>pyproject.toml</code> file and downloads the latest version of their files.</p>
-<p>When Poetry has finished installing, it writes all of the packages and the exact versions of them that it downloaded to the <code>poetry.lock</code> file,
-locking the project to those specific versions.
-You should commit the <code>poetry.lock</code> file to your project repo so that all people working on the project are locked to the same versions of dependencies (more below).</p>
+<p>If you have never run the command before and there is also no <code>poetry.lock</code>
+file present, Poetry simply resolves all dependencies listed in your
+<code>pyproject.toml</code> file and downloads the latest version of their files.</p>
+<p>When Poetry has finished installing, it writes all of the packages and the
+exact versions of them that it downloaded to the <code>poetry.lock</code> file, locking
+the project to those specific versions.  You should commit the <code>poetry.lock</code>
+file to your project repo so that all people working on the project are
+locked to the same versions of dependencies (more below).</p>
 <h3 id="installing-with-poetrylock">Installing with <code>poetry.lock</code><a class="headerlink" href="#installing-with-poetrylock" title="Permanent link"></a></h3>
-<p>This brings us to the second scenario. If there is already a <code>poetry.lock</code> file as well as a <code>pyproject.toml</code> file
-when you run <code>poetry install</code>, it means either you ran the <code>install</code> command before,
-or someone else on the project ran the <code>install</code> command and committed the <code>poetry.lock</code> file to the project (which is good).</p>
-<p>Either way, running <code>install</code> when a <code>poetry.lock</code> file is present resolves and installs all dependencies that you listed in <code>pyproject.toml</code>,
-but Poetry uses the exact versions listed in <code>poetry.lock</code> to ensure that the package versions are consistent for everyone working on your project.
-As a result you will have all dependencies requested by your <code>pyproject.toml</code> file,
-but they may not all be at the very latest available versions
-(some of the dependencies listed in the <code>poetry.lock</code> file may have released newer versions since the file was created).
-This is by design, it ensures that your project does not break because of unexpected changes in dependencies.</p>
+<p>This brings us to the second scenario. If there is already a <code>poetry.lock</code>
+file as well as a <code>pyproject.toml</code> file when you run <code>poetry install</code>, it
+means either you ran the <code>install</code> command before, or someone else on the
+project ran the <code>install</code> command and committed the <code>poetry.lock</code> file to
+the project (which is good).</p>
+<p>Either way, running <code>install</code> when a <code>poetry.lock</code> file is present resolves
+and installs all dependencies that you listed in <code>pyproject.toml</code>, but
+Poetry uses the exact versions listed in <code>poetry.lock</code> to ensure that the
+package versions are consistent for everyone working on your project.  As a
+result you will have all dependencies requested by your <code>pyproject.toml</code>
+file, but they may not all be at the very latest available versions (some of
+the dependencies listed in the <code>poetry.lock</code> file may have released newer
+versions since the file was created).  This is by design, it ensures that
+your project does not break because of unexpected changes in dependencies.</p>
 <h3 id="commit-your-poetrylock-file-to-version-control">Commit your <code>poetry.lock</code> file to version control<a class="headerlink" href="#commit-your-poetrylock-file-to-version-control" title="Permanent link"></a></h3>
-<p>Committing this file to VC is important because it will cause anyone who sets up the project
-to use the exact same versions of the dependencies that you are using.
-Your CI server, production machines, other developers in your team,
-everything and everyone runs on the same dependencies,
-which mitigates the potential for bugs affecting only some parts of the deployments.
-Even if you develop alone, in six months when reinstalling the project you can feel confident
-the dependencies installed are still working even if your dependencies released many new versions since then.
-(See note below about using the update command.)</p>
+<p>Committing this file to VC is important because it will cause anyone who
+sets up the project to use the exact same versions of the dependencies that
+you are using.  Your CI server, production machines, other developers in
+your team, everything and everyone runs on the same dependencies, which
+mitigates the potential for bugs affecting only some parts of the
+deployments.  Even if you develop alone, in six months when reinstalling the
+project you can feel confident the dependencies installed are still working
+even if your dependencies released many new versions since then.  (See note
+below about using the update command.)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For libraries it is not necessary to commit the lock file.</p>
 </div>
 <h2 id="updating-dependencies-to-their-latest-versions">Updating dependencies to their latest versions<a class="headerlink" href="#updating-dependencies-to-their-latest-versions" title="Permanent link"></a></h2>
-<p>As mentioned above, the <code>poetry.lock</code> file prevents you from automatically getting the latest versions
-of your dependencies.
-To update to the latest versions, use the <code>update</code> command.
-This will fetch the latest matching versions (according to your <code>pyproject.toml</code> file)
-and update the lock file with the new versions.
-(This is equivalent to deleting the <code>poetry.lock</code> file and running <code>install</code> again.)</p>
+<p>As mentioned above, the <code>poetry.lock</code> file prevents you from automatically
+getting the latest versions of your dependencies.  To update to the latest
+versions, use the <code>update</code> command.  This will fetch the latest matching
+versions (according to your <code>pyproject.toml</code> file)  and update the lock file
+with the new versions.  (This is equivalent to deleting the <code>poetry.lock</code>
+file and running <code>install</code> again.)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Poetry will display a <strong>Warning</strong> when executing an install command if <code>poetry.lock</code> and <code>pyproject.toml</code>
 are not synchronized.</p>
 </div>
 <h2 id="poetry-and-virtualenvs">Poetry and virtualenvs<a class="headerlink" href="#poetry-and-virtualenvs" title="Permanent link"></a></h2>
-<p>When you execute the <code>install</code> command (or any other "install" commands like <code>add</code> or <code>remove</code>),
-Poetry will check if it's currently inside a virtualenv and, if not, will use an existing one
-or create a brand new one for you to always work isolated from your global Python installation.</p>
+<p>When you execute the <code>install</code> command (or any other "install" commands like
+<code>add</code> or <code>remove</code>), Poetry will check if it's currently inside a virtualenv
+and, if not, will use an existing one or create a brand new one for you to
+always work isolated from your global Python installation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To create the virtualenv for the current project, Poetry will use
@@ -712,15 +726,13 @@ poetry install
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
