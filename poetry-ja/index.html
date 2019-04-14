@@ -225,8 +225,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-with-pipx" title="Installing with pipx" class="md-nav__link">
-    Installing with pipx
+  <a href="#pipx" title="pipx でインストール" class="md-nav__link">
+    pipx でインストール
   </a>
   
 </li>
@@ -425,8 +425,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-with-pipx" title="Installing with pipx" class="md-nav__link">
-    Installing with pipx
+  <a href="#pipx" title="pipx でインストール" class="md-nav__link">
+    pipx でインストール
   </a>
   
 </li>
@@ -505,46 +505,45 @@ Poetryはマルチプラットフォームに対応していて、Windows, Linux
 <span class="nv">POETRY_UNINSTALL</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
 </pre></div>
 
-<p>If you want to install prerelease versions, you can do so by passing
-<code>--preview</code> to <code>get-poetry.py</code> or by using the <code>POETRY_PREVIEW</code> environment
-variable:</p>
+<p>プレリリースバージョンをインストールしたい場合は、 <code>get-poetry.py</code> に <code>--preview</code> を渡すか
+<code>POETRY_PREVIEW</code> 環境変数を使えばできます:</p>
 <div class="codehilite"><pre><span></span>python get-poetry.py --preview
 <span class="nv">POETRY_PREVIEW</span><span class="o">=</span><span class="m">1</span> python get-poetry.py
 </pre></div>
 
-<p>Similarly, if you want to install a specific version, you can use
-<code>--version</code> or the <code>POETRY_VERSION</code> environment variable:</p>
+<p>同様に、特定のバージョンをインストールしたい場合は、 <code>--version</code> や <code>POETRY_VERSION</code> 環境変数が使えます:</p>
 <div class="codehilite"><pre><span></span>python get-poetry.py --version <span class="m">0</span>.12.0
 <span class="nv">POETRY_VERSION</span><span class="o">=</span><span class="m">0</span>.12.0 python get-poetry.py
 </pre></div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>インストーラーはリリースバージョンが0.12.0より前のPoetryはサポートしていないことに注意してください。</p>
 </div>
 <h3 id="_4">他のインストール方法 (非推奨)<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>他のインストール方法を使うと、Poetryは常に、
 仮想環境を作成するためにインストールされたバージョンのPythonを使います。</p>
 </div>
 <p>そのため、使いたいPythonのバージョンごとにPoetryをインストールし、切り替える必要があります。</p>
 <h4 id="pip"><code>pip</code> でインストール<a class="headerlink" href="#pip" title="Permanent link"></a></h4>
-<p>Using <code>pip</code> to install Poetry is possible.</p>
+<p><code>pip</code> を使ってPoetryをインストールできます。</p>
 <div class="codehilite"><pre><span></span>pip install --user poetry
 </pre></div>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>他のパッケージと衝突を起こすかもしれないPoetryの依存パッケージを
-インストールすることにもなることを認識しておいてください。</p>
+<div class="admonition 警告">
+<p class="admonition-title">警告</p>
+<p>他のパッケージと衝突を起こす可能性のあるPoetryの依存パッケージを
+インストールすることにもなるのを認識しておいてください。</p>
 </div>
-<h4 id="installing-with-pipx">Installing with <code>pipx</code><a class="headerlink" href="#installing-with-pipx" title="Permanent link"></a></h4>
-<p>Using <a href="https://github.com/cs01/pipx"><code>pipx</code></a> to install Poetry is also
-possible. [pipx] is used to install Python CLI applications globally while
-still isolating them in virtual environments. This allows for clean upgrades
-and uninstalls. pipx supports Python 3.6 and later. If using an earlier
-version of Python, consider <a href="https://github.com/mitsuhiko/pipsi">pipsi</a>.</p>
+<h4 id="pipx"><code>pipx</code> でインストール<a class="headerlink" href="#pipx" title="Permanent link"></a></h4>
+<p><a href="https://github.com/cs01/pipx"><code>pipx</code></a>を使ってPoetryをインストールすることもできます。
+[pipx]は、PythonのCLIアプリケーションを仮想環境に隔離したまま、システム全体で使えるようにインストールするのに使われます。
+これにより更新やアンインストールが環境を汚さずに行えます。
+pipxはPython 3.6以降のバージョンをサポートしています。
+もっと前のバージョンのPythonを使っている場合は、
+<a href="https://github.com/mitsuhiko/pipsi">pipsi</a>を検討してください。</p>
 <div class="codehilite"><pre><span></span>pipx install poetry
 </pre></div>
 
@@ -554,79 +553,57 @@ version of Python, consider <a href="https://github.com/mitsuhiko/pipsi">pipsi</
 <div class="codehilite"><pre><span></span>pipx uninstall poetry
 </pre></div>
 
-<p><a href="https://github.com/cs01/pipx">Github repository</a>.</p>
+<p><a href="https://github.com/cs01/pipx">Github repository</a>。</p>
 <h2 id="poetry"><code>poetry</code> のアップデート<a class="headerlink" href="#poetry" title="Permanent link"></a></h2>
-<p>Updating poetry to the latest stable version is as simple as calling the
-<code>self:update</code> command.</p>
+<p>Poetryを最新バージョンまで更新するのは簡単で <code>self:update</code> コマンドを呼び出すだけです。</p>
 <div class="codehilite"><pre><span></span>poetry self:update
 </pre></div>
 
-<p>If you want to install prerelease versions, you can use the <code>--preview</code>
-option.</p>
+<p>プレリリースバージョンをインストールしたい場合は、 <code>--preview</code> オプションが使えます。</p>
 <div class="codehilite"><pre><span></span>poetry self:update --preview
 </pre></div>
 
-<p>And finally, if you want to install a specific version you can pass it as an
-argument to <code>self:update</code>.</p>
+<p>最後に、特定のバージョンをインストールしたい場合は、引数としてバージョンを <code>self:update</code> に渡せます。</p>
 <div class="codehilite"><pre><span></span>poetry self:update <span class="m">0</span>.8.0
 </pre></div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p><code>self:update</code> コマンドが使えるのは、推奨インストーラーを使って
 Poetryをインストールしたときだけです。</p>
 </div>
 <h2 id="bash-fish-zsh">Bash, Fish, Zshでの補完の有効化<a class="headerlink" href="#bash-fish-zsh" title="Permanent link"></a></h2>
-<p><code>poetry</code> supports generating completion scripts for Bash, Fish, and Zsh.
-See <code>poetry help completions</code> for full details, but the gist is as simple as
-using one of the following:</p>
+<p><code>poetry</code> はBash, Fish, Zsh用の補完スクリプトの生成をサポートしています。
+完全な詳細については <code>poetry help completions</code> を参照してください。要点は簡単で、次のコマンドのどれか1つを使う、です:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Bash</span>
-
 poetry completions bash &gt; /etc/bash_completion.d/poetry.bash-completion
 
-
-
 <span class="c1"># Bash (macOS/Homebrew)</span>
-
 poetry completions bash &gt; <span class="k">$(</span>brew --prefix<span class="k">)</span>/etc/bash_completion.d/poetry.bash-completion
 
-
-
 <span class="c1"># Fish</span>
-
 poetry completions fish &gt; ~/.config/fish/completions/poetry.fish
 
-
-
 <span class="c1"># Zsh</span>
-
 poetry completions zsh &gt; ~/.zfunc/_poetry
 
-
-
 <span class="c1"># Oh-My-Zsh</span>
-
 mkdir <span class="nv">$ZSH</span>/plugins/poetry
-
 poetry completions zsh &gt; <span class="nv">$ZSH</span>/plugins/poetry/_poetry
 </pre></div>
 
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>You may need to restart your shell in order for the changes to take effect.</p>
+<p>変更が効くようにするのにシェルを再起動する必要があるかもしれません。</p>
 </div>
-<p>For <code>zsh</code>, you must then add the following line in your <code>~/.zshrc</code> before
-<code>compinit</code>:</p>
+<p><code>zsh</code> では、 <code>~/.zshrc</code> の <code>compinit</code> より前に次の行を追加しなければなりません:</p>
 <div class="codehilite"><pre><span></span><span class="nv">fpath</span><span class="o">+=</span>~/.zfunc
 </pre></div>
 
-<p>For <code>oh-my-zsh</code>, you must then enable poetry in your <code>~/.zshrc</code> plugins</p>
+<p><code>oh-my-zsh</code> では、 <code>~/.zshrc</code> プラグインでpoetryを有効化しなければなりません:</p>
 <div class="codehilite"><pre><span></span>plugins(
-
     poetry
-
     ...
-
     )
 </pre></div>
                 
