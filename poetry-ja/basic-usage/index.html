@@ -215,8 +215,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#specifying-dependencies" title="Specifying dependencies" class="md-nav__link">
-    Specifying dependencies
+  <a href="#_3" title="依存関係の指定" class="md-nav__link">
+    依存関係の指定
   </a>
   
 </li>
@@ -417,8 +417,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#specifying-dependencies" title="Specifying dependencies" class="md-nav__link">
-    Specifying dependencies
+  <a href="#_3" title="依存関係の指定" class="md-nav__link">
+    依存関係の指定
   </a>
   
 </li>
@@ -501,62 +501,43 @@
                 
                 
                 <h1 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<p>For the basic usage introduction we will be installing <code>pendulum</code>, a
-datetime library.  If you have not yet installed Poetry, refer to the
-<a href="/docs/">Introduction</a> chapter.</p>
+<p>基本的な使い方の入門として、 <code>pendulum</code> という日付ライブラリをインストールします。
+Poetryをまだインストールしていない場合は、 <a href="/docs/">Introduction</a> の章を参照してください。</p>
 <h2 id="_2">プロジェクトのセットアップ<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
-<p>First, let's create our new project, let's call it <code>poetry-demo</code>:</p>
+<p>最初に、新しいプロジェクトを作成し、 <code>poetry-demo</code> と名付けましょう:</p>
 <div class="codehilite"><pre><span></span>poetry new poetry-demo
 </pre></div>
 
 <p>This will create the <code>poetry-demo</code> directory with the following content:</p>
 <div class="codehilite"><pre><span></span>poetry-demo
-
 ├── pyproject.toml
-
 ├── README.rst
-
 ├── poetry_demo
-
 │   └── __init__.py
-
 └── tests
-
     ├── __init__.py
-
     └── test_poetry_demo.py
 </pre></div>
 
 <p>The <code>pyproject.toml</code> file is what is the most important here. This will
 orchestrate your project and its dependencies. For now, it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="na">name</span> <span class="o">=</span> <span class="s">&quot;poetry-demo&quot;</span>
-
 <span class="na">version</span> <span class="o">=</span> <span class="s">&quot;0.1.0&quot;</span>
-
 <span class="na">description</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-
 <span class="na">authors</span> <span class="o">=</span> <span class="s">[&quot;Sébastien Eustace &lt;sebastien@eustace.io&gt;&quot;]</span>
 
-
-
 <span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">python</span> <span class="o">=</span> <span class="s">&quot;*&quot;</span>
 
-
-
 <span class="k">[tool.poetry.dev-dependencies]</span>
-
 <span class="na">pytest</span> <span class="o">=</span> <span class="s">&quot;^3.4&quot;</span>
 </pre></div>
 
-<h3 id="specifying-dependencies">Specifying dependencies<a class="headerlink" href="#specifying-dependencies" title="Permanent link"></a></h3>
+<h3 id="_3">依存関係の指定<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <p>If you want to add dependencies to your project, you can specify them in the
 <code>tool.poetry.dependencies</code> section.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">pendulum</span> <span class="o">=</span> <span class="s">&quot;^1.4&quot;</span>
 </pre></div>
 
@@ -577,8 +558,8 @@ package and subdependencies.</p>
 This means any version greater or equal to 1.4.0 and less than 2.0.0 (<code>&gt;=1.4.0 &lt;2.0.0</code>).</p>
 <p>Please read <a href="/docs/versions/">versions</a> for more in-depth information on
 versions, how versions relate to each other, and on version constraints.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p><strong>How does Poetry download the right files?</strong></p>
 <p>When you specify a dependency in <code>pyproject.toml</code>, Poetry first take the name of the package
 that you have requested and searches for it in any repository you have registered using the <code>repositories</code> key.
@@ -628,8 +609,8 @@ deployments.  Even if you develop alone, in six months when reinstalling the
 project you can feel confident the dependencies installed are still working
 even if your dependencies released many new versions since then.  (See note
 below about using the update command.)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>For libraries it is not necessary to commit the lock file.</p>
 </div>
 <h2 id="updating-dependencies-to-their-latest-versions">Updating dependencies to their latest versions<a class="headerlink" href="#updating-dependencies-to-their-latest-versions" title="Permanent link"></a></h2>
@@ -639,8 +620,8 @@ versions, use the <code>update</code> command.  This will fetch the latest match
 versions (according to your <code>pyproject.toml</code> file)  and update the lock file
 with the new versions.  (This is equivalent to deleting the <code>poetry.lock</code>
 file and running <code>install</code> again.)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>Poetry will display a <strong>Warning</strong> when executing an install command if <code>poetry.lock</code> and <code>pyproject.toml</code>
 are not synchronized.</p>
 </div>
@@ -649,8 +630,8 @@ are not synchronized.</p>
 <code>add</code> or <code>remove</code>), Poetry will check if it's currently inside a virtualenv
 and, if not, will use an existing one or create a brand new one for you to
 always work isolated from your global Python installation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
 <p>To create the virtualenv for the current project, Poetry will use
 the currently activated Python version.</p>
 <p>To easily switch between Python versions, it is recommended to
