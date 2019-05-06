@@ -222,8 +222,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#version-constraints" title="Version constraints" class="md-nav__link">
-    Version constraints
+  <a href="#_4" title="バージョン制約" class="md-nav__link">
+    バージョン制約
   </a>
   
 </li>
@@ -234,23 +234,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-dependencies" title="Installing dependencies" class="md-nav__link">
-    Installing dependencies
+  <a href="#_5" title="依存関係のインストール" class="md-nav__link">
+    依存関係のインストール
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-without-poetrylock" title="Installing without poetry.lock" class="md-nav__link">
-    Installing without poetry.lock
+  <a href="#poetrylock" title="poetry.lock 無しのインストール" class="md-nav__link">
+    poetry.lock 無しのインストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-with-poetrylock" title="Installing with poetry.lock" class="md-nav__link">
-    Installing with poetry.lock
+  <a href="#poetrylock_1" title="poetry.lock 有りのインストール" class="md-nav__link">
+    poetry.lock 有りのインストール
   </a>
   
 </li>
@@ -424,8 +424,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#version-constraints" title="Version constraints" class="md-nav__link">
-    Version constraints
+  <a href="#_4" title="バージョン制約" class="md-nav__link">
+    バージョン制約
   </a>
   
 </li>
@@ -436,23 +436,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-dependencies" title="Installing dependencies" class="md-nav__link">
-    Installing dependencies
+  <a href="#_5" title="依存関係のインストール" class="md-nav__link">
+    依存関係のインストール
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-without-poetrylock" title="Installing without poetry.lock" class="md-nav__link">
-    Installing without poetry.lock
+  <a href="#poetrylock" title="poetry.lock 無しのインストール" class="md-nav__link">
+    poetry.lock 無しのインストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-with-poetrylock" title="Installing with poetry.lock" class="md-nav__link">
-    Installing with poetry.lock
+  <a href="#poetrylock_1" title="poetry.lock 有りのインストール" class="md-nav__link">
+    poetry.lock 有りのインストール
   </a>
   
 </li>
@@ -508,7 +508,7 @@ Poetryをまだインストールしていない場合は、 <a href="/docs/">In
 <div class="codehilite"><pre><span></span>poetry new poetry-demo
 </pre></div>
 
-<p>This will create the <code>poetry-demo</code> directory with the following content:</p>
+<p>このコマンドは、次の内容を持つ <code>poetry-demo</code> ディレクトリを作成します:</p>
 <div class="codehilite"><pre><span></span>poetry-demo
 ├── pyproject.toml
 ├── README.rst
@@ -519,8 +519,9 @@ Poetryをまだインストールしていない場合は、 <a href="/docs/">In
     └── test_poetry_demo.py
 </pre></div>
 
-<p>The <code>pyproject.toml</code> file is what is the most important here. This will
-orchestrate your project and its dependencies. For now, it looks like this:</p>
+<p><code>pyproject.toml</code> ファイルがここでは最も重要なものです。
+このファイルが、プロジェクトの依存関係を統括します。
+今のところの中身は、このようになっています:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="na">name</span> <span class="o">=</span> <span class="s">&quot;poetry-demo&quot;</span>
 <span class="na">version</span> <span class="o">=</span> <span class="s">&quot;0.1.0&quot;</span>
@@ -535,56 +536,52 @@ orchestrate your project and its dependencies. For now, it looks like this:</p>
 </pre></div>
 
 <h3 id="_3">依存関係の指定<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
-<p>If you want to add dependencies to your project, you can specify them in the
-<code>tool.poetry.dependencies</code> section.</p>
+<p>プロジェクトに依存関係を追加したい場合は、 <code>tool.poetry.dependencies</code> セクションに指定できます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 <span class="na">pendulum</span> <span class="o">=</span> <span class="s">&quot;^1.4&quot;</span>
 </pre></div>
 
-<p>As you can see, it takes a mapping of <strong>package names</strong> and <strong>version
-constraints</strong>.</p>
-<p>Poetry uses this information to search for the right set of files in package
-"repositories" that you register in the <code>tool.poetry.repositories</code> section,
-or on <a href="https://pypi.org">PyPI</a> by default.</p>
-<p>Also, instead of modifying the <code>pyproject.toml</code> file by hand, you can use
-the <code>add</code> command.</p>
+<p>見て分かるように、このセクションには <strong>パッケージ名</strong> と <strong>バージョン制約</strong> の対応付けを書きます。</p>
+<p>Poetryはこの情報を使い、 <code>tool.poetry.repositories</code> セクションに登録されたパッケージ "レポジトリ"
+もしくはデフォルトの <a href="https://pypi.org">PyPI</a> から、正しいファイル群を検索します。</p>
+<p><code>pyproject.toml</code> ファイルを手で編集する変わりに、 <code>add</code> コマンドも使えます。</p>
 <div class="codehilite"><pre><span></span>$ poetry add pendulum
 </pre></div>
 
-<p>It will automatically find a suitable version constraint <strong>and install</strong> the
-package and subdependencies.</p>
-<h3 id="version-constraints">Version constraints<a class="headerlink" href="#version-constraints" title="Permanent link"></a></h3>
-<p>In our example, we are requesting the <code>pendulum</code> package with the version constraint <code>^1.4</code>.
-This means any version greater or equal to 1.4.0 and less than 2.0.0 (<code>&gt;=1.4.0 &lt;2.0.0</code>).</p>
-<p>Please read <a href="/docs/versions/">versions</a> for more in-depth information on
-versions, how versions relate to each other, and on version constraints.</p>
+<p>このコマンドは自動的に適切なバージョン制約を見付け、パッケージとその依存関係を <strong>インストールします</strong> 。</p>
+<h3 id="_4">バージョン制約<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<p>今の例では、 <code>^1.4</code> というバージョン制約の付いた  <code>pendulum</code> パッケージを要求しています。
+この制約は、1.4.0以上かつ2.0.0未満のバージョンという意味です (<code>&gt;=1.4.0 &lt;2.0.0</code>)。</p>
+<p>バージョンやバージョンどうしの関係、バージョン制約について、より深いことについては <a href="/docs/versions/">versions</a>
+を読んでください。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p><strong>How does Poetry download the right files?</strong></p>
-<p>When you specify a dependency in <code>pyproject.toml</code>, Poetry first take the name of the package
-that you have requested and searches for it in any repository you have registered using the <code>repositories</code> key.
-If you have not registered any extra repositories, or it does not find a package with that name in the
-repositories you have specified, it falls back on PyPI.</p>
-<p>When Poetry finds the right package, it then attempts to find the best match
-for the version constraint you have specified.</p>
 </div>
-<h2 id="installing-dependencies">Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permanent link"></a></h2>
-<p>To install the defined dependencies for your project, just run the <code>install</code>
-command.</p>
+<p><strong>Poetryはどうやって正しいファイルをダウンロードするのか?</strong></p>
+<div class="codehilite"><pre><span></span>`pyproject.toml` に依存関係を指定しているとき、Poetryはまず最初に要求されたパッケージ名を取り出し、
+`repositories` キーに登録されたレポジトリを検索します。
+追加のレポジトリを登録していないか、指定したレポジトリから要求された名前の
+パッケージが見付からない場合は、PyPIに戻って検索します。
+
+Poetryが正しいパッケージを複数見付けたときは、指定されたバージョン制約に
+最も適合するものを見付けようとします。
+</pre></div>
+
+
+<h2 id="_5">依存関係のインストール<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<p>プロジェクトに定義された依存関係をインストールするには、 <code>install</code> コマンドを実行するだけです。</p>
 <div class="codehilite"><pre><span></span>poetry install
 </pre></div>
 
-<p>When you run this command, one of two things may happen:</p>
-<h3 id="installing-without-poetrylock">Installing without <code>poetry.lock</code><a class="headerlink" href="#installing-without-poetrylock" title="Permanent link"></a></h3>
-<p>If you have never run the command before and there is also no <code>poetry.lock</code>
-file present, Poetry simply resolves all dependencies listed in your
-<code>pyproject.toml</code> file and downloads the latest version of their files.</p>
-<p>When Poetry has finished installing, it writes all of the packages and the
-exact versions of them that it downloaded to the <code>poetry.lock</code> file, locking
-the project to those specific versions.  You should commit the <code>poetry.lock</code>
-file to your project repo so that all people working on the project are
-locked to the same versions of dependencies (more below).</p>
-<h3 id="installing-with-poetrylock">Installing with <code>poetry.lock</code><a class="headerlink" href="#installing-with-poetrylock" title="Permanent link"></a></h3>
+<p>このコマンドを実行すると、2つのうちどちらかが起こります:</p>
+<h3 id="poetrylock"><code>poetry.lock</code> 無しのインストール<a class="headerlink" href="#poetrylock" title="Permanent link"></a></h3>
+<p>以前にこのコマンドを実行したことが無く、 <code>poetry.lock</code> ファイルも存在しない場合は、Poetryは <code>pyproject.toml</code>
+に並べられた全ての依存関係を解決し、それらのファイルの最新バージョンをダウンロードするだけです。</p>
+<p>Poetryがインストールを完了すると、ダウンロードしたパッケージとその正確なバージョンを <code>poetry.lock</code>
+へ書き込み、その特定のバージョンでプロジェクトを固定します。
+プロジェクトレポジトリに <code>poetry.lock</code>
+ファイルをコミットし、このプロジェクトに携わる全ての人にとって、同じバージョンの依存関係を強制されるべきです (下でさらに解説します)。</p>
+<h3 id="poetrylock_1"><code>poetry.lock</code> 有りのインストール<a class="headerlink" href="#poetrylock_1" title="Permanent link"></a></h3>
 <p>This brings us to the second scenario. If there is already a <code>poetry.lock</code>
 file as well as a <code>pyproject.toml</code> file when you run <code>poetry install</code>, it
 means either you ran the <code>install</code> command before, or someone else on the
