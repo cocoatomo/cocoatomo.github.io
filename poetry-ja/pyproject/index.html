@@ -602,18 +602,18 @@
               
                 
                 
-                <h1 id="pyprojecttoml"><code>pyproject.toml</code> ファイル<a class="headerlink" href="#pyprojecttoml" title="Permanent link"></a></h1>
+                <h1 id="pyprojecttoml"><code>pyproject.toml</code> ファイル<a class="headerlink" href="#pyprojecttoml" title="Permanent link">🔗</a></h1>
 <p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of
 multiple sections.</p>
-<h2 id="name">name<a class="headerlink" href="#name" title="Permanent link"></a></h2>
+<h2 id="name">name<a class="headerlink" href="#name" title="Permanent link">🔗</a></h2>
 <p>The name of the package. <strong>Required</strong></p>
-<h2 id="version">version<a class="headerlink" href="#version" title="Permanent link"></a></h2>
+<h2 id="version">version<a class="headerlink" href="#version" title="Permanent link">🔗</a></h2>
 <p>The version of the package. <strong>Required</strong></p>
 <p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it
 will not be enforced and you remain free to follow another specification.</p>
-<h2 id="description">description<a class="headerlink" href="#description" title="Permanent link"></a></h2>
+<h2 id="description">description<a class="headerlink" href="#description" title="Permanent link">🔗</a></h2>
 <p>A short description of the package. <strong>Required</strong></p>
-<h2 id="license">license<a class="headerlink" href="#license" title="Permanent link"></a></h2>
+<h2 id="license">license<a class="headerlink" href="#license" title="Permanent link">🔗</a></h2>
 <p>The license of the package.</p>
 <p>The recommended notation for the most common licenses is (alphabetical):</p>
 <ul>
@@ -634,21 +634,21 @@ will not be enforced and you remain free to follow another specification.</p>
 <p>Optional, but it is highly recommended to supply this.  More identifiers are
 listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License
 Registry</a>.</p>
-<h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link"></a></h2>
+<h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link">🔗</a></h2>
 <p>The authors of the package. <strong>Required</strong></p>
 <p>This is a list of authors and should contain at least one author. Authors must be in the form <code>name &lt;email&gt;</code>.</p>
-<h2 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link"></a></h2>
+<h2 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link">🔗</a></h2>
 <p>The readme file of the package. <strong>Optional</strong></p>
 <p>The file can be either <code>README.rst</code> or <code>README.md</code>.</p>
-<h2 id="homepage">homepage<a class="headerlink" href="#homepage" title="Permanent link"></a></h2>
+<h2 id="homepage">homepage<a class="headerlink" href="#homepage" title="Permanent link">🔗</a></h2>
 <p>An URL to the website of the project. <strong>Optional</strong></p>
-<h2 id="repository">repository<a class="headerlink" href="#repository" title="Permanent link"></a></h2>
+<h2 id="repository">repository<a class="headerlink" href="#repository" title="Permanent link">🔗</a></h2>
 <p>An URL to the repository of the project. <strong>Optional</strong></p>
-<h2 id="documentation">documentation<a class="headerlink" href="#documentation" title="Permanent link"></a></h2>
+<h2 id="documentation">documentation<a class="headerlink" href="#documentation" title="Permanent link">🔗</a></h2>
 <p>An URL to the documentation of the project. <strong>Optional</strong></p>
-<h2 id="keywords">keywords<a class="headerlink" href="#keywords" title="Permanent link"></a></h2>
+<h2 id="keywords">keywords<a class="headerlink" href="#keywords" title="Permanent link">🔗</a></h2>
 <p>A list of keywords (max: 5) that the package is related to. <strong>Optional</strong></p>
-<h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link"></a></h2>
+<h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link">🔗</a></h2>
 <p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that
 describe the project. <strong>Optional</strong></p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
@@ -669,7 +669,7 @@ describe the project. <strong>Optional</strong></p>
 <p>Note that Python classifiers are still automatically added for you and are determined by your <code>python</code> requirement.</p>
 <p>The <code>license</code> property will also set the License classifier automatically.</p>
 </div>
-<h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link"></a></h2>
+<h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link">🔗</a></h2>
 <p>A list of packages and modules to include in the final distribution.</p>
 <p>If your project structure differs from the standard one supported by
 <code>poetry</code>, you can specify the packages you want to include in the final
@@ -717,7 +717,7 @@ another package named <code>extra_package</code>, you will need to specify <code
 <p>Poetry is clever enough to detect Python subpackages.</p>
 <p>Thus, you only have to specify the directory where your root package resides.</p>
 </div>
-<h2 id="include-and-exclude">include and exclude<a class="headerlink" href="#include-and-exclude" title="Permanent link"></a></h2>
+<h2 id="include-and-exclude">include and exclude<a class="headerlink" href="#include-and-exclude" title="Permanent link">🔗</a></h2>
 <p>A list of patterns that will be included in the final package.</p>
 <p>You can explicitly specify to Poetry that a set of globs should be ignored
 or included for the purposes of packaging.  The globs specified in the
@@ -735,7 +735,7 @@ the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
 <div class="codehilite"><pre><span></span>exclude = [&quot;my_package/excluded.py&quot;]
 </pre></div>
 
-<h2 id="dependencies-and-dev-dependencies"><code>dependencies</code> and <code>dev-dependencies</code><a class="headerlink" href="#dependencies-and-dev-dependencies" title="Permanent link"></a></h2>
+<h2 id="dependencies-and-dev-dependencies"><code>dependencies</code> and <code>dev-dependencies</code><a class="headerlink" href="#dependencies-and-dev-dependencies" title="Permanent link">🔗</a></h2>
 <p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by
 default.  Only the name and a version string are required in this case.</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
@@ -761,7 +761,7 @@ is compatible is mandatory:</p>
 </pre></div>
 
 </div>
-<h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link"></a></h2>
+<h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link">🔗</a></h2>
 <p>This section describe the scripts or executable that will be installed when
 installing the package</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
@@ -771,7 +771,7 @@ installing the package</p>
 
 <p>Here, we will have the <code>poetry</code> script installed which will execute
 <code>console.run</code> in the <code>poetry</code> package.</p>
-<h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link"></a></h2>
+<h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link">🔗</a></h2>
 <p>Poetry supports extras to allow expression of:</p>
 <ul>
 <li>optional dependencies, which enhance a package, but are not required; and</li>
@@ -815,7 +815,7 @@ option:</p>
 poetry install -E mysql -E pgsql
 </pre></div>
 
-<h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link"></a></h2>
+<h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link">🔗</a></h2>
 <p>Poetry supports arbitrary plugins which work similarly to <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry
 points</a>.  To
 match the example in the setuptools documentation, you would use the
@@ -829,7 +829,7 @@ following:</p>
 &quot;.rst&quot; = &quot;some_module:SomeClass&quot;
 </pre></div>
 
-<h2 id="poetry-and-pep-517">Poetry and PEP-517<a class="headerlink" href="#poetry-and-pep-517" title="Permanent link"></a></h2>
+<h2 id="poetry-and-pep-517">Poetry and PEP-517<a class="headerlink" href="#poetry-and-pep-517" title="Permanent link">🔗</a></h2>
 <p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard
 way to define alternative build systems to build a Python project.</p>
 <p>Poetry is compliant with PEP-517 so if you use Poetry to manage your Python

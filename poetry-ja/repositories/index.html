@@ -432,24 +432,24 @@
               
                 
                 
-                <h1 id="_1">レポジトリ<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<h2 id="using-the-pypi-repository">Using the PyPI repository<a class="headerlink" href="#using-the-pypi-repository" title="Permanent link"></a></h2>
+                <h1 id="_1">レポジトリ<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h1>
+<h2 id="using-the-pypi-repository">Using the PyPI repository<a class="headerlink" href="#using-the-pypi-repository" title="Permanent link">🔗</a></h2>
 <p>By default, Poetry is configured to use the <a href="https://pypi.org">PyPI</a>
 repository, for package installation and publishing.</p>
 <p>So, when you add dependencies to your project, Poetry will assume they are
 available on PyPI.</p>
 <p>This represents most cases and will likely be enough for most users.</p>
-<h2 id="using-a-private-repository">Using a private repository<a class="headerlink" href="#using-a-private-repository" title="Permanent link"></a></h2>
+<h2 id="using-a-private-repository">Using a private repository<a class="headerlink" href="#using-a-private-repository" title="Permanent link">🔗</a></h2>
 <p>However, at times, you may need to keep your package private while still
 being able to share it with your teammates. In this case, you will need to
 use a private repository.</p>
-<h3 id="adding-a-repository">Adding a repository<a class="headerlink" href="#adding-a-repository" title="Permanent link"></a></h3>
+<h3 id="adding-a-repository">Adding a repository<a class="headerlink" href="#adding-a-repository" title="Permanent link">🔗</a></h3>
 <p>Adding a new repository is easy with the <code>config</code> command.</p>
 <div class="codehilite"><pre><span></span>poetry config repositories.foo https://foo.bar/simple/
 </pre></div>
 
 <p>This will set the url for repository <code>foo</code> to <code>https://foo.bar/simple/</code>.</p>
-<h3 id="configuring-credentials">Configuring credentials<a class="headerlink" href="#configuring-credentials" title="Permanent link"></a></h3>
+<h3 id="configuring-credentials">Configuring credentials<a class="headerlink" href="#configuring-credentials" title="Permanent link">🔗</a></h3>
 <p>If you want to store your credentials for a specific repository, you can do
 so easily:</p>
 <div class="codehilite"><pre><span></span>poetry config http-basic.foo username password
@@ -466,7 +466,7 @@ named <code>pypi</code>:</p>
 </div>
 <p>You can also specify the username and password when using the <code>publish</code>
 command with the <code>--username</code> and <code>--password</code> options.</p>
-<h3 id="install-dependencies-from-a-private-repository">Install dependencies from a private repository<a class="headerlink" href="#install-dependencies-from-a-private-repository" title="Permanent link"></a></h3>
+<h3 id="install-dependencies-from-a-private-repository">Install dependencies from a private repository<a class="headerlink" href="#install-dependencies-from-a-private-repository" title="Permanent link">🔗</a></h3>
 <p>Now that you can publish to your private repository, you need to be able to
 install dependencies from it.</p>
 <p>For that, you have to edit your <code>pyproject.toml</code> file, like so</p>

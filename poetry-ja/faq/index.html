@@ -406,8 +406,8 @@
               
                 
                 
-                <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link"></a></h1>
-<h2 id="why-is-the-dependency-resolution-process-slow">Why is the dependency resolution process slow?<a class="headerlink" href="#why-is-the-dependency-resolution-process-slow" title="Permanent link"></a></h2>
+                <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">🔗</a></h1>
+<h2 id="why-is-the-dependency-resolution-process-slow">Why is the dependency resolution process slow?<a class="headerlink" href="#why-is-the-dependency-resolution-process-slow" title="Permanent link">🔗</a></h2>
 <p>While the dependency resolver at the heart of Poetry is highly optimized and
 should be fast enough for most cases, sometimes, with some specific set of
 dependencies, it can take time to find a valid solution.</p>
@@ -423,7 +423,7 @@ process.</p>
 <p>Once Poetry has cached the releases' information, the dependency resolution process
 will be much faster.</p>
 </div>
-<h2 id="why-are-unbound-version-constraints-a-bad-idea">Why are unbound version constraints a bad idea?<a class="headerlink" href="#why-are-unbound-version-constraints-a-bad-idea" title="Permanent link"></a></h2>
+<h2 id="why-are-unbound-version-constraints-a-bad-idea">Why are unbound version constraints a bad idea?<a class="headerlink" href="#why-are-unbound-version-constraints-a-bad-idea" title="Permanent link">🔗</a></h2>
 <p>A version constraint without an upper bound such as <code>*</code> or <code>&gt;=3.4</code> will allow updates to any future version of the dependency.
 This includes major versions breaking backward compatibility.</p>
 <p>Once a release of your package is published, you cannot tweak its
@@ -434,7 +434,7 @@ which you can increase in a new release after testing that your package is
 compatible with the new major version of your dependency.</p>
 <p>For example instead of using <code>&gt;=3.4</code> you should use <code>~3.4</code> which allows all versions <code>&lt;4.0</code>.
 The <code>^</code> operator works very well with libraries following <a href="https://semver.org">semantic versioning</a>.</p>
-<h2 id="is-tox-supported">Is tox supported?<a class="headerlink" href="#is-tox-supported" title="Permanent link"></a></h2>
+<h2 id="is-tox-supported">Is tox supported?<a class="headerlink" href="#is-tox-supported" title="Permanent link">🔗</a></h2>
 <p>Yes. By using the <a href="https://tox.readthedocs.io/en/latest/config.html#conf-isolated_build">isolated
 builds</a>
 <code>tox</code> provides, you can use it in combination with the PEP 517 compliant
@@ -468,7 +468,7 @@ exist:</p>
     <span class="na">poetry run pytest tests/</span>
 </pre></div>
 
-<h2 id="i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it">I don't want Poetry to manage my virtualenvs. Can I disable it?<a class="headerlink" href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="Permanent link"></a></h2>
+<h2 id="i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it">I don't want Poetry to manage my virtualenvs. Can I disable it?<a class="headerlink" href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="Permanent link">🔗</a></h2>
 <p>While Poetry automatically creates virtualenvs to always work isolated from
 the global Python installation, there are valid reasons why it's not
 necessary and is an overhead, like when working with containers.</p>

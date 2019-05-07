@@ -500,10 +500,10 @@
               
                 
                 
-                <h1 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+                <h1 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h1>
 <p>基本的な使い方の入門として、 <code>pendulum</code> という日付ライブラリをインストールします。
 Poetryをまだインストールしていない場合は、 <a href="/docs/">Introduction</a> の章を参照してください。</p>
-<h2 id="_2">プロジェクトのセットアップ<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<h2 id="_2">プロジェクトのセットアップ<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
 <p>最初に、新しいプロジェクトを作成し、 <code>poetry-demo</code> と名付けましょう:</p>
 <div class="codehilite"><pre><span></span>poetry new poetry-demo
 </pre></div>
@@ -535,7 +535,7 @@ Poetryをまだインストールしていない場合は、 <a href="/docs/">In
 <span class="na">pytest</span> <span class="o">=</span> <span class="s">&quot;^3.4&quot;</span>
 </pre></div>
 
-<h3 id="_3">依存関係の指定<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<h3 id="_3">依存関係の指定<a class="headerlink" href="#_3" title="Permanent link">🔗</a></h3>
 <p>プロジェクトに依存関係を追加したい場合は、 <code>tool.poetry.dependencies</code> セクションに指定できます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 <span class="na">pendulum</span> <span class="o">=</span> <span class="s">&quot;^1.4&quot;</span>
@@ -549,7 +549,7 @@ Poetryをまだインストールしていない場合は、 <a href="/docs/">In
 </pre></div>
 
 <p>このコマンドは自動的に適切なバージョン制約を見付け、パッケージとその依存関係を <strong>インストールします</strong> 。</p>
-<h3 id="_4">バージョン制約<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<h3 id="_4">バージョン制約<a class="headerlink" href="#_4" title="Permanent link">🔗</a></h3>
 <p>今の例では、 <code>^1.4</code> というバージョン制約の付いた  <code>pendulum</code> パッケージを要求しています。
 この制約は、1.4.0以上かつ2.0.0未満のバージョンという意味です (<code>&gt;=1.4.0 &lt;2.0.0</code>)。</p>
 <p>バージョンやバージョンどうしの関係、バージョン制約について、より深いことについては <a href="/docs/versions/">versions</a>
@@ -568,20 +568,20 @@ Poetryが正しいパッケージを複数見付けたときは、指定され�
 </pre></div>
 
 
-<h2 id="_5">依存関係のインストール<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h2 id="_5">依存関係のインストール<a class="headerlink" href="#_5" title="Permanent link">🔗</a></h2>
 <p>プロジェクトに定義された依存関係をインストールするには、 <code>install</code> コマンドを実行するだけです。</p>
 <div class="codehilite"><pre><span></span>poetry install
 </pre></div>
 
 <p>このコマンドを実行すると、2つのうちどちらかが起こります:</p>
-<h3 id="poetrylock"><code>poetry.lock</code> 無しのインストール<a class="headerlink" href="#poetrylock" title="Permanent link"></a></h3>
+<h3 id="poetrylock"><code>poetry.lock</code> 無しのインストール<a class="headerlink" href="#poetrylock" title="Permanent link">🔗</a></h3>
 <p>以前にこのコマンドを実行したことが無く、 <code>poetry.lock</code> ファイルも存在しない場合は、Poetryは <code>pyproject.toml</code>
 に並べられた全ての依存関係を解決し、それらのファイルの最新バージョンをダウンロードするだけです。</p>
 <p>Poetryがインストールを完了すると、ダウンロードしたパッケージとその正確なバージョンを <code>poetry.lock</code>
 へ書き込み、その特定のバージョンでプロジェクトを固定します。
 プロジェクトレポジトリに <code>poetry.lock</code>
 ファイルをコミットし、このプロジェクトに携わる全ての人にとって、同じバージョンの依存関係を強制されるべきです (下でさらに解説します)。</p>
-<h3 id="poetrylock_1"><code>poetry.lock</code> 有りのインストール<a class="headerlink" href="#poetrylock_1" title="Permanent link"></a></h3>
+<h3 id="poetrylock_1"><code>poetry.lock</code> 有りのインストール<a class="headerlink" href="#poetrylock_1" title="Permanent link">🔗</a></h3>
 <p>This brings us to the second scenario. If there is already a <code>poetry.lock</code>
 file as well as a <code>pyproject.toml</code> file when you run <code>poetry install</code>, it
 means either you ran the <code>install</code> command before, or someone else on the
@@ -596,7 +596,7 @@ file, but they may not all be at the very latest available versions (some of
 the dependencies listed in the <code>poetry.lock</code> file may have released newer
 versions since the file was created).  This is by design, it ensures that
 your project does not break because of unexpected changes in dependencies.</p>
-<h3 id="commit-your-poetrylock-file-to-version-control">Commit your <code>poetry.lock</code> file to version control<a class="headerlink" href="#commit-your-poetrylock-file-to-version-control" title="Permanent link"></a></h3>
+<h3 id="commit-your-poetrylock-file-to-version-control">Commit your <code>poetry.lock</code> file to version control<a class="headerlink" href="#commit-your-poetrylock-file-to-version-control" title="Permanent link">🔗</a></h3>
 <p>Committing this file to VC is important because it will cause anyone who
 sets up the project to use the exact same versions of the dependencies that
 you are using.  Your CI server, production machines, other developers in
@@ -610,7 +610,7 @@ below about using the update command.)</p>
 <p class="admonition-title">注意</p>
 <p>For libraries it is not necessary to commit the lock file.</p>
 </div>
-<h2 id="updating-dependencies-to-their-latest-versions">Updating dependencies to their latest versions<a class="headerlink" href="#updating-dependencies-to-their-latest-versions" title="Permanent link"></a></h2>
+<h2 id="updating-dependencies-to-their-latest-versions">Updating dependencies to their latest versions<a class="headerlink" href="#updating-dependencies-to-their-latest-versions" title="Permanent link">🔗</a></h2>
 <p>As mentioned above, the <code>poetry.lock</code> file prevents you from automatically
 getting the latest versions of your dependencies.  To update to the latest
 versions, use the <code>update</code> command.  This will fetch the latest matching
@@ -622,7 +622,7 @@ file and running <code>install</code> again.)</p>
 <p>Poetry will display a <strong>Warning</strong> when executing an install command if <code>poetry.lock</code> and <code>pyproject.toml</code>
 are not synchronized.</p>
 </div>
-<h2 id="poetry-and-virtualenvs">Poetry and virtualenvs<a class="headerlink" href="#poetry-and-virtualenvs" title="Permanent link"></a></h2>
+<h2 id="poetry-and-virtualenvs">Poetry and virtualenvs<a class="headerlink" href="#poetry-and-virtualenvs" title="Permanent link">🔗</a></h2>
 <p>When you execute the <code>install</code> command (or any other "install" commands like
 <code>add</code> or <code>remove</code>), Poetry will check if it's currently inside a virtualenv
 and, if not, will use an existing one or create a brand new one for you to

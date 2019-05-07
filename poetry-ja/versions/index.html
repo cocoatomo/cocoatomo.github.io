@@ -528,11 +528,11 @@
               
                 
                 
-                <h1 id="_1">バージョンと制約<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+                <h1 id="_1">バージョンと制約<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h1>
 <p>Poetry recommends following <a href="https://semver.org">semantic versioning</a> but
 will not enforce it.</p>
-<h2 id="version-constraints">Version constraints<a class="headerlink" href="#version-constraints" title="Permanent link"></a></h2>
-<h3 id="caret-requirements">Caret requirements<a class="headerlink" href="#caret-requirements" title="Permanent link"></a></h3>
+<h2 id="version-constraints">Version constraints<a class="headerlink" href="#version-constraints" title="Permanent link">🔗</a></h2>
+<h3 id="caret-requirements">Caret requirements<a class="headerlink" href="#caret-requirements" title="Permanent link">🔗</a></h3>
 <p><strong>Caret requirements</strong> allow SemVer compatible updates to a specified version.
 An update is allowed if the new version number does not modify the left-most non-zero digit in the major, minor, patch grouping.
 In this case, if we ran <code>poetry update requests</code>, poetry would update us to version <code>2.14.0</code> if it was available,
@@ -579,7 +579,7 @@ would be allowed with them:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="tilde-requirements">Tilde requirements<a class="headerlink" href="#tilde-requirements" title="Permanent link"></a></h3>
+<h3 id="tilde-requirements">Tilde requirements<a class="headerlink" href="#tilde-requirements" title="Permanent link">🔗</a></h3>
 <p><strong>Tilde requirements</strong> specify a minimal version with some ability to update.
 If you specify a major, minor, and patch version or only a major and minor version, only patch-level changes are allowed.
 If you only specify a major version, then minor- and patch-level changes are allowed.</p>
@@ -606,7 +606,7 @@ If you only specify a major version, then minor- and patch-level changes are all
 </tr>
 </tbody>
 </table>
-<h3 id="wildcard-requirements">Wildcard requirements<a class="headerlink" href="#wildcard-requirements" title="Permanent link"></a></h3>
+<h3 id="wildcard-requirements">Wildcard requirements<a class="headerlink" href="#wildcard-requirements" title="Permanent link">🔗</a></h3>
 <p><strong>Wildcard requirements</strong> allow for any version where the wildcard is positioned.</p>
 <p><code>*</code>, <code>1.*</code> and <code>1.2.*</code> are examples of wildcard requirements.</p>
 <table>
@@ -631,7 +631,7 @@ If you only specify a major version, then minor- and patch-level changes are all
 </tr>
 </tbody>
 </table>
-<h3 id="inequality-requirements">Inequality requirements<a class="headerlink" href="#inequality-requirements" title="Permanent link"></a></h3>
+<h3 id="inequality-requirements">Inequality requirements<a class="headerlink" href="#inequality-requirements" title="Permanent link">🔗</a></h3>
 <p><strong>Inequality requirements</strong> allow manually specifying a version range or an exact version to depend on.</p>
 <p>Here are some examples of inequality requirements:</p>
 <div class="codehilite"><pre><span></span>&gt;= 1.2.0
@@ -643,14 +643,14 @@ If you only specify a major version, then minor- and patch-level changes are all
 != 1.2.3
 </pre></div>
 
-<h3 id="exact-requirements">Exact requirements<a class="headerlink" href="#exact-requirements" title="Permanent link"></a></h3>
+<h3 id="exact-requirements">Exact requirements<a class="headerlink" href="#exact-requirements" title="Permanent link">🔗</a></h3>
 <p>You can specify the exact version of a package.  This will tell Poetry to
 install this version and this version only.  If other dependencies require a
 different version, the solver will ultimately fail and abort any install or
 update procedures.</p>
-<h4 id="multiple-requirements">Multiple requirements<a class="headerlink" href="#multiple-requirements" title="Permanent link"></a></h4>
+<h4 id="multiple-requirements">Multiple requirements<a class="headerlink" href="#multiple-requirements" title="Permanent link">🔗</a></h4>
 <p>Multiple version requirements can also be separated with a comma, e.g. <code>&gt;= 1.2, &lt; 1.5</code>.</p>
-<h3 id="git-dependencies"><code>git</code> dependencies<a class="headerlink" href="#git-dependencies" title="Permanent link"></a></h3>
+<h3 id="git-dependencies"><code>git</code> dependencies<a class="headerlink" href="#git-dependencies" title="Permanent link">🔗</a></h3>
 <p>To depend on a library located in a <code>git</code> repository, the minimum
 information you need to specify is the location of the repository with the
 git key:</p>
@@ -669,7 +669,7 @@ want to use the latest commit on a branch named <code>next</code>:</p>
 <span class="na">requests</span> <span class="o">=</span> <span class="s">{ git = &quot;https://github.com/kennethreitz/requests.git&quot;, branch = &quot;next&quot; }</span>
 </pre></div>
 
-<h3 id="path-dependencies"><code>path</code> dependencies<a class="headerlink" href="#path-dependencies" title="Permanent link"></a></h3>
+<h3 id="path-dependencies"><code>path</code> dependencies<a class="headerlink" href="#path-dependencies" title="Permanent link">🔗</a></h3>
 <p>To depend on a library located in a local directory or file, you can use the
 <code>path</code> property:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
@@ -691,7 +691,7 @@ want to use the latest commit on a branch named <code>next</code>:</p>
 Just pass <code>--develop my-package</code> (repeatable as much as you want) to
 the <code>install</code> command.</p>
 </div>
-<h3 id="python-restricted-dependencies">Python restricted dependencies<a class="headerlink" href="#python-restricted-dependencies" title="Permanent link"></a></h3>
+<h3 id="python-restricted-dependencies">Python restricted dependencies<a class="headerlink" href="#python-restricted-dependencies" title="Permanent link">🔗</a></h3>
 <p>You can also specify that a dependency should be installed only for specific
 Python versions:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
@@ -704,7 +704,7 @@ Python versions:</p>
 <span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = [&quot;~2.7&quot;, &quot;^3.2&quot;] }</span>
 </pre></div>
 
-<h3 id="multiple-constraints-dependencies">Multiple constraints dependencies<a class="headerlink" href="#multiple-constraints-dependencies" title="Permanent link"></a></h3>
+<h3 id="multiple-constraints-dependencies">Multiple constraints dependencies<a class="headerlink" href="#multiple-constraints-dependencies" title="Permanent link">🔗</a></h3>
 <p>Sometimes, one of your dependency may have different version ranges
 depending on the target Python versions.</p>
 <p>Let's say you have a dependency on the package <code>foo</code> which is only compatible
