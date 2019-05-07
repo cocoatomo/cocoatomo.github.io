@@ -556,18 +556,14 @@ Poetryをまだインストールしていない場合は、 <a href="/docs/">In
 を読んでください。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-</div>
 <p><strong>Poetryはどうやって正しいファイルをダウンロードするのか?</strong></p>
-<div class="codehilite"><pre><span></span>`pyproject.toml` に依存関係を指定しているとき、Poetryはまず最初に要求されたパッケージ名を取り出し、
-`repositories` キーに登録されたレポジトリを検索します。
+<p><code>pyproject.toml</code> に依存関係を指定しているとき、Poetryはまず最初に要求されたパッケージ名を取り出し、
+<code>repositories</code> キーに登録されたレポジトリを検索します。
 追加のレポジトリを登録していないか、指定したレポジトリから要求された名前の
-パッケージが見付からない場合は、PyPIに戻って検索します。
-
-Poetryが正しいパッケージを複数見付けたときは、指定されたバージョン制約に
-最も適合するものを見付けようとします。
-</pre></div>
-
-
+パッケージが見付からない場合は、PyPIに戻って検索します。</p>
+<p>Poetryが正しいパッケージを複数見付けたときは、指定されたバージョン制約に
+最も適合するものを見付けようとします。</p>
+</div>
 <h2 id="_5">依存関係のインストール<a class="headerlink" href="#_5" title="Permanent link">🔗</a></h2>
 <p>プロジェクトに定義された依存関係をインストールするには、 <code>install</code> コマンドを実行するだけです。</p>
 <div class="codehilite"><pre><span></span>poetry install
