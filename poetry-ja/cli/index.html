@@ -231,8 +231,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#global-options" title="Global options" class="md-nav__link">
-    Global options
+  <a href="#_2" title="グローバルオプション" class="md-nav__link">
+    グローバルオプション
   </a>
   
 </li>
@@ -590,8 +590,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#global-options" title="Global options" class="md-nav__link">
-    Global options
+  <a href="#_2" title="グローバルオプション" class="md-nav__link">
+    グローバルオプション
   </a>
   
 </li>
@@ -863,162 +863,128 @@
                 
                 
                 <h1 id="_1">コマンド<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h1>
-<p>You've already learned how to use the command-line interface to do some
-things.  This chapter documents all the available commands.</p>
-<p>To get help from the command-line, simply call <code>poetry</code> or <code>poetry list</code> to
-see the complete list of commands, then <code>--help</code> combined with any of those
-can give you more information.</p>
-<p>As <code>Poetry</code> uses <a href="https://github.com/sdispater/cleo">cleo</a> you can call
-commands by short name if it's not ambiguous.</p>
+<p>これまでに、何かをするためのコマンドラインインターフェースの使い方を学びました。
+この章では、全ての利用可能なコマンドについて記述します。</p>
+<p>コマントラインでヘルプを出すには、 <code>poetry</code> もしくは <code>poetry list</code>
+と呼び出すとコマンドの完全なリストが見られて、コマンドのどれかに <code>--help</code> を付けて実行するとより詳しい情報が得られます。</p>
+<p><code>Poetry</code> は <a href="https://github.com/sdispater/cleo">cleo</a>
+を使っているので、曖昧性が無い場合は、短い名前でもコマンドが呼び出せます。</p>
 <div class="codehilite"><pre><span></span>poetry up
 </pre></div>
 
-<p>calls <code>poetry update</code>.</p>
-<h2 id="global-options">Global options<a class="headerlink" href="#global-options" title="Permanent link">🔗</a></h2>
+<p>これは <code>poetry update</code> コマンドを呼び出します。</p>
+<h2 id="_2">グローバルオプション<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
 <ul>
-<li><code>--verbose (-v|vv|vvv)</code>: Increase the verbosity of messages: 1 for normal
-  output, 2 for more verbose output and 3 for debug.</li>
-<li><code>--help (-h)</code> : Display help information.</li>
-<li><code>--quiet (-q)</code> : Do not output any message.</li>
-<li><code>--ansi</code>: Force ANSI output.</li>
-<li><code>--no-ansi</code>: Disable ANSI output.</li>
-<li><code>--version (-V)</code>: Display this application version.</li>
+<li><code>--verbose (-v|vv|vvv)</code>: メッセージの冗長さを増やします:
+  1つでは標準の出力、2つではより冗長な出力、3つではデバッグ出力です。</li>
+<li><code>--help (-h)</code> : ヘルプ情報を表示します。</li>
+<li><code>--quiet (-q)</code> : メッセージを出力しません。</li>
+<li><code>--ansi</code>: ANSI出力を強制します。</li>
+<li><code>--no-ansi</code>: ANSI出力を無効にします。</li>
+<li><code>--version (-V)</code>: このアプリケーションのバージョンを表示します。</li>
 </ul>
 <h2 id="new">new<a class="headerlink" href="#new" title="Permanent link">🔗</a></h2>
-<p>This command will help you kickstart your new Python project by creating a
-directory structure suitable for most projects.</p>
+<p>このコマンドは、ほとんどのプロジェクトに適するディレクトリ構造を作成して、新しいPythonプロジェクトに勢いをつける助けをしてくれます。</p>
 <div class="codehilite"><pre><span></span>poetry new my-package
 </pre></div>
 
-<p>will create a folder as follows:</p>
+<p>というコマンドは次のフォルダを作成します:</p>
 <div class="codehilite"><pre><span></span>my-package
-
 ├── pyproject.toml
-
 ├── README.rst
-
 ├── my_package
-
 │   └── __init__.py
-
 └── tests
-
     ├── __init__.py
-
     └── test_my_package
 </pre></div>
 
-<p>If you want to name your project differently than the folder, you can pass
-the <code>--name</code> option:</p>
+<p>フォルダとは別のプロジェクト名を付けたい場合は、 <code>--name</code> オプションで渡せます:</p>
 <div class="codehilite"><pre><span></span>poetry new my-folder --name my-package
 </pre></div>
 
-<p>If you want to use a src folder, you can use the <code>--src</code> option:</p>
+<p>srcフォルダを使いたい場合は、 <code>--src</code> オプションが使えます:</p>
 <div class="codehilite"><pre><span></span>poetry new --src my-package
 </pre></div>
 
-<p>That will create a folder structure as follows:</p>
+<p>このコマンドは次のようなフォルダ構成を作成します:</p>
 <div class="codehilite"><pre><span></span>my-package
-
 ├── pyproject.toml
-
 ├── README.rst
-
 ├── src
-
 │   └── my_package
-
 │       └── __init__.py
-
 └── tests
-
     ├── __init__.py
-
     └── test_my_package
 </pre></div>
 
 <h2 id="init">init<a class="headerlink" href="#init" title="Permanent link">🔗</a></h2>
-<p>This command will help you create a <code>pyproject.toml</code> file interactively by
-prompting you to provide basic information about your package.</p>
-<p>It will interactively ask you to fill in the fields, while using some smart
-defaults.</p>
+<p>このコマンドは、パッケージについての基本的な情報を提供するよう促して、 <code>pyproject.toml</code> ファイルを対話的に作成する助けになります。</p>
+<p>このコマンドは、賢いデフォルト設定を使いつつ、フィールドを埋めるよう対話的に求めます。</p>
 <div class="codehilite"><pre><span></span>poetry init
 </pre></div>
 
 <h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--name</code>: Name of the package.</li>
-<li><code>--description</code>: Description of the package.</li>
-<li><code>--author</code>: Author of the package.</li>
-<li><code>--dependency</code>: Package to require with a version constraint. Should be in
-  format <code>foo:1.0.0</code>.</li>
-<li><code>--dev-dependency</code>: Development requirements, see <code>--require</code>.</li>
+<li><code>--name</code>: パッケージ名。</li>
+<li><code>--description</code>: パッケージの説明。</li>
+<li><code>--author</code>: パッケージの作者。</li>
+<li><code>--dependency</code>: バージョン制約付きの要求されるパッケージ。 <code>foo:1.0.0</code> 形式でなければいけません。</li>
+<li><code>--dev-dependency</code>: 開発時に要求されるパッケージ、 <code>--require</code> を参照してください。</li>
 </ul>
 <h2 id="install">install<a class="headerlink" href="#install" title="Permanent link">🔗</a></h2>
-<p>The <code>install</code> command reads the <code>pyproject.toml</code> file from the current
-project, resolves the dependencies, and installs them.</p>
+<p><code>install</code> コマンドは、現在のプロジェクトにある <code>pyproject.toml</code> ファイルを読み込み、依存関係を解決し、インストールします。</p>
 <div class="codehilite"><pre><span></span>poetry install
 </pre></div>
 
-<p>If there is a <code>poetry.lock</code> file in the current directory, it will use the
-exact versions from there instead of resolving them.  This ensures that
-everyone using the library will get the same versions of the dependencies.</p>
-<p>If there is no <code>poetry.lock</code> file, Poetry will create one after dependency
-resolution.</p>
-<p>You can specify to the command that you do not want the development
-dependencies installed by passing the <code>--no-dev</code> option.</p>
+<p><code>poetry.lock</code> ファイルが今のディレクトリにある場合は、依存関係を解決する代わりに、ロックファイルにある厳密なバージョンを使います。
+これにより、そのライブラリを使う全員が同じバージョンの依存関係を手に入れることを保証します。</p>
+<p><code>poetry.lock</code> ファイルが無い場合は、Poetryは依存関係解決の結果に従ってロックファイルを作成します。</p>
+<p><code>--no-dev</code> オプションを渡すことで、開発用の依存関係をインストールさせないで欲しいことをコマンドに指定できます。</p>
 <div class="codehilite"><pre><span></span>poetry install --no-dev
 </pre></div>
 
-<p>You can also specify the extras you want installed by passing the
-<code>--E|--extras</code> option (See <a href="#extras">Extras</a> for more info)</p>
+<p><code>--E|--extras</code> オプションを渡すことで、インストールして欲しい追加の依存関係の指定もできます (より詳しいことは
+<a href="#extras">Extras</a> を参照してください)</p>
 <div class="codehilite"><pre><span></span>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
-
 poetry install -E mysql -E pgsql
 </pre></div>
 
 <h3 id="options_1">Options<a class="headerlink" href="#options_1" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--no-dev</code>: Do not install dev dependencies.</li>
-<li><code>--extras (-E)</code>: Features to install (multiple values allowed).</li>
+<li><code>--no-dev</code>: 開発用の依存関係をインストールしない。</li>
+<li><code>--extras (-E)</code>: インストールする機能 (複数値も可能です)。</li>
 </ul>
 <h2 id="update">update<a class="headerlink" href="#update" title="Permanent link">🔗</a></h2>
-<p>In order to get the latest versions of the dependencies and to update the
-<code>poetry.lock</code> file, you should use the <code>update</code> command.</p>
+<p>最新バージョンの依存関係を取得し、 <code>poetry.lock</code> を更新するには、 <code>update</code> コマンドを使いましょう。</p>
 <div class="codehilite"><pre><span></span>poetry update
 </pre></div>
 
-<p>This will resolve all dependencies of the project and write the exact
-versions into <code>poetry.lock</code>.</p>
-<p>If you just want to update a few packages and not all, you can list them as
-such:</p>
+<p>このコマンドは、プロジェクトの全ての依存関係を解決し、その厳密なバージョンを <code>poetry.lock</code> に書き込みます。</p>
+<p>全てではない一部のパッケージだけを更新したい場合は、このように並べて指定できます:</p>
 <div class="codehilite"><pre><span></span>poetry update requests toml
 </pre></div>
 
 <h3 id="options_2">Options<a class="headerlink" href="#options_2" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--dry-run</code> : Outputs the operations but will not execute anything
-  (implicitly enables --verbose).</li>
-<li><code>--no-dev</code> : Do not install dev dependencies.</li>
-<li><code>--lock</code> : Do not perform install (only update the lockfile).</li>
+<li><code>--dry-run</code> : 作業を表示しますが、何も実行しません (暗黙的に --verbose が有効になります)。</li>
+<li><code>--no-dev</code> : 開発用の依存関係をインストールしません。</li>
+<li><code>--lock</code> : インストールを行いません (ロックファイルを更新するだけです)。</li>
 </ul>
 <h2 id="add">add<a class="headerlink" href="#add" title="Permanent link">🔗</a></h2>
-<p>The <code>add</code> command adds required packages to your <code>pyproject.toml</code> and
-installs them.</p>
-<p>If you do not specify a version constraint, poetry will choose a suitable
-one based on the available package versions.</p>
+<p><code>add</code> コマンドは <code>pyproject.toml</code> に要求しているパッケージを追加し、インストールします。</p>
+<p>バージョン制約を指定しなかった場合は、Poetryは利用可能なパッケージバージョンに基づいて適切なものを選びます。</p>
 <div class="codehilite"><pre><span></span>poetry add requests pendulum
 </pre></div>
 
-<p>You can also add <code>git</code> dependencies:</p>
+<p><code>git</code> 依存関係の追加もできます:</p>
 <div class="codehilite"><pre><span></span>poetry add pendulum --git https://github.com/sdispater/pendulum.git
 </pre></div>
 
-<p>or make them point to a local directory or file:</p>
+<p>のようにするか、ローカルのディレクトリやファイルを指し示すようにします:</p>
 <div class="codehilite"><pre><span></span>poetry add my-package --path ../my-package/
-
 poetry add my-package --path ../my-package/dist/my-package-0.1.0.tar.gz
-
 poetry add my-package --path ../my-package/dist/my_package-0.1.0.whl
 </pre></div>
 
@@ -1028,7 +994,6 @@ the local directory will be reflected directly in environment.</p>
 <p>If you don't want the dependency to be installed in editable mode you can
 specify it in the <code>pyproject.toml</code> file:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">my-package</span> <span class="o">=</span> <span class="s">{path = &quot;../my/path&quot;, develop = false}</span>
 </pre></div>
 
@@ -1039,8 +1004,7 @@ specify it in the <code>pyproject.toml</code> file:</p>
 <li><code>--path</code>: The path to a dependency.</li>
 <li><code>--extras (-E)</code>: Extras to activate for the dependency.</li>
 <li><code>--optional</code> : Add as an optional dependency.</li>
-<li><code>--dry-run</code> : Outputs the operations but will not execute anything
-  (implicitly enables --verbose).</li>
+<li><code>--dry-run</code> : 作業を表示しますが、何も実行しません (暗黙的に --verbose が有効になります)。</li>
 </ul>
 <h2 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">🔗</a></h2>
 <p>The <code>remove</code> command removes a package from the current list of installed
@@ -1051,8 +1015,7 @@ packages.</p>
 <h3 id="options_4">Options<a class="headerlink" href="#options_4" title="Permanent link">🔗</a></h3>
 <ul>
 <li><code>--dev (-D)</code>: Removes a package from the development dependencies.</li>
-<li><code>--dry-run</code> : Outputs the operations but will not execute anything
-  (implicitly enables --verbose).</li>
+<li><code>--dry-run</code> : 作業を表示しますが、何も実行しません (暗黙的に --verbose が有効になります)。</li>
 </ul>
 <h2 id="show">show<a class="headerlink" href="#show" title="Permanent link">🔗</a></h2>
 <p>To list all of the available packages, you can use the <code>show</code> command.</p>
@@ -1063,22 +1026,13 @@ packages.</p>
 package name.</p>
 <div class="codehilite"><pre><span></span>poetry show pendulum
 
-
-
 name        : pendulum
-
 version     : <span class="m">1</span>.4.2
-
 description : Python datetimes made easy
 
-
-
 dependencies:
-
  - python-dateutil &gt;<span class="o">=</span><span class="m">2</span>.6.1
-
  - tzlocal &gt;<span class="o">=</span><span class="m">1</span>.4
-
  - pytzdata &gt;<span class="o">=</span><span class="m">2017</span>.2.2
 </pre></div>
 
@@ -1143,7 +1097,6 @@ virtualenv.</p>
 <p>It can also execute one of the scripts defined in <code>pyproject.toml</code>.</p>
 <p>So, if you have a script defined like this:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
-
 <span class="na">my-script</span> <span class="o">=</span> <span class="s">&quot;my_module:main&quot;</span>
 </pre></div>
 
