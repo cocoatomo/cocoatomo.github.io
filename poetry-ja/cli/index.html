@@ -413,8 +413,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#_3" title="使い方" class="md-nav__link">
+    使い方
   </a>
   
 </li>
@@ -772,8 +772,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#_3" title="使い方" class="md-nav__link">
+    使い方
   </a>
   
 </li>
@@ -988,42 +988,38 @@ poetry add my-package --path ../my-package/dist/my-package-0.1.0.tar.gz
 poetry add my-package --path ../my-package/dist/my_package-0.1.0.whl
 </pre></div>
 
-<p>Path dependencies pointing to a local directory will be installed in
-editable mode (i.e. setuptools "develop mode").  It means that changes in
-the local directory will be reflected directly in environment.</p>
-<p>If you don't want the dependency to be installed in editable mode you can
-specify it in the <code>pyproject.toml</code> file:</p>
+<p>ローカルのディレクトリを指すパス依存関係は、編集可能モード (つまり、setuptoolsの"develop mode") でインストールされます。
+これは、ローカルのディレクトリの変更が、動作環境に直接影響するということです。</p>
+<p>依存関係を編集可能モードでインストールしたくない場合は、 <code>pyproject.toml</code> ファイルでその指定ができます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 <span class="na">my-package</span> <span class="o">=</span> <span class="s">{path = &quot;../my/path&quot;, develop = false}</span>
 </pre></div>
 
 <h3 id="options_3">Options<a class="headerlink" href="#options_3" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--dev (-D)</code>: Add package as development dependency.</li>
-<li><code>--git</code>: The url of the Git repository.</li>
-<li><code>--path</code>: The path to a dependency.</li>
-<li><code>--extras (-E)</code>: Extras to activate for the dependency.</li>
-<li><code>--optional</code> : Add as an optional dependency.</li>
+<li><code>--dev (-D)</code>: 開発用の依存関係としてパッケージを追加します。</li>
+<li><code>--git</code>: GitレポジトリのURL。</li>
+<li><code>--path</code>: 依存関係へのパス。</li>
+<li><code>--extras (-E)</code>: 追加で有効化される依存関係。</li>
+<li><code>--optional</code> : オプションの依存関係を追加します。</li>
 <li><code>--dry-run</code> : 作業を表示しますが、何も実行しません (暗黙的に --verbose が有効になります)。</li>
 </ul>
 <h2 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">🔗</a></h2>
-<p>The <code>remove</code> command removes a package from the current list of installed
-packages.</p>
+<p><code>remove</code> コマンドは、現在のインストールされたパッケージの一覧からパッケージを削除します。</p>
 <div class="codehilite"><pre><span></span>poetry remove pendulum
 </pre></div>
 
 <h3 id="options_4">Options<a class="headerlink" href="#options_4" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--dev (-D)</code>: Removes a package from the development dependencies.</li>
+<li><code>--dev (-D)</code>: 開発用の依存関係からパッケージを削除します。</li>
 <li><code>--dry-run</code> : 作業を表示しますが、何も実行しません (暗黙的に --verbose が有効になります)。</li>
 </ul>
 <h2 id="show">show<a class="headerlink" href="#show" title="Permanent link">🔗</a></h2>
-<p>To list all of the available packages, you can use the <code>show</code> command.</p>
+<p>全ての利用可能なパッケージを列挙するには、 <code>show</code> コマンドが使えます。</p>
 <div class="codehilite"><pre><span></span>poetry show
 </pre></div>
 
-<p>If you want to see the details of a certain package, you can pass the
-package name.</p>
+<p>ある特定のパッケージの詳細を見たい場合は、パッケージ名を渡せます。</p>
 <div class="codehilite"><pre><span></span>poetry show pendulum
 
 name        : pendulum
@@ -1038,51 +1034,46 @@ dependencies:
 
 <h3 id="options_5">Options<a class="headerlink" href="#options_5" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--no-dev</code>: Do not list the dev dependencies.</li>
-<li><code>--tree</code>: List the dependencies as a tree.</li>
-<li><code>--latest (-l)</code>: Show the latest version.</li>
-<li><code>--outdated (-o)</code>: Show the latest version but only for packages that are
-  outdated.</li>
+<li><code>--no-dev</code>: 開発用の依存関係を列挙しません。</li>
+<li><code>--tree</code>: 依存関係を木構造で列挙します。</li>
+<li><code>--latest (-l)</code>: 最新バージョンを表示します。</li>
+<li><code>--outdated (-o)</code>: 古くなったパッケージの最新バージョンだけを表示します。</li>
 </ul>
 <h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">🔗</a></h2>
 <p>The <code>build</code> command builds the source and wheels archives.</p>
 <div class="codehilite"><pre><span></span>poetry build
 </pre></div>
 
-<p>Note that, at the moment, only pure python wheels are supported.</p>
+<p>現時点では、ピュアPythonのwheelのみサポートされていることに注意してください。</p>
 <h3 id="options_6">Options<a class="headerlink" href="#options_6" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--format (-F)</code>: Limit the format to either wheel or sdist.</li>
+<li><code>--format (-F)</code>: 形式をwheelもしくはsdistに限定します。</li>
 </ul>
 <h2 id="publish">publish<a class="headerlink" href="#publish" title="Permanent link">🔗</a></h2>
-<p>This command publishes the package, previously built with the
-<a href="#build"><code>build</code></a> command, to the remote repository.</p>
-<p>It will automatically register the package before uploading if this is the
-first time it is submitted.</p>
+<p>このコマンドは、前に <a href="#build"><code>build</code></a> コマンドでビルドしたパッケージを、リモートレポジトリに公開します。</p>
+<p>初めて提出する場合には、このコマンドは、アップロードの前に自動的にパッケージの登録を行います。</p>
 <div class="codehilite"><pre><span></span>poetry publish
 </pre></div>
 
-<p>It can also build the package if you pass it the <code>--build</code> option.</p>
+<p><code>--build</code> オプションを渡すと、パッケージのビルドもしてくれます。</p>
 <h3 id="options_7">Options<a class="headerlink" href="#options_7" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--repository (-r)</code>: The repository to register the package to (default: <code>pypi</code>).
-Should match a repository name set by the <a href="#config"><code>config</code></a> command.</li>
-<li><code>--username (-u)</code>: The username to access the repository.</li>
-<li><code>--password (-p)</code>: The password to access the repository.</li>
+<li><code>--repository (-r)</code>: パッケージを登録するレポジトリ (デフォルト: <code>pypi</code>) です。
+<a href="#config"><code>config</code></a> コマンドで設定したレポジトリ名と一致しなければなりません。</li>
+<li><code>--username (-u)</code>: レポジトリにアクセスするためのユーザー名。</li>
+<li><code>--password (-p)</code>: レポジトリにアクセスするためのパスワード。</li>
 </ul>
 <h2 id="config">config<a class="headerlink" href="#config" title="Permanent link">🔗</a></h2>
-<p>The <code>config</code> command allows you to edit poetry config settings and
-repositories.</p>
+<p><code>config</code> コマンドを使うと、Poetryのsettingsやrepositoriesの設定を編集できます。</p>
 <div class="codehilite"><pre><span></span>poetry config --list
 </pre></div>
 
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">🔗</a></h3>
+<h3 id="_3">使い方<a class="headerlink" href="#_3" title="Permanent link">🔗</a></h3>
 <div class="codehilite"><pre><span></span>poetry config <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>setting-key<span class="o">]</span> <span class="o">[</span>setting-value1<span class="o">]</span> ... <span class="o">[</span>setting-valueN<span class="o">]</span>
 </pre></div>
 
-<p><code>setting-key</code> is a configuration option name and <code>setting-value1</code> is a
-configuration value.  See <a href="/docs/configuration/">Configuration</a> for all
-available settings.</p>
+<p><code>setting-key</code> は設定のオプション名で <code>setting-value1</code> は設定値です。
+利用可能な全ての設定は <a href="/docs/configuration/">設定</a> を参照してください。</p>
 <h3 id="options_8">Options<a class="headerlink" href="#options_8" title="Permanent link">🔗</a></h3>
 <ul>
 <li><code>--unset</code>: Remove the configuration element named by <code>setting-key</code>.</li>
