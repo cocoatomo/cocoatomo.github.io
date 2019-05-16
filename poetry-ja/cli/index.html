@@ -1040,7 +1040,7 @@ dependencies:
 <li><code>--outdated (-o)</code>: 古くなったパッケージの最新バージョンだけを表示します。</li>
 </ul>
 <h2 id="build">build<a class="headerlink" href="#build" title="Permanent link">🔗</a></h2>
-<p>The <code>build</code> command builds the source and wheels archives.</p>
+<p><code>build</code> コマンドは、ソースアーカイブとwheelアーカイブへビルドします。</p>
 <div class="codehilite"><pre><span></span>poetry build
 </pre></div>
 
@@ -1076,60 +1076,54 @@ dependencies:
 利用可能な全ての設定は <a href="/docs/configuration/">設定</a> を参照してください。</p>
 <h3 id="options_8">Options<a class="headerlink" href="#options_8" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--unset</code>: Remove the configuration element named by <code>setting-key</code>.</li>
-<li><code>--list</code>: Show the list of current config variables.</li>
+<li><code>--unset</code>: <code>setting-key</code> で名付けられた設定要素を削除します。</li>
+<li><code>--list</code>: 現在の設定変数の一覧を表示します。</li>
 </ul>
 <h2 id="run">run<a class="headerlink" href="#run" title="Permanent link">🔗</a></h2>
-<p>The <code>run</code> command executes the given command inside the project's
-virtualenv.</p>
+<p><code>run</code> コマンドは、与えられたコマンドをプロジェクトの仮想環境の中で実行します。</p>
 <div class="codehilite"><pre><span></span>poetry run python -V
 </pre></div>
 
-<p>It can also execute one of the scripts defined in <code>pyproject.toml</code>.</p>
-<p>So, if you have a script defined like this:</p>
+<p>このコマンドは <code>pyproject.toml</code> に定義されたスクリプトうち1つを実行することもできます。</p>
+<p>それなので、次のように定義されたスクリプトがある場合:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
 <span class="na">my-script</span> <span class="o">=</span> <span class="s">&quot;my_module:main&quot;</span>
 </pre></div>
 
-<p>You can execute it like so:</p>
+<p>このようにして実行できます:</p>
 <div class="codehilite"><pre><span></span>poetry run my-script
 </pre></div>
 
-<p>Note that this command has no option.</p>
+<p>このコマンドにはオプションが無いことに注意してください。</p>
 <h2 id="shell">shell<a class="headerlink" href="#shell" title="Permanent link">🔗</a></h2>
-<p>The <code>shell</code> command spawns a shell, according to the <code>$SHELL</code> environment
-variable, within the virtual environment.  If one doesn't exist yet, it will
-be created.</p>
+<p><code>shell</code> コマンドは、 <code>$SHELL</code> 環境変数に従って、仮想環境の中でシェルを起動します。
+仮想環境がまだ無い場合は、作成されます。</p>
 <div class="codehilite"><pre><span></span>poetry shell
 </pre></div>
 
 <h2 id="check">check<a class="headerlink" href="#check" title="Permanent link">🔗</a></h2>
-<p>The <code>check</code> command validates the structure of the <code>pyproject.toml</code> file and
-returns a detailed report if there are any errors.</p>
+<p><code>check</code> コマンドは、 <code>pyproject.toml</code> ファイルの構造を検証し、エラーがあった場合は、詳細なレポートを返します。</p>
 <div class="codehilite"><pre><span></span>poetry check
 </pre></div>
 
 <h2 id="search">search<a class="headerlink" href="#search" title="Permanent link">🔗</a></h2>
-<p>This command searches for packages on a remote index.</p>
+<p>このコマンドは、リモートの目録にあるパッケージを検索します。</p>
 <div class="codehilite"><pre><span></span>poetry search requests pendulum
 </pre></div>
 
 <h3 id="options_9">Options<a class="headerlink" href="#options_9" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--only-name (-N)</code>: Search only in name.</li>
+<li><code>--only-name (-N)</code>: 名前でのみ検索します。</li>
 </ul>
 <h2 id="lock">lock<a class="headerlink" href="#lock" title="Permanent link">🔗</a></h2>
-<p>This command locks (without installing) the dependencies specified in
-<code>pyproject.toml</code>.</p>
+<p>このコマンドは、(インストールはせずに) <code>pyproject.toml</code> に指定されている依存関係をロックします。</p>
 <div class="codehilite"><pre><span></span>poetry lock
 </pre></div>
 
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link">🔗</a></h2>
-<p>This command bumps the version of the project and writes the new version
-back to <code>pyproject.toml</code></p>
-<p>The new version should ideally be a valid semver string or a valid bump
-rule: <code>patch</code>, <code>minor</code>, <code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>,
-<code>prerelease</code>.</p>
+<p>このコマンドは、プロジェクトのバージョンを更新し、新しいバージョンを <code>pyproject.toml</code> に書き戻します</p>
+<p>新しいバージョンは理想的には、有効なセマンティックバージョン文字列か、有効な更新規則であるべきです。有効な更新規則: <code>patch</code>, <code>minor</code>,
+<code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>, <code>prerelease</code> 。</p>
                 
                   
                 
