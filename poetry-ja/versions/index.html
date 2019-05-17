@@ -337,15 +337,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-restricted-dependencies" title="Python restricted dependencies" class="md-nav__link">
-    Python restricted dependencies
+  <a href="#python" title="Python制限依存関係" class="md-nav__link">
+    Python制限依存関係
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#multiple-constraints-dependencies" title="Multiple constraints dependencies" class="md-nav__link">
-    Multiple constraints dependencies
+  <a href="#_9" title="複数制約依存関係" class="md-nav__link">
+    複数制約依存関係
   </a>
   
 </li>
@@ -493,15 +493,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-restricted-dependencies" title="Python restricted dependencies" class="md-nav__link">
-    Python restricted dependencies
+  <a href="#python" title="Python制限依存関係" class="md-nav__link">
+    Python制限依存関係
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#multiple-constraints-dependencies" title="Multiple constraints dependencies" class="md-nav__link">
-    Multiple constraints dependencies
+  <a href="#_9" title="複数制約依存関係" class="md-nav__link">
+    複数制約依存関係
   </a>
   
 </li>
@@ -668,43 +668,35 @@
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>編集可能モードおよび開発モードの <code>path</code> 依存関係をインストールできます。
+<p>編集可能モードあるいは開発モードの <code>path</code> 依存関係をインストールできます。
 <code>--develop my-package</code> を (好きな個数だけ) <code>install</code> コマンドに渡せばよいだけです。</p>
 </div>
-<h3 id="python-restricted-dependencies">Python restricted dependencies<a class="headerlink" href="#python-restricted-dependencies" title="Permanent link">🔗</a></h3>
-<p>You can also specify that a dependency should be installed only for specific
-Python versions:</p>
+<h3 id="python">Python制限依存関係<a class="headerlink" href="#python" title="Permanent link">🔗</a></h3>
+<p>ある依存関係を特定のバージョンのPythonでだけインストールする、という指定もできます:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = &quot;~2.7&quot; }</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = [&quot;~2.7&quot;, &quot;^3.2&quot;] }</span>
 </pre></div>
 
-<h3 id="multiple-constraints-dependencies">Multiple constraints dependencies<a class="headerlink" href="#multiple-constraints-dependencies" title="Permanent link">🔗</a></h3>
-<p>Sometimes, one of your dependency may have different version ranges
-depending on the target Python versions.</p>
-<p>Let's say you have a dependency on the package <code>foo</code> which is only compatible
-with Python &lt;3.0 up to version 1.9 and compatible with Python 3.4+ from version 2.0:
-you would declare it like so:</p>
+<h3 id="_9">複数制約依存関係<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h3>
+<p>あるときは、対象のPythonバージョンに依存して、依存関係に異なるバージョン範囲が設定されることがあります。</p>
+<p>バージョン1.9まではPython 3.0未満、2.0以降はPython 3.4以上というPythonとの互換性を持つパッケージ <code>foo</code> への依存関係があるとしましょう:
+このとき次のように宣言します:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 
 <span class="na">foo</span> <span class="o">=</span> <span class="s">[</span>
-
-    <span class="na">{version</span> <span class="o">=</span> <span class="s">&quot;&lt;=1.9&quot;, python = &quot;^2.7&quot;},</span>
-
-    <span class="na">{version</span> <span class="o">=</span> <span class="s">&quot;^2.0&quot;, python = &quot;^3.4&quot;}</span>
-
+<span class="s">    {version = &quot;&lt;=1.9&quot;, python = &quot;^2.7&quot;},</span>
+<span class="s">    {version = &quot;^2.0&quot;, python = &quot;^3.4&quot;}</span>
 <span class="na">]</span>
 </pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The constraints <strong>must</strong> have different requirements (like <code>python</code>)
-otherwise it will cause an error when resolving dependencies.</p>
+<p>制約は (<code>python</code> のように) 異なる要件で <strong>なければならず</strong> 、
+そうでない場合は、依存関係の解決でエラーが発生します。</p>
 </div>
                 
                   
