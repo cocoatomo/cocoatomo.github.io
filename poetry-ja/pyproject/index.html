@@ -335,8 +335,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="documentation" class="md-nav__link">
-    documentation
+  <a href="#_1" title="ドキュメント" class="md-nav__link">
+    ドキュメント
   </a>
   
 </li>
@@ -363,15 +363,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#include-and-exclude" title="include and exclude" class="md-nav__link">
-    include and exclude
+  <a href="#includeexclude" title="includeとexclude" class="md-nav__link">
+    includeとexclude
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies-and-dev-dependencies" title="dependencies and dev-dependencies" class="md-nav__link">
-    dependencies and dev-dependencies
+  <a href="#dependencies-dev-dependencies" title="dependencies と dev-dependencies" class="md-nav__link">
+    dependencies と dev-dependencies
   </a>
   
 </li>
@@ -516,8 +516,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="documentation" class="md-nav__link">
-    documentation
+  <a href="#_1" title="ドキュメント" class="md-nav__link">
+    ドキュメント
   </a>
   
 </li>
@@ -544,15 +544,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#include-and-exclude" title="include and exclude" class="md-nav__link">
-    include and exclude
+  <a href="#includeexclude" title="includeとexclude" class="md-nav__link">
+    includeとexclude
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies-and-dev-dependencies" title="dependencies and dev-dependencies" class="md-nav__link">
-    dependencies and dev-dependencies
+  <a href="#dependencies-dev-dependencies" title="dependencies と dev-dependencies" class="md-nav__link">
+    dependencies と dev-dependencies
   </a>
   
 </li>
@@ -603,19 +603,19 @@
                 
                 
                 <h1 id="pyprojecttoml"><code>pyproject.toml</code> ファイル<a class="headerlink" href="#pyprojecttoml" title="Permanent link">🔗</a></h1>
-<p>The <code>tool.poetry</code> section of the <code>pyproject.toml</code> file is composed of
-multiple sections.</p>
+<p><code>pyproject.toml</code> ファイルの <code>tool.poetry</code> 節は複数の節で構成されています。</p>
 <h2 id="name">name<a class="headerlink" href="#name" title="Permanent link">🔗</a></h2>
-<p>The name of the package. <strong>Required</strong></p>
+<p>パッケージ名。
+<strong>必須</strong></p>
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link">🔗</a></h2>
-<p>The version of the package. <strong>Required</strong></p>
-<p>This should follow <a href="http://semver.org/">semantic versioning</a>. However it
-will not be enforced and you remain free to follow another specification.</p>
+<p>パッケージのバージョン。 <strong>必須</strong></p>
+<p>これは <a href="http://semver.org/">semantic versioning</a> に従うべきです。
+ただし、強制はしませんし、他の仕様に従う自由も残されています。</p>
 <h2 id="description">description<a class="headerlink" href="#description" title="Permanent link">🔗</a></h2>
-<p>A short description of the package. <strong>Required</strong></p>
+<p>パッケージの短い説明。 <strong>必須</strong></p>
 <h2 id="license">license<a class="headerlink" href="#license" title="Permanent link">🔗</a></h2>
-<p>The license of the package.</p>
-<p>The recommended notation for the most common licenses is (alphabetical):</p>
+<p>パッケージのライセンス。</p>
+<p>最もよく使われるライセンスの推奨される記法は (アルファベット順で) 次の通りです:</p>
 <ul>
 <li>Apache-2.0</li>
 <li>BSD-2-Clause</li>
@@ -631,80 +631,72 @@ will not be enforced and you remain free to follow another specification.</p>
 <li>LGPL-3.0+</li>
 <li>MIT</li>
 </ul>
-<p>Optional, but it is highly recommended to supply this.  More identifiers are
-listed at the <a href="https://www.spdx.org/licenses/">SPDX Open Source License
-Registry</a>.</p>
+<p>任意ですが、この節を載せておくことを強く推奨します。
+この他の識別子は <a href="https://www.spdx.org/licenses/">SPDX Open Source License Registry</a>
+に一覧があります。</p>
 <h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link">🔗</a></h2>
-<p>The authors of the package. <strong>Required</strong></p>
-<p>This is a list of authors and should contain at least one author. Authors must be in the form <code>name &lt;email&gt;</code>.</p>
+<p>パッケージの作者。
+<strong>必須</strong></p>
+<p>これは作者のリストで、少なくとも1人は載せるべきです。
+作者は <code>name &lt;email&gt;</code> という形式で載せなければなりません。</p>
 <h2 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link">🔗</a></h2>
-<p>The readme file of the package. <strong>Optional</strong></p>
-<p>The file can be either <code>README.rst</code> or <code>README.md</code>.</p>
+<p>パッケージのreadmeファイル。
+<strong>任意</strong></p>
+<p>ファイルは <code>README.rst</code> もしくは <code>README.md</code> のどちらでも構いません。</p>
 <h2 id="homepage">homepage<a class="headerlink" href="#homepage" title="Permanent link">🔗</a></h2>
-<p>An URL to the website of the project. <strong>Optional</strong></p>
+<p>プロジェクトのウェブサイトへのURL。
+<strong>任意</strong></p>
 <h2 id="repository">repository<a class="headerlink" href="#repository" title="Permanent link">🔗</a></h2>
-<p>An URL to the repository of the project. <strong>Optional</strong></p>
-<h2 id="documentation">documentation<a class="headerlink" href="#documentation" title="Permanent link">🔗</a></h2>
-<p>An URL to the documentation of the project. <strong>Optional</strong></p>
+<p>プロジェクトのウェブサイトへのURL。
+<strong>任意</strong></p>
+<h2 id="_1">ドキュメント<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h2>
+<p>プロジェクトのドキュメントへのURL。
+<strong>任意</strong></p>
 <h2 id="keywords">keywords<a class="headerlink" href="#keywords" title="Permanent link">🔗</a></h2>
-<p>A list of keywords (max: 5) that the package is related to. <strong>Optional</strong></p>
+<p>パッケージに関連する (最大5つの) キーワードの一覧。
+<strong>任意</strong></p>
 <h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link">🔗</a></h2>
-<p>A list of PyPI <a href="https://pypi.org/classifiers/">trove classifiers</a> that
-describe the project. <strong>Optional</strong></p>
+<p>プロジェクトの説明となるPyPIの <a href="https://pypi.org/classifiers/">trove classifiers</a> の一覧。
+<strong>任意</strong></p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="c1"># ...</span>
-
 <span class="na">classifiers</span> <span class="o">=</span> <span class="s">[</span>
-
-    <span class="na">&quot;Topic :: Software Development :: Build Tools&quot;,</span>
-
-    <span class="na">&quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
-
+<span class="s">    &quot;Topic :: Software Development :: Build Tools&quot;,</span>
+<span class="s">    &quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
 <span class="na">]</span>
 </pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that Python classifiers are still automatically added for you and are determined by your <code>python</code> requirement.</p>
-<p>The <code>license</code> property will also set the License classifier automatically.</p>
+<p>何にせよ、Python classifierは自動的に追加され、
+それは <code>python</code> 要件で決まります。</p>
+<p><code>license</code> 属性から自動的にLicense classifierが設定されます。</p>
 </div>
 <h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link">🔗</a></h2>
-<p>A list of packages and modules to include in the final distribution.</p>
-<p>If your project structure differs from the standard one supported by
-<code>poetry</code>, you can specify the packages you want to include in the final
-distribution.</p>
+<p>最終配布物に含まれるパッケージやモジュールの一覧。</p>
+<p>プロジェクトの構成が <code>poetry</code> が標準でサポートしているものと異なる場合は、最終配布物に含めたいパッケージを指定できます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="c1"># ...</span>
-
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-
-    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;mypackage&quot; },</span>
-
-    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;extra_package/**/*.py&quot; },</span>
-
+<span class="s">    { include = &quot;mypackage&quot; },</span>
+<span class="s">    { include = &quot;extra_package/**/*.py&quot; },</span>
 <span class="na">]</span>
 </pre></div>
 
-<p>If your package is stored inside a "source" directory, you must specify it:</p>
+<p>パッケージが"source"ディレクトリ内にある場合は、それを指定しなければなりません:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="c1"># ...</span>
-
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-
-    <span class="na">{ include</span> <span class="o">=</span> <span class="s">&quot;mypackage&quot;, from = &quot;lib&quot; },</span>
-
+<span class="s">    { include = &quot;mypackage&quot;, from = &quot;lib&quot; },</span>
 <span class="na">]</span>
 </pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Using <code>packages</code> disables the package auto-detection feature meaning you have to
-<strong>explicitly</strong> specify the "default" package.</p>
-<p>For instance, if you have a package named <code>my_package</code> and you want to also include
-another package named <code>extra_package</code>, you will need to specify <code>my_package</code> explicitly:</p>
+<p><code>packages</code> を使うとパッケージの自動検出機能が無効になり、
+「デフォルトの」パッケージを <strong>明示的に</strong> 指定しないといけないことになります。</p>
+<p>例えば、 <code>my_package</code> という名前のパッケージがあり、 <code>extra_package</code> という名前の別のパッケージも一緒に含めたい場合、
+明示的に <code>my_package</code> も指定する必要があります:</p>
 <div class="codehilite"><pre><span></span>packages = [
     { include = &quot;mypackage&quot; },
     { include = &quot;extra_package&quot; },
@@ -714,104 +706,76 @@ another package named <code>extra_package</code>, you will need to specify <code
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Poetry is clever enough to detect Python subpackages.</p>
-<p>Thus, you only have to specify the directory where your root package resides.</p>
+<p>Poetryは賢いのでPythonのサブパッケージを検出できます。</p>
+<p>それなので、ルートパッケージがあるディレクトリを指定するだけで済みます。</p>
 </div>
-<h2 id="include-and-exclude">include and exclude<a class="headerlink" href="#include-and-exclude" title="Permanent link">🔗</a></h2>
-<p>A list of patterns that will be included in the final package.</p>
-<p>You can explicitly specify to Poetry that a set of globs should be ignored
-or included for the purposes of packaging.  The globs specified in the
-exclude field identify a set of files that are not included when a package
-is built.</p>
-<p>If a VCS is being used for a package, the exclude field will be seeded with
-the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
+<h2 id="includeexclude">includeとexclude<a class="headerlink" href="#includeexclude" title="Permanent link">🔗</a></h2>
+<p>最終的なパッケージに含まれるパターンの一覧。</p>
+<p>パッケージ化のために無視するべき、あるいは含めるべきglobの集合をPoetryに明示的に指定できます。
+excludeフィールドに指定されたglobは、パッケージのビルド時に含めないファイルの集合を特定します。</p>
+<p>パッケージの管理にVCSを使っている場合は、excludeフィールドはVCSの除外設定 (例えばgitの <code>.gitignore</code>) を元に作られます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="c1"># ...</span>
-
 <span class="na">include</span> <span class="o">=</span> <span class="s">[&quot;CHANGELOG.md&quot;]</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span>exclude = [&quot;my_package/excluded.py&quot;]
 </pre></div>
 
-<h2 id="dependencies-and-dev-dependencies"><code>dependencies</code> and <code>dev-dependencies</code><a class="headerlink" href="#dependencies-and-dev-dependencies" title="Permanent link">🔗</a></h2>
-<p>Poetry is configured to look for dependencies on <a href="https://pypi.org">PyPi</a> by
-default.  Only the name and a version string are required in this case.</p>
+<h2 id="dependencies-dev-dependencies"><code>dependencies</code> と <code>dev-dependencies</code><a class="headerlink" href="#dependencies-dev-dependencies" title="Permanent link">🔗</a></h2>
+<p>Poetryは、デフォルトでは <a href="https://pypi.org">PyPi</a> の依存関係を探すよう設定されています。
+その場合では、パッケージ名とバージョン文字列だけが要求されます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-
 <span class="na">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
 </pre></div>
 
-<p>If you want to use a private repository, you can add it to your
-<code>pyproject.toml</code> file, like so:</p>
+<p>プライベートレポジトリを使いたい場合は、次のように <code>pyproject.toml</code> ファイルに追加できます:</p>
 <div class="codehilite"><pre><span></span><span class="k">[[tool.poetry.source]]</span>
-
 <span class="na">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
-
 <span class="na">url</span> <span class="o">=</span> <span class="s">&#39;http://example.com/simple&#39;</span>
 </pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Be aware that declaring the python version for which your package
-is compatible is mandatory:</p>
+<p>パッケージと互換性のあるPythonバージョンの宣言は
+義務であることに気を付けてください:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 <span class="na">python</span> <span class="o">=</span> <span class="s">&quot;^3.6&quot;</span>
 </pre></div>
 
 </div>
 <h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link">🔗</a></h2>
-<p>This section describe the scripts or executable that will be installed when
-installing the package</p>
+<p>この節は、パッケージをインストールするときにインストールされるスクリプトや実行可能ファイルを記述します</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
-
 <span class="na">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry:console.run&#39;</span>
 </pre></div>
 
-<p>Here, we will have the <code>poetry</code> script installed which will execute
-<code>console.run</code> in the <code>poetry</code> package.</p>
+<p>ほら、これで <code>poetry</code> バッケージにある <code>console.run</code> を実行する <code>poetry</code> スクリプトがインストールされました。</p>
 <h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link">🔗</a></h2>
-<p>Poetry supports extras to allow expression of:</p>
+<p>Poetryは次の表現を可能にするために追加の依存関係をサポートしています:</p>
 <ul>
-<li>optional dependencies, which enhance a package, but are not required; and</li>
-<li>clusters of optional dependencies.</li>
+<li>パッケージを拡張するものだが必須ではない、オプションの依存関係</li>
+<li>オプションの依存関係のパッケージ群</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-
 <span class="na">name</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span>
 
-
-
 <span class="k">[tool.poetry.dependencies]</span>
-
 <span class="c1"># These packages are mandatory and form the core of this package’s distribution.</span>
-
 <span class="na">mandatory</span> <span class="o">=</span> <span class="s">&quot;^1.0&quot;</span>
 
-
-
 <span class="c1"># A list of all of the optional dependencies, some of which are included in the</span>
-
 <span class="c1"># below `extras`. They can be opted into by apps.</span>
-
 <span class="na">psycopg2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.7&quot;, optional = true }</span>
-
 <span class="na">mysqlclient</span> <span class="o">=</span> <span class="s">{ version = &quot;^1.3&quot;, optional = true }</span>
 
-
-
 <span class="k">[tool.poetry.extras]</span>
-
 <span class="na">mysql</span> <span class="o">=</span> <span class="s">[&quot;mysqlclient&quot;]</span>
-
 <span class="na">pgsql</span> <span class="o">=</span> <span class="s">[&quot;psycopg2&quot;]</span>
 </pre></div>
 
-<p>When installing packages, you can specify extras by using the <code>-E|--extras</code>
-option:</p>
+<p>パッケージをインストールするときに、 <code>-E|--extras</code> オプションを使って追加分だと指定できます:</p>
 <div class="codehilite"><pre><span></span>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
-
 poetry install -E mysql -E pgsql
 </pre></div>
 
@@ -822,10 +786,7 @@ match the example in the setuptools documentation, you would use the
 following:</p>
 <div class="codehilite"><pre><span></span>[tool.poetry.plugins] # Optional super table
 
-
-
 [tool.poetry.plugins.&quot;blogtool.parsers&quot;]
-
 &quot;.rst&quot; = &quot;some_module:SomeClass&quot;
 </pre></div>
 
@@ -836,9 +797,7 @@ way to define alternative build systems to build a Python project.</p>
 project you should reference it in the <code>build-system</code> section of the
 <code>pyproject.toml</code> file like so:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
-
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
-
 <span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
 </pre></div>
 
