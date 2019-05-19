@@ -442,30 +442,20 @@ build system provided by Poetry.</p>
 <p>So, in your <code>pyproject.toml</code> file, add this section if it does not already
 exist:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
-
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
-
 <span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
 </pre></div>
 
 <p>And use a <code>tox.ini</code> configuration file similar to this:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tox]</span>
-
 <span class="na">isolated_build</span> <span class="o">=</span> <span class="s">true</span>
-
 <span class="na">envlist</span> <span class="o">=</span> <span class="s">py27, py36</span>
 
-
-
 <span class="k">[testenv]</span>
-
 <span class="na">whitelist_externals</span> <span class="o">=</span> <span class="s">poetry</span>
-
-<span class="na">commands</span> <span class="o">=</span>
-
-    <span class="na">poetry install -v</span>
-
-    <span class="na">poetry run pytest tests/</span>
+<span class="na">commands</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    poetry install -v</span>
+<span class="s">    poetry run pytest tests/</span>
 </pre></div>
 
 <h2 id="i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it">I don't want Poetry to manage my virtualenvs. Can I disable it?<a class="headerlink" href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="Permanent link">🔗</a></h2>

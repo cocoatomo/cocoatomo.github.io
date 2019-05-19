@@ -678,7 +678,7 @@
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;mypackage&quot; },</span>
+<span class="s">    { include = &quot;my_package&quot; },</span>
 <span class="s">    { include = &quot;extra_package/**/*.py&quot; },</span>
 <span class="na">]</span>
 </pre></div>
@@ -687,7 +687,7 @@
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;mypackage&quot;, from = &quot;lib&quot; },</span>
+<span class="s">    { include = &quot;my_package&quot;, from = &quot;lib&quot; },</span>
 <span class="na">]</span>
 </pre></div>
 
@@ -698,7 +698,7 @@
 <p>例えば、 <code>my_package</code> という名前のパッケージがあり、 <code>extra_package</code> という名前の別のパッケージも一緒に含めたい場合、
 明示的に <code>my_package</code> も指定する必要があります:</p>
 <div class="codehilite"><pre><span></span>packages = [
-    { include = &quot;mypackage&quot; },
+    { include = &quot;my_package&quot; },
     { include = &quot;extra_package&quot; },
 ]
 </pre></div>
