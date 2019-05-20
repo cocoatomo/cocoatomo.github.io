@@ -398,8 +398,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#poetry-and-pep-517" title="Poetry and PEP-517" class="md-nav__link">
-    Poetry and PEP-517
+  <a href="#poetrypep-517" title="PoetryとPEP-517" class="md-nav__link">
+    PoetryとPEP-517
   </a>
   
 </li>
@@ -579,8 +579,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#poetry-and-pep-517" title="Poetry and PEP-517" class="md-nav__link">
-    Poetry and PEP-517
+  <a href="#poetrypep-517" title="PoetryとPEP-517" class="md-nav__link">
+    PoetryとPEP-517
   </a>
   
 </li>
@@ -780,22 +780,21 @@ poetry install -E mysql -E pgsql
 </pre></div>
 
 <h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link">🔗</a></h2>
-<p>Poetry supports arbitrary plugins which work similarly to <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptools entry
-points</a>.  To
-match the example in the setuptools documentation, you would use the
-following:</p>
+<p>Poetryは
+<a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptoolsのエントリーポイント</a>
+と同じように動作する任意のプラグインをサポートしています。
+setuptoolsのドキュメントにある例に合わせると、次のように使います:</p>
 <div class="codehilite"><pre><span></span>[tool.poetry.plugins] # Optional super table
 
 [tool.poetry.plugins.&quot;blogtool.parsers&quot;]
 &quot;.rst&quot; = &quot;some_module:SomeClass&quot;
 </pre></div>
 
-<h2 id="poetry-and-pep-517">Poetry and PEP-517<a class="headerlink" href="#poetry-and-pep-517" title="Permanent link">🔗</a></h2>
-<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a> introduces a standard
-way to define alternative build systems to build a Python project.</p>
-<p>Poetry is compliant with PEP-517 so if you use Poetry to manage your Python
-project you should reference it in the <code>build-system</code> section of the
-<code>pyproject.toml</code> file like so:</p>
+<h2 id="poetrypep-517">PoetryとPEP-517<a class="headerlink" href="#poetrypep-517" title="Permanent link">🔗</a></h2>
+<p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a>
+は、Pythonプロジェクトをビルドする別のビルドシステムを定義する標準的な方法が導入します。</p>
+<p>PoetryはPEP-517に準拠しているので、Poetryを使ってPythonプロジェクトを管理していたなら、次のように
+<code>pyproject.toml</code> ファイルの <code>build-system</code> 節で目にするはずです:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
 <span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
@@ -803,7 +802,7 @@ project you should reference it in the <code>build-system</code> section of the
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using the <code>new</code> or <code>init</code> command this section will be automatically added.</p>
+<p><code>new</code> コマンドや <code>init</code> コマンドを使うときには、この節は自動的に追加されます。</p>
 </div>
                 
                   
