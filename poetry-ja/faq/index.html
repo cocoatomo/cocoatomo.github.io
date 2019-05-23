@@ -303,29 +303,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-is-the-dependency-resolution-process-slow" title="Why is the dependency resolution process slow?" class="md-nav__link">
-    Why is the dependency resolution process slow?
+  <a href="#_1" title="なぜ依存関係解決の処理は遅いのですか？" class="md-nav__link">
+    なぜ依存関係解決の処理は遅いのですか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-are-unbound-version-constraints-a-bad-idea" title="Why are unbound version constraints a bad idea?" class="md-nav__link">
-    Why are unbound version constraints a bad idea?
+  <a href="#_2" title="上限の無いバージョン制約が良くないのはなぜですか？" class="md-nav__link">
+    上限の無いバージョン制約が良くないのはなぜですか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is-tox-supported" title="Is tox supported?" class="md-nav__link">
-    Is tox supported?
+  <a href="#tox" title="toxはサポートしていますか？" class="md-nav__link">
+    toxはサポートしていますか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="I don't want Poetry to manage my virtualenvs. Can I disable it?" class="md-nav__link">
-    I don't want Poetry to manage my virtualenvs. Can I disable it?
+  <a href="#poetry" title="Poetryに仮想環境を管理されたくありません。無効化できませんか？" class="md-nav__link">
+    Poetryに仮想環境を管理されたくありません。無効化できませんか？
   </a>
   
 </li>
@@ -362,29 +362,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-is-the-dependency-resolution-process-slow" title="Why is the dependency resolution process slow?" class="md-nav__link">
-    Why is the dependency resolution process slow?
+  <a href="#_1" title="なぜ依存関係解決の処理は遅いのですか？" class="md-nav__link">
+    なぜ依存関係解決の処理は遅いのですか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-are-unbound-version-constraints-a-bad-idea" title="Why are unbound version constraints a bad idea?" class="md-nav__link">
-    Why are unbound version constraints a bad idea?
+  <a href="#_2" title="上限の無いバージョン制約が良くないのはなぜですか？" class="md-nav__link">
+    上限の無いバージョン制約が良くないのはなぜですか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is-tox-supported" title="Is tox supported?" class="md-nav__link">
-    Is tox supported?
+  <a href="#tox" title="toxはサポートしていますか？" class="md-nav__link">
+    toxはサポートしていますか？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="I don't want Poetry to manage my virtualenvs. Can I disable it?" class="md-nav__link">
-    I don't want Poetry to manage my virtualenvs. Can I disable it?
+  <a href="#poetry" title="Poetryに仮想環境を管理されたくありません。無効化できませんか？" class="md-nav__link">
+    Poetryに仮想環境を管理されたくありません。無効化できませんか？
   </a>
   
 </li>
@@ -407,46 +407,37 @@
                 
                 
                 <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">🔗</a></h1>
-<h2 id="why-is-the-dependency-resolution-process-slow">Why is the dependency resolution process slow?<a class="headerlink" href="#why-is-the-dependency-resolution-process-slow" title="Permanent link">🔗</a></h2>
-<p>While the dependency resolver at the heart of Poetry is highly optimized and
-should be fast enough for most cases, sometimes, with some specific set of
-dependencies, it can take time to find a valid solution.</p>
-<p>This is due to the fact that not all libraries on PyPI have properly
-declared their metadata and, as such, they are not available via the PyPI
-JSON API. At this point, Poetry has no choice but downloading the packages
-and inspect them to get the necessary information. This is an expensive
-operation, both in bandwidth and time, which is why it seems this is a long
-process.</p>
-<p>At the moment there is no way around it.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Once Poetry has cached the releases' information, the dependency resolution process
-will be much faster.</p>
+<h2 id="_1">なぜ依存関係解決の処理は遅いのですか？<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h2>
+<p>Poetryの心臓部である依存関係解決器は大いに最適化されており、ほとんどのケースで十分に速いはずですが、ときどき、ある依存関係の特定の組み合わせでは、妥当な解決策を見付けるのに時間がかかることがあります。</p>
+<p>これは、PyPIにある全てのライブラリが適切なメタデータの宣言をしているわけではなく、それらはPyPI JSON
+APIからは利用可能でないという事実に依るものです。
+現時点では、パッケージをダウンロードし、中身を調べて必要な情報を取得する以外の選択肢は、Poetryにはありません。
+これは手間の掛かる作業で、それが原因でバンド幅と時間の両方において長い処理に見えるのです。</p>
+<p>今のところ、これを回避する道はありません。</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>いったんPoetryがリリース情報をキャッシュしてしまえば、
+依存関係解決の処理はとても速くなります。</p>
 </div>
-<h2 id="why-are-unbound-version-constraints-a-bad-idea">Why are unbound version constraints a bad idea?<a class="headerlink" href="#why-are-unbound-version-constraints-a-bad-idea" title="Permanent link">🔗</a></h2>
-<p>A version constraint without an upper bound such as <code>*</code> or <code>&gt;=3.4</code> will allow updates to any future version of the dependency.
-This includes major versions breaking backward compatibility.</p>
-<p>Once a release of your package is published, you cannot tweak its
-dependencies anymore in case a dependency breaks BC - you have to do a new
-release but the previous one stays broken.</p>
-<p>The only good alternative is to define an upper bound on your constraints,
-which you can increase in a new release after testing that your package is
-compatible with the new major version of your dependency.</p>
-<p>For example instead of using <code>&gt;=3.4</code> you should use <code>~3.4</code> which allows all versions <code>&lt;4.0</code>.
-The <code>^</code> operator works very well with libraries following <a href="https://semver.org">semantic versioning</a>.</p>
-<h2 id="is-tox-supported">Is tox supported?<a class="headerlink" href="#is-tox-supported" title="Permanent link">🔗</a></h2>
-<p>Yes. By using the <a href="https://tox.readthedocs.io/en/latest/config.html#conf-isolated_build">isolated
-builds</a>
-<code>tox</code> provides, you can use it in combination with the PEP 517 compliant
-build system provided by Poetry.</p>
-<p>So, in your <code>pyproject.toml</code> file, add this section if it does not already
-exist:</p>
+<h2 id="_2">上限の無いバージョン制約が良くないのはなぜですか？<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<p><code>*</code> や <code>&gt;=3.4</code> のような上限の無いバージョン制約は、依存関係のいくらでも先のバージョンへの更新を許可します。
+これには後方互換性を破壊するメジャーバージョンも含まれています。</p>
+<p>いったんパッケージのリリースが公開されてしまうと、後方互換性の破壊が起きてしまうケースでも、それ以降は依存関係の微調整は行えなくなります。そうなると新しいリリースを出さなればいけませんが、その前のリリースは後方互換性が壊れたままです。</p>
+<p>唯一の適切な選択肢は、バージョン制約に上限を設け、パッケージが依存関係の新しいメジャーバージョンと互換性があることをテストした後の新しいリリースで、その上限を上げられるようにすることです。</p>
+<p>例えば、 <code>&gt;=3.4</code> を使う代わりに、 <code>&lt;4.0</code> を満たす全てのバージョンを許可する <code>~3.4</code> を使うべきです。
+<code>^</code> 演算子は、 <a href="https://semver.org">semantic versioning</a> に従ったライブラリと非常に相性が良いです。</p>
+<h2 id="tox">toxはサポートしていますか？<a class="headerlink" href="#tox" title="Permanent link">🔗</a></h2>
+<p>はい。
+<code>tox</code> が提供している
+<a href="https://tox.readthedocs.io/en/latest/config.html#conf-isolated_build">隔離ビルド</a>
+を使うことで、Poetryが提供するPEP 517準拠のビルドシステムと <code>tox</code> を連携して使えます。</p>
+<p>連携させるには、 <code>pyproject.toml</code> ファイルに、この節がまだ無ければ追加してください:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
 <span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
 <span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
 </pre></div>
 
-<p>And use a <code>tox.ini</code> configuration file similar to this:</p>
+<p>そして、このような <code>tox.ini</code> 設定ファイルを使ってください:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tox]</span>
 <span class="na">isolated_build</span> <span class="o">=</span> <span class="s">true</span>
 <span class="na">envlist</span> <span class="o">=</span> <span class="s">py27, py36</span>
@@ -458,12 +449,9 @@ exist:</p>
 <span class="s">    poetry run pytest tests/</span>
 </pre></div>
 
-<h2 id="i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it">I don't want Poetry to manage my virtualenvs. Can I disable it?<a class="headerlink" href="#i-dont-want-poetry-to-manage-my-virtualenvs-can-i-disable-it" title="Permanent link">🔗</a></h2>
-<p>While Poetry automatically creates virtualenvs to always work isolated from
-the global Python installation, there are valid reasons why it's not
-necessary and is an overhead, like when working with containers.</p>
-<p>In this case, you can disable this feature by setting the
-<code>virtualenvs.create</code> setting to <code>false</code>:</p>
+<h2 id="poetry">Poetryに仮想環境を管理されたくありません。無効化できませんか？<a class="headerlink" href="#poetry" title="Permanent link">🔗</a></h2>
+<p>Poetryは、グローバルにインストールされたPythonから隔離された状態で動作するために仮想環境を自動的に作成しますが、コンテナで動作させるときのような、その必要が無くむしろオーバーヘッドになるという、そうしない妥当な理由もあります。</p>
+<p>このケースでは、 <code>virtualenvs.create</code> に <code>false</code> を設定することで、この機能を無効化できます:</p>
 <div class="codehilite"><pre><span></span>poetry config settings.virtualenvs.create <span class="nb">false</span>
 </pre></div>
                 
