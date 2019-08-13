@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Poetry documentation translated into Japanese">
+      
       
       
       
@@ -32,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -40,17 +42,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -125,7 +127,9 @@
               Poetry documentation
             </span>
             <span class="md-header-nav__topic">
-              The pyproject.toml file
+              
+                The pyproject.toml file
+              
             </span>
           
         </div>
@@ -685,10 +689,10 @@
 <strong>任意</strong></p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
-<span class="na">classifiers</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    &quot;Topic :: Software Development :: Build Tools&quot;,</span>
-<span class="s">    &quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
-<span class="na">]</span>
+<span class="n">classifiers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&quot;Topic :: Software Development :: Build Tools&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
+<span class="p">]</span>
 </pre></div>
 
 <div class="admonition note">
@@ -702,18 +706,18 @@
 <p>プロジェクトの構成が <code>poetry</code> が標準でサポートしているものと異なる場合は、最終配布物に含めたいパッケージを指定できます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
-<span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;my_package&quot; },</span>
-<span class="s">    { include = &quot;extra_package/**/*.py&quot; },</span>
-<span class="na">]</span>
+<span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;extra_package/**/*.py&quot;</span> <span class="p">},</span>
+<span class="p">]</span>
 </pre></div>
 
 <p>パッケージが"source"ディレクトリ内にある場合は、それを指定しなければなりません:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
-<span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    { include = &quot;my_package&quot;, from = &quot;lib&quot; },</span>
-<span class="na">]</span>
+<span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span><span class="p">,</span> <span class="n">from</span> <span class="o">=</span> <span class="s">&quot;lib&quot;</span> <span class="p">},</span>
+<span class="p">]</span>
 </pre></div>
 
 <div class="admonition note">
@@ -722,10 +726,10 @@
 「デフォルトの」パッケージを <strong>明示的に</strong> 指定しないといけないことになります。</p>
 <p>例えば、 <code>my_package</code> という名前のパッケージがあり、 <code>extra_package</code> という名前の別のパッケージも一緒に含めたい場合、
 明示的に <code>my_package</code> も指定する必要があります:</p>
-<div class="codehilite"><pre><span></span>packages = [
-    { include = &quot;my_package&quot; },
-    { include = &quot;extra_package&quot; },
-]
+<div class="codehilite"><pre><span></span><span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;extra_package&quot;</span> <span class="p">},</span>
+<span class="p">]</span>
 </pre></div>
 
 </div>
@@ -741,23 +745,23 @@ excludeフィールドに指定されたglobは、パッケージのビルド時
 <p>パッケージの管理にVCSを使っている場合は、excludeフィールドはVCSの除外設定 (例えばgitの <code>.gitignore</code>) を元に作られます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
-<span class="na">include</span> <span class="o">=</span> <span class="s">[&quot;CHANGELOG.md&quot;]</span>
+<span class="n">include</span> <span class="o">=</span> <span class="k">[&quot;CHANGELOG.md&quot;]</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>exclude = [&quot;my_package/excluded.py&quot;]
+<div class="codehilite"><pre><span></span><span class="n">exclude</span> <span class="o">=</span> <span class="k">[&quot;my_package/excluded.py&quot;]</span>
 </pre></div>
 
 <h2 id="dependencies-dev-dependencies"><code>dependencies</code> と <code>dev-dependencies</code><a class="headerlink" href="#dependencies-dev-dependencies" title="Permanent link">🔗</a></h2>
 <p>Poetryは、デフォルトでは <a href="https://pypi.org">PyPi</a> の依存関係を探すよう設定されています。
 その場合では、パッケージ名とバージョン文字列だけが要求されます。</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
+<span class="n">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
 </pre></div>
 
 <p>プライベートレポジトリを使いたい場合は、次のように <code>pyproject.toml</code> ファイルに追加できます:</p>
 <div class="codehilite"><pre><span></span><span class="k">[[tool.poetry.source]]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
-<span class="na">url</span> <span class="o">=</span> <span class="s">&#39;http://example.com/simple&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://example.com/simple&#39;</span>
 </pre></div>
 
 <div class="admonition note">
@@ -765,14 +769,14 @@ excludeフィールドに指定されたglobは、パッケージのビルド時
 <p>パッケージと互換性のあるPythonバージョンの宣言は
 義務であることに気を付けてください:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">python</span> <span class="o">=</span> <span class="s">&quot;^3.6&quot;</span>
+<span class="n">python</span> <span class="o">=</span> <span class="s">&quot;^3.6&quot;</span>
 </pre></div>
 
 </div>
 <h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link">🔗</a></h2>
 <p>この節は、パッケージをインストールするときにインストールされるスクリプトや実行可能ファイルを記述します</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
-<span class="na">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry:console.run&#39;</span>
+<span class="n">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry:console.run&#39;</span>
 </pre></div>
 
 <p>ほら、これで <code>poetry</code> バッケージにある <code>console.run</code> を実行する <code>poetry</code> スクリプトがインストールされました。</p>
@@ -783,20 +787,20 @@ excludeフィールドに指定されたglobは、パッケージのビルド時
 <li>オプションの依存関係のパッケージ群</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span>
 
 <span class="k">[tool.poetry.dependencies]</span>
 <span class="c1"># These packages are mandatory and form the core of this package’s distribution.</span>
-<span class="na">mandatory</span> <span class="o">=</span> <span class="s">&quot;^1.0&quot;</span>
+<span class="n">mandatory</span> <span class="o">=</span> <span class="s">&quot;^1.0&quot;</span>
 
 <span class="c1"># A list of all of the optional dependencies, some of which are included in the</span>
 <span class="c1"># below `extras`. They can be opted into by apps.</span>
-<span class="na">psycopg2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.7&quot;, optional = true }</span>
-<span class="na">mysqlclient</span> <span class="o">=</span> <span class="s">{ version = &quot;^1.3&quot;, optional = true }</span>
+<span class="n">psycopg2</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.7&quot;</span><span class="p">,</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">true</span> <span class="p">}</span>
+<span class="n">mysqlclient</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^1.3&quot;</span><span class="p">,</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">true</span> <span class="p">}</span>
 
 <span class="k">[tool.poetry.extras]</span>
-<span class="na">mysql</span> <span class="o">=</span> <span class="s">[&quot;mysqlclient&quot;]</span>
-<span class="na">pgsql</span> <span class="o">=</span> <span class="s">[&quot;psycopg2&quot;]</span>
+<span class="n">mysql</span> <span class="o">=</span> <span class="k">[&quot;mysqlclient&quot;]</span>
+<span class="n">pgsql</span> <span class="o">=</span> <span class="k">[&quot;psycopg2&quot;]</span>
 </pre></div>
 
 <p>パッケージをインストールするときに、 <code>-E|--extras</code> オプションを使って追加分だと指定できます:</p>
@@ -809,10 +813,10 @@ poetry install -E mysql -E pgsql
 <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptoolsのエントリーポイント</a>
 と同じように動作する任意のプラグインをサポートしています。
 setuptoolsのドキュメントにある例に合わせると、次のように使います:</p>
-<div class="codehilite"><pre><span></span>[tool.poetry.plugins] # Optional super table
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="p">.</span><span class="n">poetry</span><span class="p">.</span><span class="n">plugins</span><span class="p">]</span> <span class="c1"># Optional super table</span>
 
-[tool.poetry.plugins.&quot;blogtool.parsers&quot;]
-&quot;.rst&quot; = &quot;some_module:SomeClass&quot;
+<span class="k">[tool.poetry.plugins.&quot;blogtool.parsers&quot;]</span>
+<span class="s">&quot;.rst&quot;</span> <span class="o">=</span> <span class="s">&quot;some_module:SomeClass&quot;</span>
 </pre></div>
 
 <h2 id="poetrypep-517">PoetryとPEP-517<a class="headerlink" href="#poetrypep-517" title="Permanent link">🔗</a></h2>
@@ -821,8 +825,8 @@ setuptoolsのドキュメントにある例に合わせると、次のように�
 <p>PoetryはPEP-517に準拠しているので、Poetryを使ってPythonプロジェクトを管理していたなら、次のように
 <code>pyproject.toml</code> ファイルの <code>build-system</code> 節で目にするはずです:</p>
 <div class="codehilite"><pre><span></span><span class="k">[build-system]</span>
-<span class="na">requires</span> <span class="o">=</span> <span class="s">[&quot;poetry&gt;=0.12&quot;]</span>
-<span class="na">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
+<span class="n">requires</span> <span class="o">=</span> <span class="k">[&quot;poetry&gt;=0.12&quot;]</span>
+<span class="n">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
 </pre></div>
 
 <div class="admonition note">
@@ -898,7 +902,7 @@ setuptoolsのドキュメントにある例に合わせると、次のように�
       
     </div>
     
-      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

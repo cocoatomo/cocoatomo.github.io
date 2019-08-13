@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Poetry documentation translated into Japanese">
+      
       
       
       
@@ -32,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -40,17 +42,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -125,7 +127,9 @@
               Poetry documentation
             </span>
             <span class="md-header-nav__topic">
-              Versions
+              
+                Versions
+              
             </span>
           
         </div>
@@ -671,24 +675,24 @@
 <h3 id="git"><code>git</code> 依存関係<a class="headerlink" href="#git" title="Permanent link">🔗</a></h3>
 <p><code>git</code> レポジトリにあるライブラリに依存するための、指定する必要のある最小限の情報はgitをキーとするレポジトリの場所です:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">requests</span> <span class="o">=</span> <span class="s">{ git = &quot;https://github.com/requests/requests.git&quot; }</span>
+<span class="n">requests</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span> <span class="o">=</span> <span class="s">&quot;https://github.com/requests/requests.git&quot;</span> <span class="p">}</span>
 </pre></div>
 
 <p>これ以外の情報を指定していないので、Poetryは <code>master</code> ブランチの最新のコミットを使いプロジェクトをするつもりなのだと仮定します。
 <code>git</code> キーと <code>rev</code> キー, <code>tag</code> キー, <code>branch</code> キーを組み合わせて、それ以外のものも指定できます。
 これが、 <code>next</code> という名前のブランチの最新のコミットを使いたいことを指定する例です:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">requests</span> <span class="o">=</span> <span class="s">{ git = &quot;https://github.com/kennethreitz/requests.git&quot;, branch = &quot;next&quot; }</span>
+<span class="n">requests</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span> <span class="o">=</span> <span class="s">&quot;https://github.com/kennethreitz/requests.git&quot;</span><span class="p">,</span> <span class="n">branch</span> <span class="o">=</span> <span class="s">&quot;next&quot;</span> <span class="p">}</span>
 </pre></div>
 
 <h3 id="path"><code>path</code> 依存関係<a class="headerlink" href="#path" title="Permanent link">🔗</a></h3>
 <p>ローカルディレクトリやローカルファイルにあるライブラリに依存するために、 <code>path</code> 属性が使えます:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
 <span class="c1"># directory</span>
-<span class="na">my-package</span> <span class="o">=</span> <span class="s">{ path = &quot;../my-package/&quot; }</span>
+<span class="n">my-package</span> <span class="o">=</span> <span class="p">{</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;../my-package/&quot;</span> <span class="p">}</span>
 
 <span class="c1"># file</span>
-<span class="na">my-package</span> <span class="o">=</span> <span class="s">{ path = &quot;../my-package/dist/my-package-0.1.0.tar.gz&quot; }</span>
+<span class="n">my-package</span> <span class="o">=</span> <span class="p">{</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;../my-package/dist/my-package-0.1.0.tar.gz&quot;</span> <span class="p">}</span>
 </pre></div>
 
 <div class="admonition note">
@@ -699,11 +703,11 @@
 <h3 id="python">Python制限依存関係<a class="headerlink" href="#python" title="Permanent link">🔗</a></h3>
 <p>ある依存関係を特定のバージョンのPythonでだけインストールする、という指定もできます:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = &quot;~2.7&quot; }</span>
+<span class="n">pathlib2</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.2&quot;</span><span class="p">,</span> <span class="n">python</span> <span class="o">=</span> <span class="s">&quot;~2.7&quot;</span> <span class="p">}</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">pathlib2</span> <span class="o">=</span> <span class="s">{ version = &quot;^2.2&quot;, python = [&quot;~2.7&quot;, &quot;^3.2&quot;] }</span>
+<span class="n">pathlib2</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.2&quot;</span><span class="p">,</span> <span class="n">python</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;~2.7&quot;</span><span class="p">,</span> <span class="s">&quot;^3.2&quot;</span><span class="p">]</span> <span class="p">}</span>
 </pre></div>
 
 <h3 id="_9">複数制約依存関係<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h3>
@@ -711,10 +715,10 @@
 <p>バージョン1.9まではPython 3.0未満、2.0以降はPython 3.4以上というPythonとの互換性を持つパッケージ <code>foo</code> への依存関係があるとしましょう:
 このとき次のように宣言します:</p>
 <div class="codehilite"><pre><span></span><span class="k">[tool.poetry.dependencies]</span>
-<span class="na">foo</span> <span class="o">=</span> <span class="s">[</span>
-<span class="s">    {version = &quot;&lt;=1.9&quot;, python = &quot;^2.7&quot;},</span>
-<span class="s">    {version = &quot;^2.0&quot;, python = &quot;^3.4&quot;}</span>
-<span class="na">]</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;&lt;=1.9&quot;</span><span class="p">,</span> <span class="n">python</span> <span class="o">=</span> <span class="s">&quot;^2.7&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.0&quot;</span><span class="p">,</span> <span class="n">python</span> <span class="o">=</span> <span class="s">&quot;^3.4&quot;</span><span class="p">}</span>
+<span class="p">]</span>
 </pre></div>
 
 <div class="admonition note">
@@ -791,7 +795,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
