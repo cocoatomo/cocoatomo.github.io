@@ -38,7 +38,7 @@
     
     
       
-        <title>設定 - Poetry documentation</title>
+        <title>環境管理 - Poetry documentation</title>
       
     
     
@@ -102,7 +102,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="0" class="md-skip">
+      <a href="#managing-environments" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -128,7 +128,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                設定
+                環境管理
               
             </span>
           
@@ -243,132 +243,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        設定
-      </label>
-    
-    <a href="./" title="設定" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../configuration/" title="設定" class="md-nav__link">
       設定
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-the-current-configuration" class="md-nav__link">
-    Listing the current configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-a-single-configuration-setting" class="md-nav__link">
-    Displaying a single configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-or-updating-a-configuration-setting" class="md-nav__link">
-    Adding or updating a configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-a-specific-setting" class="md-nav__link">
-    Removing a specific setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-environment-variables" class="md-nav__link">
-    Using environment variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    利用可能な設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-dir-string" class="md-nav__link">
-    cache-dir: string
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvscreate-boolean" class="md-nav__link">
-    virtualenvs.create: boolean
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvsin-project-boolean" class="md-nav__link">
-    virtualenvs.in-project: boolean
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvspath-string" class="md-nav__link">
-    virtualenvs.path: string
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repositoriesltnamegt-string" class="md-nav__link">
-    repositories.&amp;lt;name&amp;gt;: string
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -388,11 +267,70 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../managing-environments/" title="環境管理" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        環境管理
+      </label>
+    
+    <a href="./" title="環境管理" class="md-nav__link md-nav__link--active">
       環境管理
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#switching-between-environments" class="md-nav__link">
+    Switching between environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#displaying-the-environment-information" class="md-nav__link">
+    Displaying the environment information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-the-environments-associated-with-the-project" class="md-nav__link">
+    Listing the environments associated with the project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-the-environments" class="md-nav__link">
+    Deleting the environments
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -465,92 +403,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local configuration
+  <a href="#switching-between-environments" class="md-nav__link">
+    Switching between environments
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-the-current-configuration" class="md-nav__link">
-    Listing the current configuration
+  <a href="#displaying-the-environment-information" class="md-nav__link">
+    Displaying the environment information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#displaying-a-single-configuration-setting" class="md-nav__link">
-    Displaying a single configuration setting
+  <a href="#listing-the-environments-associated-with-the-project" class="md-nav__link">
+    Listing the environments associated with the project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-or-updating-a-configuration-setting" class="md-nav__link">
-    Adding or updating a configuration setting
+  <a href="#deleting-the-environments" class="md-nav__link">
+    Deleting the environments
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-a-specific-setting" class="md-nav__link">
-    Removing a specific setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-environment-variables" class="md-nav__link">
-    Using environment variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    利用可能な設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-dir-string" class="md-nav__link">
-    cache-dir: string
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvscreate-boolean" class="md-nav__link">
-    virtualenvs.create: boolean
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvsin-project-boolean" class="md-nav__link">
-    virtualenvs.in-project: boolean
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtualenvspath-string" class="md-nav__link">
-    virtualenvs.path: string
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repositoriesltnamegt-string" class="md-nav__link">
-    repositories.&amp;lt;name&amp;gt;: string
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -571,94 +447,100 @@
               
                 
                 
-                <h1 id="_1">設定<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h1>
-<p>Poetryは、 <code>config</code> コマンド (<a href="/poetry-ja/cli/#config">使い方のより詳しいことはこちら</a>)
-による設定や、初めてそのコマンドを実行するときに自動的に作成される <code>config.toml</code> で直接設定が行えます。
-このファイルはたいてい次のディレクトリのうち1つで見付かります。</p>
-<ul>
-<li>macOS:   <code>~/Library/Application Support/pypoetry</code></li>
-<li>Windows: <code>C:\Users\&lt;username&gt;\AppData\Roaming\pypoetry</code></li>
-</ul>
-<p>Unixでは、XDG仕様に従い、 <code>$XDG_CONFIG_HOME</code> をサポートしています。
-つまり、デフォルトでは <code>~/.config/pypoetry</code> となります。</p>
-<h2 id="local-configuration">Local configuration<a class="headerlink" href="#local-configuration" title="Permanent link">🔗</a></h2>
-<p>Poetry also provides the ability to have settings that are specific to a
-project by passing the <code>--local</code> option to the <code>config</code> command.</p>
-<div class="codehilite"><pre><span></span><code>poetry config virtualenvs.create <span class="nb">false</span> --local
+                <h1 id="managing-environments">Managing environments<a class="headerlink" href="#managing-environments" title="Permanent link">🔗</a></h1>
+<p>Poetry makes project environment isolation one of its core feature.</p>
+<p>What this means is that it will always work isolated from your global Python
+installation.  To achieve this, it will first check if it's currently
+running inside a virtual environment.  If it is, it will use it directly
+without creating a new one. But if it's not, it will use one that it has
+already created or create a brand new one for you.</p>
+<p>By default, Poetry will try to use the currently activated Python version to
+create the virtual environment for the current project.</p>
+<p>However, for various reasons, this Python version might not be compatible
+with the <code>python</code> requirement of the project. In this case, Poetry will try
+to find one that is and use it. If it's unable to do so then you will be
+prompted to activate one explicitly, see <a href="#switching-between-environments">Switching
+environments</a>.</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>To easily switch between Python versions, it is recommended to
+use <a href="https://github.com/pyenv/pyenv">pyenv</a> or similar tools.</p>
+<p>For instance, if your project is Python 2.7 only, a standard workflow
+would be:</p>
+<div class="codehilite"><pre><span></span><code>pyenv install <span class="m">2</span>.7.15
+pyenv <span class="nb">local</span> <span class="m">2</span>.7.15  <span class="c1"># Activate Python 2.7 for the current project</span>
+poetry install
 </code></pre></div>
 
-<h2 id="listing-the-current-configuration">Listing the current configuration<a class="headerlink" href="#listing-the-current-configuration" title="Permanent link">🔗</a></h2>
-<p>To list the current configuration you can use the <code>--list</code> option of the
-<code>config</code> command:</p>
-<div class="codehilite"><pre><span></span><code>poetry config --list
+</div>
+<h2 id="switching-between-environments">Switching between environments<a class="headerlink" href="#switching-between-environments" title="Permanent link">🔗</a></h2>
+<p>Sometimes this might not be feasible for your system, especially Windows
+where <code>pyenv</code> is not available, or you simply prefer to have a more explicit
+control over your environment.  For this specific purpose, you can use the
+<code>env use</code> command to tell Poetry which Python version to use for the current
+project.</p>
+<div class="codehilite"><pre><span></span><code>poetry env use /full/path/to/python
 </code></pre></div>
 
-<p>which will give you something similar to this:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">cache-dir</span> <span class="o">=</span> <span class="s">&quot;/path/to/cache/directory&quot;</span>
-<span class="n">virtualenvs</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="kc">true</span>
-<span class="n">virtualenvs</span><span class="p">.</span><span class="n">in-project</span> <span class="o">=</span> <span class="kc">false</span>
-<span class="n">virtualenvs</span><span class="p">.</span><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;{cache-dir}/virtualenvs&quot;</span>  <span class="c1"># /path/to/cache/directory/virtualenvs</span>
+<p>If you have the python executable in your <code>PATH</code> you can use it:</p>
+<div class="codehilite"><pre><span></span><code>poetry env use python3.7
 </code></pre></div>
 
-<h2 id="displaying-a-single-configuration-setting">Displaying a single configuration setting<a class="headerlink" href="#displaying-a-single-configuration-setting" title="Permanent link">🔗</a></h2>
-<p>If you want to see the value of a specific setting, you can give its name to
-the <code>config</code> command</p>
-<div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path
+<p>You can even just use the minor Python version in this case:</p>
+<div class="codehilite"><pre><span></span><code>poetry env use <span class="m">3</span>.7
 </code></pre></div>
 
-<p>For a full list of the supported settings see <a href="#available-settings">Available
-settings</a>.</p>
-<h2 id="adding-or-updating-a-configuration-setting">Adding or updating a configuration setting<a class="headerlink" href="#adding-or-updating-a-configuration-setting" title="Permanent link">🔗</a></h2>
-<p>To change or otherwise add a new configuration setting, you can pass a value
-after the setting's name:</p>
-<div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path /path/to/cache/directory/virtualenvs
+<p>If you want to disable the explicitly activated virtual environment, you can
+use the special <code>system</code> Python version to retrieve the default behavior:</p>
+<div class="codehilite"><pre><span></span><code>poetry env use system
 </code></pre></div>
 
-<p>For a full list of the supported settings see <a href="#available-settings">Available
-settings</a>.</p>
-<h2 id="removing-a-specific-setting">Removing a specific setting<a class="headerlink" href="#removing-a-specific-setting" title="Permanent link">🔗</a></h2>
-<p>If you want to remove a previously set setting, you can use the <code>--unset</code>
-option:</p>
-<div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path --unset
+<h2 id="displaying-the-environment-information">Displaying the environment information<a class="headerlink" href="#displaying-the-environment-information" title="Permanent link">🔗</a></h2>
+<p>If you want to get basic information about the currently activated virtual
+environment, you can use the <code>env info</code> command:</p>
+<div class="codehilite"><pre><span></span><code>poetry env info
 </code></pre></div>
 
-<p>The setting will then retrieve its default value.</p>
-<h2 id="using-environment-variables">Using environment variables<a class="headerlink" href="#using-environment-variables" title="Permanent link">🔗</a></h2>
-<p>Sometimes, in particular when using Poetry with CI tools, it's easier to use
-environment variables and not have to execute configuration commands.</p>
-<p>Poetry supports this and any setting can be set by using environment
-variables.</p>
-<p>The environment variables must be prefixed by <code>POETRY_</code> and are comprised of
-the uppercase name of the setting and with dots and dashes replaced by
-underscore, here is an example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">POETRY_VIRTUALENVS_PATH</span><span class="o">=</span>/path/to/virtualenvs/directory
+<p>will output something similar to this:</p>
+<div class="codehilite"><pre><span></span><code>Virtual environment
+Python:         3.7.1
+Implementation: CPython
+Path:           /path/to/poetry/cache/virtualenvs/test-O3eWbxRl-py3.7
+Valid:          True
+
+System
+Platform: darwin
+OS:       posix
+Python:   /path/to/main/python
 </code></pre></div>
 
-<p>This also works for secret settings, like credentials:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">POETRY_HTTP_BASIC_MY_REPOSITORY_PASSWORD</span><span class="o">=</span>secret
+<p>If you only want to know the path to the virtual environment, you can pass
+the <code>--path</code> option to <code>env info</code>:</p>
+<div class="codehilite"><pre><span></span><code>poetry env info --path
 </code></pre></div>
 
-<h2 id="_2">利用可能な設定<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
-<h3 id="cache-dir-string"><code>cache-dir</code>: string<a class="headerlink" href="#cache-dir-string" title="Permanent link">🔗</a></h3>
-<p>The path to the cache directory used by Poetry.</p>
-<p>Defaults to one of the following directories:</p>
-<ul>
-<li>macOS:   <code>~/Library/Caches/pypoetry</code></li>
-<li>Windows: <code>C:\Users\&lt;username&gt;\AppData\Local\pypoetry\Cache</code></li>
-<li>Unix:    <code>~/.cache/pypoetry</code></li>
-</ul>
-<h3 id="virtualenvscreate-boolean"><code>virtualenvs.create</code>: boolean<a class="headerlink" href="#virtualenvscreate-boolean" title="Permanent link">🔗</a></h3>
-<p>まだ存在していない場合、新しい仮想環境を作成します。
-デフォルトは <code>true</code> です。</p>
-<h3 id="virtualenvsin-project-boolean"><code>virtualenvs.in-project</code>: boolean<a class="headerlink" href="#virtualenvsin-project-boolean" title="Permanent link">🔗</a></h3>
-<p>プロジェクトのルートディレクトリに仮想環境を作成します。
-デフォルトは <code>false</code> です。</p>
-<h3 id="virtualenvspath-string"><code>virtualenvs.path</code>: string<a class="headerlink" href="#virtualenvspath-string" title="Permanent link">🔗</a></h3>
-<p>仮想環境が作成されるディレクトリ。
-デフォルトは <code>{cache-dir}/virtualenvs</code> (Windowsでは <code>{cache-dir}\virtualenvs</code>) です。</p>
-<h3 id="repositoriesltnamegt-string"><code>repositories.&lt;name&gt;</code>: string<a class="headerlink" href="#repositoriesltnamegt-string" title="Permanent link">🔗</a></h3>
-<p>別のレポジトリを新しく設定します。
-より詳しいことは <a href="/poetry-ja/repositories/">レポジトリ</a> を参照してください。</p>
+<h2 id="listing-the-environments-associated-with-the-project">Listing the environments associated with the project<a class="headerlink" href="#listing-the-environments-associated-with-the-project" title="Permanent link">🔗</a></h2>
+<p>You can also list all the virtual environments associated with the current
+virtual environment with the <code>env list</code> command:</p>
+<div class="codehilite"><pre><span></span><code>poetry env list
+</code></pre></div>
+
+<p>will output something like the following:</p>
+<div class="codehilite"><pre><span></span><code>test-O3eWbxRl-py2.7
+test-O3eWbxRl-py3.6
+test-O3eWbxRl-py3.7 (Activated)
+</code></pre></div>
+
+<h2 id="deleting-the-environments">Deleting the environments<a class="headerlink" href="#deleting-the-environments" title="Permanent link">🔗</a></h2>
+<p>Finally, you can delete existing virtual environments by using <code>env remove</code>:</p>
+<div class="codehilite"><pre><span></span><code>poetry env remove /full/path/to/python
+poetry env remove python3.7
+poetry env remove <span class="m">3</span>.7
+poetry env remove test-O3eWbxRl-py3.7
+</code></pre></div>
+
+<p>If your remove the currently activated virtual environment, it will be
+automatically deactivated.</p>
                 
                   
                 
@@ -680,7 +562,7 @@ underscore, here is an example:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cli/" title="コマンド" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../repositories/" title="レポジトリ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -689,19 +571,19 @@ underscore, here is an example:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                コマンド
+                レポジトリ
               </span>
             </div>
           </a>
         
         
-          <a href="../repositories/" title="レポジトリ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dependency-specification/" title="依存関係指定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                レポジトリ
+                依存関係指定
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
