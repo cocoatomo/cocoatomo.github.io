@@ -314,8 +314,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#custom-certificate-authority-and-mutual-tls-authentication" class="md-nav__link">
-    Custom certificate authority and mutual TLS authentication
+  <a href="#tls" class="md-nav__link">
+    カスタム認証局と相互TLS認証
   </a>
   
 </li>
@@ -373,8 +373,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../dependency-specification/" title="依存関係指定" class="md-nav__link">
-      依存関係指定
+    <a href="../dependency-specification/" title="依存関係仕様" class="md-nav__link">
+      依存関係仕様
     </a>
   </li>
 
@@ -466,8 +466,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#custom-certificate-authority-and-mutual-tls-authentication" class="md-nav__link">
-    Custom certificate authority and mutual TLS authentication
+  <a href="#tls" class="md-nav__link">
+    カスタム認証局と相互TLS認証
   </a>
   
 </li>
@@ -537,39 +537,40 @@
 <p class="admonition-title">注意</p>
 <p>PyPIへ公開するために、 <code>pypi</code> という名前のレポジトリの認証情報を
 設定できます:</p>
-<p>Note that it is recommended to use <a href="https://pypi.org/help/#apitoken">API tokens</a>
-when uploading packages to PyPI.
-Once you have created a new token, you can tell Poetry to use it:</p>
-<div class="codehilite"><pre><span></span><code>poetry config pypi-token.pypi my-token
-</code></pre></div>
-
-<p>If you still want to use you username and password, you can do so with the following
-call to <code>config</code>.</p>
-<div class="codehilite"><pre><span></span><code>poetry config http-basic.pypi username password
-</code></pre></div>
-
 </div>
-<p><code>pyblish</code> コマンドを使うときに <code>--username</code> オプションと <code>--password</code>
+<p>パッケージをPyPIにアップロードするときには、<a href="https://pypi.org/help/#apitoken">API tokens</a>を使うのが推奨されていることに注意してください。
+新しくトークンを作っておけば、Poetryにそれを使わせられます:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">```bash</span>
+<span class="err">poetry config pypi-token.pypi my-token</span>
+<span class="err">```</span>
+</code></pre></div>
+
+
+<p>ここでも自分のユーザー名とパスワードを使いたい場合、次の <code>config</code> の呼び出し方でできます。</p>
+<div class="codehilite"><pre><span></span><code><span class="err">```bash</span>
+<span class="err">poetry config http-basic.pypi username password</span>
+<span class="err">```</span>
+</code></pre></div>
+
+
+<p><code>publish</code> コマンドを使うときに <code>--username</code> オプションと <code>--password</code>
 オプションを付けて、ユーザー名とパスワードを指定することもできます。</p>
-<p>If a system keyring is available and supported, the password is stored to
-and retrieved from the keyring. In the above example, the credential will be
-stored using the name <code>poetry-repository-pypi</code>. If access to keyring fails
-or is unsupported, this will fall back to writing the password to the
-<code>auth.toml</code> file along with the username.</p>
-<p>Keyring support is enabled using the <a href="https://pypi.org/project/keyring/">keyring
-library</a>. For more information on
-supported backends refer to the <a href="https://keyring.readthedocs.io/en/latest/?badge=latest">library
-documentation</a>.</p>
-<p>Alternatively, you can use environment variables to provide the credentials:</p>
+<p>システムのキーリングが利用可能でサポートされている場合、パスワードはキーリングに格納されたり、キーリングから取得されたりします。認証情報は
+<code>poetry-repository-pypi</code>
+という名前で格納されます。キーリングへのアクセスに失敗したりサポートされていない場合、パスワードはユーザー名と一緒に <code>auth.toml</code>
+ファイルに書き込まれます。</p>
+<p>キーリングのサポートは <a href="https://pypi.org/project/keyring/">keyringライブラリ</a>
+を使って有効にします。サポートされる環境基盤についてより詳しいことは
+<a href="https://keyring.readthedocs.io/en/latest/?badge=latest">ライブラリドキュメント</a>
+を参照してください。</p>
+<p>あるいは、環境変数を使って認証情報を提供けいます:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">POETRY_PYPI_TOKEN_PYPI</span><span class="o">=</span>my-token
 <span class="nb">export</span> <span class="nv">POETRY_HTTP_BASIC_PYPI_USERNAME</span><span class="o">=</span>username
 <span class="nb">export</span> <span class="nv">POETRY_HTTP_BASIC_PYPI_PASSWORD</span><span class="o">=</span>password
 </code></pre></div>
 
-<p>See <a href="/docs/configuration/#using-environment-variables">Using environment
-variables</a> for more
-information on how to configure Poetry with environment variables.</p>
-<h4 id="custom-certificate-authority-and-mutual-tls-authentication">Custom certificate authority and mutual TLS authentication<a class="headerlink" href="#custom-certificate-authority-and-mutual-tls-authentication" title="Permanent link">🔗</a></h4>
+<p>環境変数でPoetryを設定する方法についてより詳しいことは、<a href="/docs/configuration/#using-environment-variables">環境変数の使用</a>を参照してください。</p>
+<h4 id="tls">カスタム認証局と相互TLS認証<a class="headerlink" href="#tls" title="Permanent link">🔗</a></h4>
 <p>Poetry supports repositories that are secured by a custom certificate
 authority as well as those that require certificate-based client
 authentication.  The following will configure the "foo" repository to

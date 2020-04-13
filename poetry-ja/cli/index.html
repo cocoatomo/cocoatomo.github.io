@@ -595,8 +595,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../dependency-specification/" title="依存関係指定" class="md-nav__link">
-      依存関係指定
+    <a href="../dependency-specification/" title="依存関係仕様" class="md-nav__link">
+      依存関係仕様
     </a>
   </li>
 
@@ -1046,8 +1046,7 @@
 poetry install -E mysql -E pgsql
 </code></pre></div>
 
-<p>By default <code>poetry</code> will install your project's package everytime you run
-<code>install</code>:</p>
+<p>デフォルトでは、<code>poetry</code> は <code>install</code> を実行するたびにプロジェクトのパッケージをインストールします:</p>
 <div class="codehilite"><pre><span></span><code>$ poetry install
 Installing dependencies from lock file
 
@@ -1056,14 +1055,14 @@ No dependencies to install or update
   - Installing &lt;your-package-name&gt; <span class="o">(</span>x.x.x<span class="o">)</span>
 </code></pre></div>
 
-<p>If you want to skip this installation, use the <code>--no-root</code> option.</p>
+<p>このインストールをスキップしたい場合は、<code>--no-root</code> オプションを使ってください。</p>
 <div class="codehilite"><pre><span></span><code>poetry install --no-root
 </code></pre></div>
 
 <h3 id="options_1">Options<a class="headerlink" href="#options_1" title="Permanent link">🔗</a></h3>
 <ul>
 <li><code>--no-dev</code>: 開発用の依存関係をインストールしない。</li>
-<li><code>--no-root</code>: Do not install the root package (your project).</li>
+<li><code>--no-root</code>: ルートパッケージ (あなたのプロジェクト) をインストールしない。</li>
 <li><code>--extras (-E)</code>: インストールする機能 (複数値も可能です)。</li>
 </ul>
 <h2 id="update">update<a class="headerlink" href="#update" title="Permanent link">🔗</a></h2>
@@ -1088,16 +1087,14 @@ No dependencies to install or update
 <div class="codehilite"><pre><span></span><code>poetry add requests pendulum
 </code></pre></div>
 
-<p>You also can specify a constraint when adding a package, like so:</p>
+<p>パッケージを追加するときに、次のように制約を指定できます:</p>
 <div class="codehilite"><pre><span></span><code>poetry add pendulum@^2.0.5
 poetry add <span class="s2">&quot;pendulum&gt;=2.0.5&quot;</span>
 </code></pre></div>
 
-<p>If you try to add a package that is already present, you will get an error.
-However, if you specify a constraint, like above, the dependency will be
-updated by using the specified constraint. If you want to get the latest
-version of an already present dependency you can use the special <code>latest</code>
-constraint:</p>
+<p>既に追加してあるパッケージを追加しようとすると、エラーが出ます。
+ただし、上にあるような制約を指定している場合は、その指定された制約を使って依存関係が更新されます。既に追加してある依存関係の最新バージョンが欲しい場合は、
+<code>latest</code> という特殊な制約が使えます:</p>
 <div class="codehilite"><pre><span></span><code>poetry add pendulum@latest
 </code></pre></div>
 
@@ -1105,8 +1102,7 @@ constraint:</p>
 <div class="codehilite"><pre><span></span><code>poetry add git+https://github.com/sdispater/pendulum.git
 </code></pre></div>
 
-<p>If you need to checkout a specific branch, tag or revision, you can specify
-it when using <code>add</code>:</p>
+<p>特定のブランチ、タグ、リビジョンをチェックアウトする必要がある場合に、 <code>add</code> を使っているときはその指定ができます:</p>
 <div class="codehilite"><pre><span></span><code>poetry add git+https://github.com/sdispater/pendulum.git#develop
 poetry add git+https://github.com/sdispater/pendulum.git#2.0.5
 </code></pre></div>
@@ -1124,8 +1120,7 @@ poetry add ../my-package/dist/my_package-0.1.0.whl
 <span class="n">my-package</span> <span class="o">=</span> <span class="p">{</span><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;../my/path&quot;</span><span class="p">,</span> <span class="n">develop</span> <span class="o">=</span> <span class="n">false</span><span class="p">}</span>
 </code></pre></div>
 
-<p>If the package(s) you want to install provide extras, you can specify them
-when adding the package:</p>
+<p>インストールしたいパッケージがextraを提供している場合、パッケージを追加するときにそのextrasを指定できます:</p>
 <div class="codehilite"><pre><span></span><code>poetry add requests<span class="o">[</span>security,socks<span class="o">]</span>
 poetry add <span class="s2">&quot;requests[security,socks]~=2.22.0&quot;</span>
 poetry add <span class="s2">&quot;git+https://github.com/pallets/flask.git@1.1.1[dotenv,dev]&quot;</span>
@@ -1255,29 +1250,26 @@ dependencies:
 </code></pre></div>
 
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link">🔗</a></h2>
-<p>This command shows the current version of the project or bumps the version
-of the project and writes the new version back to <code>pyproject.toml</code> if a
-valid bump rule is provided.</p>
+<p>このコマンドは現在のプロジェクトのバージョンを表示したり、正しいバージョン更新規則を指定された場合、プロジェクトのバージョンを進めて
+<code>pyproject.toml</code> へ新しいバージョンを書き戻します。</p>
 <p>新しいバージョンは理想的には、有効なセマンティックバージョン文字列か、有効な更新規則であるべきです。有効な更新規則: <code>patch</code>, <code>minor</code>,
 <code>major</code>, <code>prepatch</code>, <code>preminor</code>, <code>premajor</code>, <code>prerelease</code> 。</p>
 <h2 id="export">export<a class="headerlink" href="#export" title="Permanent link">🔗</a></h2>
-<p>This command exports the lock file to other formats.</p>
+<p>このコマンドはlockファイルを他のフォーマットへ出力します。</p>
 <div class="codehilite"><pre><span></span><code>poetry <span class="nb">export</span> -f requirements.txt &gt; requirements.txt
 </code></pre></div>
 
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>Only the <code>requirements.txt</code> format is currently supported.</p>
+<p>現時点では <code>requirements.txt</code> 形式のみをサポートしています。</p>
 </div>
 <h3 id="options_10">Options<a class="headerlink" href="#options_10" title="Permanent link">🔗</a></h3>
 <ul>
-<li><code>--format (-f)</code>: The format to export to.  Currently, only
-  <code>requirements.txt</code> is supported.</li>
-<li><code>--output (-o)</code>: The name of the output file.  If omitted, print to
-  standard output.</li>
-<li><code>--dev</code>: Include development dependencies.</li>
-<li><code>--extras (-E)</code>: Extra sets of dependencies to include.</li>
-<li><code>--without-hashes</code>: Exclude hashes from the exported file.</li>
+<li><code>--format (-f)</code>: 出力する形式。現時点では <code>requirements.txt</code> のみサポートされています。</li>
+<li><code>--output (-o)</code>: 出力ファイル名。省略した場合は、標準出力に表示されます。</li>
+<li><code>--dev</code>: 開発用の依存関係を含めます。</li>
+<li><code>--extras (-E)</code>: 含めたい依存関係のextra一式です。</li>
+<li><code>--without-hashes</code>: 出力したファイルのハッシュを除外します。</li>
 <li><code>--with-credentials</code>: Include credentials for extra indices.</li>
 </ul>
 <h2 id="env">env<a class="headerlink" href="#env" title="Permanent link">🔗</a></h2>
