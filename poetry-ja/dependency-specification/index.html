@@ -397,14 +397,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-environment-markers" class="md-nav__link">
-    Using environment markers
+  <a href="#_9" class="md-nav__link">
+    環境マーカーの使用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     複数制約依存関係
   </a>
   
@@ -567,14 +567,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-environment-markers" class="md-nav__link">
-    Using environment markers
+  <a href="#_9" class="md-nav__link">
+    環境マーカーの使用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     複数制約依存関係
   </a>
   
@@ -750,7 +750,7 @@
 <span class="n">my-package</span> <span class="o">=</span> <span class="p">{</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://example.com/my-package-0.1.0.tar.gz&quot;</span> <span class="p">}</span>
 </code></pre></div>
 
-<p>with the corresponding <code>add</code> call:</p>
+<p>対応する <code>add</code> 呼び出しはこれです:</p>
 <div class="codehilite"><pre><span></span><code>poetry add https://example.com/my-package-0.1.0.tar.gz
 </code></pre></div>
 
@@ -764,16 +764,15 @@
 <span class="n">pathlib2</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.2&quot;</span><span class="p">,</span> <span class="n">python</span> <span class="o">=</span> <span class="s">&quot;~2.7 || ^3.2&quot;</span> <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="using-environment-markers">Using environment markers<a class="headerlink" href="#using-environment-markers" title="Permanent link">🔗</a></h2>
-<p>If you need more complex install conditions for your dependencies, Poetry
-supports <a href="https://www.python.org/dev/peps/pep-0508/#environment-markers">environment
-markers</a>  via
-the <code>markers</code> property:</p>
+<h2 id="_9">環境マーカーの使用<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h2>
+<p>依存関係のためのより複雑なインストール条件が必要な場合、Poetryは <code>markers</code> 属性で
+<a href="https://www.python.org/dev/peps/pep-0508/#environment-markers">環境マーカー</a>
+に対応しています:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.dependencies]</span>
 <span class="n">pathlib2</span> <span class="o">=</span> <span class="p">{</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;^2.2&quot;</span><span class="p">,</span> <span class="n">markers</span> <span class="o">=</span> <span class="s">&quot;python_version ~= &#39;2.7&#39; or sys_platform == &#39;win32&#39;&quot;</span> <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="_9">複数制約依存関係<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h2>
+<h2 id="_10">複数制約依存関係<a class="headerlink" href="#_10" title="Permanent link">🔗</a></h2>
 <p>あるときは、対象のPythonバージョンに依存して、依存関係に異なるバージョン範囲が設定されることがあります。</p>
 <p>バージョン1.9まではPython 3.0未満、2.0以降はPython 3.4以上というPythonとの互換性を持つパッケージ <code>foo</code> への依存関係があるとしましょう:
 このとき次のように宣言します:</p>

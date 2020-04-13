@@ -765,8 +765,7 @@ maintainersにはemailを含めてよく、<code>name &lt;email&gt;</code> と�
 <span class="p">]</span>
 </code></pre></div>
 
-<p>If you want to restrict a package to a specific <a href="#build">build</a> format you
-can specify it by using <code>format</code>:</p>
+<p>パッケージを特定の <a href="#build">ビルド</a> 形式だけに制限したい場合は、<code>format</code> を使って指定できます。</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
@@ -775,8 +774,7 @@ can specify it by using <code>format</code>:</p>
 <span class="p">]</span>
 </code></pre></div>
 
-<p>From now on, only the <code>sdist</code> build archive will include the <code>tests</code>
-package.</p>
+<p>今後一切、<code>sdist</code> ビルドアーカイブだけが <code>tests</code> パッケージに含まれることになります。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p><code>packages</code> を使うとパッケージの自動検出機能が無効になり、
@@ -877,14 +875,13 @@ setuptoolsのドキュメントにある例に合わせると、次のように�
 </code></pre></div>
 
 <h2 id="urls"><code>urls</code><a class="headerlink" href="#urls" title="Permanent link">🔗</a></h2>
-<p>In addition to the basic urls (<code>homepage</code>, <code>repository</code> and
-<code>documentation</code>), you can specify any custom url in the <code>urls</code> section.</p>
+<p>基本的なurl (<code>homepage</code>, <code>repository</code>, <code>documentation</code>) に加えて、<code>urls</code>
+節には独自のurlを指定できます。</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.urls]</span>
 <span class="s">&quot;Bug Tracker&quot;</span> <span class="o">=</span> <span class="s">&quot;https://github.com/python-poetry/poetry/issues&quot;</span>
 </code></pre></div>
 
-<p>If you publish you package on PyPI, they will appear in the <code>Project Links</code>
-section.</p>
+<p>PyPIにパッケージを公開した場合、urlたちは <code>Project Links</code> 節に出てきます。</p>
 <h2 id="poetrypep-517">PoetryとPEP-517<a class="headerlink" href="#poetrypep-517" title="Permanent link">🔗</a></h2>
 <p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a>
 は、Pythonプロジェクトをビルドする別のビルドシステムを定義する標準的な方法を導入します。</p>

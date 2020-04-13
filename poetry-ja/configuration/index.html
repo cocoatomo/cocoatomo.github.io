@@ -272,49 +272,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-the-current-configuration" class="md-nav__link">
-    Listing the current configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-a-single-configuration-setting" class="md-nav__link">
-    Displaying a single configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-or-updating-a-configuration-setting" class="md-nav__link">
-    Adding or updating a configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-a-specific-setting" class="md-nav__link">
-    Removing a specific setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-environment-variables" class="md-nav__link">
-    Using environment variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    ローカル設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    現在の設定の一覧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    設定を1つだけ表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    設定の追加あるいは更新
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ある設定を消す
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    環境変数の使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     利用可能な設定
   </a>
   
@@ -465,49 +465,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-the-current-configuration" class="md-nav__link">
-    Listing the current configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-a-single-configuration-setting" class="md-nav__link">
-    Displaying a single configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-or-updating-a-configuration-setting" class="md-nav__link">
-    Adding or updating a configuration setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-a-specific-setting" class="md-nav__link">
-    Removing a specific setting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-environment-variables" class="md-nav__link">
-    Using environment variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    ローカル設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    現在の設定の一覧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    設定を1つだけ表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    設定の追加あるいは更新
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ある設定を消す
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    環境変数の使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     利用可能な設定
   </a>
   
@@ -581,67 +581,57 @@
 </ul>
 <p>Unixでは、XDG仕様に従い、 <code>$XDG_CONFIG_HOME</code> をサポートしています。
 つまり、デフォルトでは <code>~/.config/pypoetry</code> となります。</p>
-<h2 id="local-configuration">Local configuration<a class="headerlink" href="#local-configuration" title="Permanent link">🔗</a></h2>
-<p>Poetry also provides the ability to have settings that are specific to a
-project by passing the <code>--local</code> option to the <code>config</code> command.</p>
+<h2 id="_2">ローカル設定<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<p>Poetryは、<code>config</code> コマンドの <code>--local</code> オプションを渡すことで、プロジェクトに特定の設定を持たせる機能も提供しています。</p>
 <div class="codehilite"><pre><span></span><code>poetry config virtualenvs.create <span class="nb">false</span> --local
 </code></pre></div>
 
-<h2 id="listing-the-current-configuration">Listing the current configuration<a class="headerlink" href="#listing-the-current-configuration" title="Permanent link">🔗</a></h2>
-<p>To list the current configuration you can use the <code>--list</code> option of the
-<code>config</code> command:</p>
+<h2 id="_3">現在の設定の一覧<a class="headerlink" href="#_3" title="Permanent link">🔗</a></h2>
+<p>現在の設定の一覧を出すには、<code>config</code> コマンドの <code>--list</code> オプションが使えます:</p>
 <div class="codehilite"><pre><span></span><code>poetry config --list
 </code></pre></div>
 
-<p>which will give you something similar to this:</p>
+<p>これで次のような出力が見れます:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">cache-dir</span> <span class="o">=</span> <span class="s">&quot;/path/to/cache/directory&quot;</span>
 <span class="n">virtualenvs</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="kc">true</span>
 <span class="n">virtualenvs</span><span class="p">.</span><span class="n">in-project</span> <span class="o">=</span> <span class="kc">false</span>
 <span class="n">virtualenvs</span><span class="p">.</span><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;{cache-dir}/virtualenvs&quot;</span>  <span class="c1"># /path/to/cache/directory/virtualenvs</span>
 </code></pre></div>
 
-<h2 id="displaying-a-single-configuration-setting">Displaying a single configuration setting<a class="headerlink" href="#displaying-a-single-configuration-setting" title="Permanent link">🔗</a></h2>
-<p>If you want to see the value of a specific setting, you can give its name to
-the <code>config</code> command</p>
+<h2 id="1">設定を1つだけ表示<a class="headerlink" href="#1" title="Permanent link">🔗</a></h2>
+<p>ある1つの設定の値を見たい場合は、<code>config</code> コマンドにその設定の名前を渡せばよいです。</p>
 <div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path
 </code></pre></div>
 
-<p>For a full list of the supported settings see <a href="#available-settings">Available
-settings</a>.</p>
-<h2 id="adding-or-updating-a-configuration-setting">Adding or updating a configuration setting<a class="headerlink" href="#adding-or-updating-a-configuration-setting" title="Permanent link">🔗</a></h2>
-<p>To change or otherwise add a new configuration setting, you can pass a value
-after the setting's name:</p>
+<p>サポートされている設定の全一覧は <a href="#available-settings">利用可能な設定</a> を参照してください。</p>
+<h2 id="_4">設定の追加あるいは更新<a class="headerlink" href="#_4" title="Permanent link">🔗</a></h2>
+<p>新しい設定の変更それか追加するには、設定名の後ろに値を渡せば良いです:</p>
 <div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path /path/to/cache/directory/virtualenvs
 </code></pre></div>
 
-<p>For a full list of the supported settings see <a href="#available-settings">Available
-settings</a>.</p>
-<h2 id="removing-a-specific-setting">Removing a specific setting<a class="headerlink" href="#removing-a-specific-setting" title="Permanent link">🔗</a></h2>
-<p>If you want to remove a previously set setting, you can use the <code>--unset</code>
-option:</p>
+<p>サポートされている設定の全一覧は <a href="#available-settings">利用可能な設定</a> を参照してください。</p>
+<h2 id="_5">ある設定を消す<a class="headerlink" href="#_5" title="Permanent link">🔗</a></h2>
+<p>前に設定したものを消したい場合は、<code>--unset</code> オプションが使えます:</p>
 <div class="codehilite"><pre><span></span><code>poetry config virtualenvs.path --unset
 </code></pre></div>
 
-<p>The setting will then retrieve its default value.</p>
-<h2 id="using-environment-variables">Using environment variables<a class="headerlink" href="#using-environment-variables" title="Permanent link">🔗</a></h2>
-<p>Sometimes, in particular when using Poetry with CI tools, it's easier to use
-environment variables and not have to execute configuration commands.</p>
-<p>Poetry supports this and any setting can be set by using environment
-variables.</p>
-<p>The environment variables must be prefixed by <code>POETRY_</code> and are comprised of
-the uppercase name of the setting and with dots and dashes replaced by
-underscore, here is an example:</p>
+<p>その設定はデフォルト値に戻ります。</p>
+<h2 id="_6">環境変数の使用<a class="headerlink" href="#_6" title="Permanent link">🔗</a></h2>
+<p>あるとき、特にPoetryをCIツールと一緒に使っているとき、環境変数を使うのは簡単で、設定コマンドを実行する必要がありません。</p>
+<p>Poetryはそれをサポートしていて、どんな設定でも環境変数で設定できます。</p>
+<p>環境変数は <code>POETRY_</code> で始まらなければならず、大文字にした設定の名前で構成され、ドットとダッシュをアンダースコアで置き換えたものとなります。
+これが例です。</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">POETRY_VIRTUALENVS_PATH</span><span class="o">=</span>/path/to/virtualenvs/directory
 </code></pre></div>
 
-<p>This also works for secret settings, like credentials:</p>
+<p>この機能は証明書のような秘密情報に対しても使えます:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">POETRY_HTTP_BASIC_MY_REPOSITORY_PASSWORD</span><span class="o">=</span>secret
 </code></pre></div>
 
-<h2 id="_2">利用可能な設定<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<h2 id="_7">利用可能な設定<a class="headerlink" href="#_7" title="Permanent link">🔗</a></h2>
 <h3 id="cache-dir-string"><code>cache-dir</code>: string<a class="headerlink" href="#cache-dir-string" title="Permanent link">🔗</a></h3>
-<p>The path to the cache directory used by Poetry.</p>
-<p>Defaults to one of the following directories:</p>
+<p>Poetryが使うキャッシュディレクトリのpathです。</p>
+<p>次のディレクトリのうち1つがデフォルト値になります:</p>
 <ul>
 <li>macOS:   <code>~/Library/Caches/pypoetry</code></li>
 <li>Windows: <code>C:\Users\&lt;username&gt;\AppData\Local\pypoetry\Cache</code></li>
