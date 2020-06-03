@@ -591,30 +591,33 @@ need to be set):
 <p>今後は、Poetryはプライベートレポジトリのパッケージも検索します。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>Any custom repository will have precedence over PyPI.</p>
-<p>If you still want PyPI to be your primary source for your packages
-you can declare custom repositories as secondary.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[[tool.poetry.source]]</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://foo.bar/simple/&quot;</span>
-<span class="n">secondary</span> <span class="o">=</span> <span class="kc">true</span>
+</div>
+<p>どんな独自レポジトリもPyPIより優先されます。</p>
+<div class="codehilite"><pre><span></span><code><span class="n">PyPIを第一のパッケージ取得元としておきたい場合は</span><span class="err">、</span>
+<span class="err">独自レポジトリを第二のレポジトリと宣言できます。</span>
+
+<span class="o">```</span><span class="n">toml</span>
+<span class="p">[[</span><span class="n">tool</span><span class="p">.</span><span class="n">poetry</span><span class="p">.</span><span class="k">source</span><span class="p">]]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="ss">&quot;foo&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="ss">&quot;https://foo.bar/simple/&quot;</span>
+<span class="n">secondary</span> <span class="o">=</span> <span class="k">true</span>
+<span class="o">```</span>
 </code></pre></div>
 
-</div>
+
 <p>プライベートレポジトリがHTTP Basic認証を要求する場合、上の例を使って、忘れずにユーザー名とパスワードを <code>http-basic</code>
 設定に追加してください (<code>tool.poetry.source</code> セクションにある名前と同じものを使うことも忘れないでください)。
 レポジトリにカスタムの認証局かクライアント証明書が必要な場合も同様に上の例を参照して <code>certificates</code> セクションを設定してください。
 Poetryは、パッケージのダウンロードや検索をするときに、これらの値をプライベートレポジトリに対する認証に使います。</p>
 <h3 id="pypi_1">PyPIレポジトリの無効化<a class="headerlink" href="#pypi_1" title="Permanent link">🔗</a></h3>
-<p>If you want your packages to be exclusively looked up from a private
-repository, you can set it as the default one by using the <code>default</code> keyword</p>
+<p>パッケージがプライベートレポジトリからのみ探されて欲しい場合は、<code>default</code> キーワードを使ってデフォルトであることが設定できます。</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[[tool.poetry.source]]</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://foo.bar/simple/&quot;</span>
 <span class="n">default</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre></div>
 
-<p>A default source will also be the fallback source if you add other sources.</p>
+<p>デフォルトの取得元は、他の取得元を追加した場合のフォールバック先になります。</p>
                 
                   
                 
