@@ -1,40 +1,18 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Poetry documentation translated into Japanese">
       
       
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -42,117 +20,112 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
       
-    
-    
-      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-117662275-2", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117662275-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#pyprojecttoml" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pyprojecttoml" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Poetry documentation (日本語訳)" aria-label="Poetry documentation (日本語訳)" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Poetry documentation (日本語訳)
-            </span>
-            <span class="md-header-nav__topic">
-              
-                pyproject.toml ファイル
-              
-            </span>
-          
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Poetry documentation (日本語訳)" class="md-header__button md-logo" aria-label="Poetry documentation (日本語訳)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Poetry documentation (日本語訳)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              pyproject.toml ファイル
+            
+          </span>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -160,31 +133,34 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
       
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Poetry documentation (日本語訳)" class="md-nav__button md-logo">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Poetry documentation (日本語訳)" class="md-nav__button md-logo" aria-label="Poetry documentation (日本語訳)" data-md-component="logo">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Poetry documentation (日本語訳)
   </label>
@@ -195,96 +171,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="入門" class="md-nav__link">
-      入門
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../basic-usage/" title="基本的な使い方" class="md-nav__link">
-      基本的な使い方
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../libraries/" title="ライブラリ" class="md-nav__link">
-      ライブラリ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../cli/" title="コマンド" class="md-nav__link">
-      コマンド
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../configuration/" title="設定" class="md-nav__link">
-      設定
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../repositories/" title="レポジトリ" class="md-nav__link">
-      レポジトリ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../managing-environments/" title="環境管理" class="md-nav__link">
-      環境管理
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../dependency-specification/" title="依存関係仕様" class="md-nav__link">
-      依存関係仕様
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        入門
+      </a>
+    </li>
+  
 
     
       
@@ -292,32 +187,145 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-usage/" class="md-nav__link">
+        基本的な使い方
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libraries/" class="md-nav__link">
+        ライブラリ
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        コマンド
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        設定
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        レポジトリ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-environments/" class="md-nav__link">
+        環境管理
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-specification/" class="md-nav__link">
+        依存関係仕様
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          pyproject.toml ファイル
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         pyproject.toml ファイル
-      </label>
-    
-    <a href="./" title="pyproject.toml ファイル" class="md-nav__link md-nav__link--active">
-      pyproject.toml ファイル
-    </a>
-    
+      </a>
       
-<nav class="md-nav md-nav--secondary">
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#name" class="md-nav__link">
@@ -459,39 +467,42 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../contributing/" title="コントリビュート" class="md-nav__link">
-      コントリビュート
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        コントリビュート
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../faq/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -501,18 +512,23 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#name" class="md-nav__link">
@@ -654,10 +670,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -666,7 +678,7 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -678,7 +690,7 @@
 <strong>必須</strong></p>
 <h2 id="version">version<a class="headerlink" href="#version" title="Permanent link">🔗</a></h2>
 <p>パッケージのバージョン。 <strong>必須</strong></p>
-<p>これは <a href="http://semver.org/">semantic versioning</a> に従うべきです。
+<p>これは <a href="http://semver.org/">セマンティックバージョニング</a> に従うべきです。
 ただし、強制はしませんし、他の仕様に従う自由も残されています。</p>
 <h2 id="description">description<a class="headerlink" href="#description" title="Permanent link">🔗</a></h2>
 <p>パッケージの短い説明。 <strong>必須</strong></p>
@@ -700,9 +712,12 @@
 <li>LGPL-3.0-or-later</li>
 <li>MIT</li>
 </ul>
-<p>任意ですが、この節を載せておくことを強く推奨します。
-この他の識別子は <a href="https://www.spdx.org/licenses/">SPDX Open Source License Registry</a>
-に一覧があります。</p>
+<p>任意ですが、この節を載せておくことを強く推奨します。この他の識別子は <a href="https://spdx.org/licenses/">SPDX Open Source License
+Registry</a> に一覧があります。</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>プロジェクトがプロプリエタリで、特定のライセンスを使えない場合は、 <code>Proprietary</code> が設定値として使えます。</p>
+</div>
 <h2 id="authors">authors<a class="headerlink" href="#authors" title="Permanent link">🔗</a></h2>
 <p>パッケージの作者。
 <strong>必須</strong></p>
@@ -732,14 +747,13 @@ maintainersにはemailを含めてよく、<code>name &lt;email&gt;</code> と�
 <h2 id="classifiers">classifiers<a class="headerlink" href="#classifiers" title="Permanent link">🔗</a></h2>
 <p>プロジェクトの説明となるPyPIの <a href="https://pypi.org/classifiers/">trove classifiers</a> の一覧。
 <strong>任意</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">classifiers</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">&quot;Topic :: Software Development :: Build Tools&quot;</span><span class="p">,</span>
     <span class="s">&quot;Topic :: Software Development :: Libraries :: Python Modules&quot;</span>
 <span class="p">]</span>
 </code></pre></div>
-
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p>何にせよ、Python classifierは自動的に追加され、
@@ -749,44 +763,40 @@ maintainersにはemailを含めてよく、<code>name &lt;email&gt;</code> と�
 <h2 id="packages">packages<a class="headerlink" href="#packages" title="Permanent link">🔗</a></h2>
 <p>最終配布物に含まれるパッケージやモジュールの一覧。</p>
 <p>プロジェクトの構成が <code>poetry</code> が標準でサポートしているものと異なる場合は、最終配布物に含めたいパッケージを指定できます。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span> <span class="p">},</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;extra_package/**/*.py&quot;</span> <span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div>
-
-<p>パッケージが"source"ディレクトリ内にある場合は、それを指定しなければなりません:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<p>パッケージが "lib" ディレクトリ内に格納されている場合は、次のように指定しなければなりません:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span><span class="p">,</span> <span class="n">from</span> <span class="o">=</span> <span class="s">&quot;lib&quot;</span> <span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div>
-
 <p>パッケージを特定の <a href="#build">ビルド</a> 形式だけに制限したい場合は、<code>format</code> を使って指定できます。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;tests&quot;</span><span class="p">,</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;sdist&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_other_package&quot;</span><span class="p">,</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;sdist&quot;</span> <span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div>
-
-<p>今後一切、<code>sdist</code> ビルドアーカイブだけが <code>tests</code> パッケージに含まれることになります。</p>
+<p>これからは、 <code>my_other_package</code> パッケージは <code>sdist</code> ビルドアーカイブだけに含まれるようになります。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p><code>packages</code> を使うとパッケージの自動検出機能が無効になり、
 「デフォルトの」パッケージを <strong>明示的に</strong> 指定しないといけないことになります。</p>
 <p>例えば、 <code>my_package</code> という名前のパッケージがあり、 <code>extra_package</code> という名前の別のパッケージも一緒に含めたい場合、
 明示的に <code>my_package</code> も指定する必要があります:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;my_package&quot;</span> <span class="p">},</span>
     <span class="p">{</span> <span class="n">include</span> <span class="o">=</span> <span class="s">&quot;extra_package&quot;</span> <span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div>
-
 </div>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
@@ -798,50 +808,48 @@ maintainersにはemailを含めてよく、<code>name &lt;email&gt;</code> と�
 <p>パッケージ化のために無視するべき、あるいは含めるべきglobの集合をPoetryに明示的に指定できます。
 excludeフィールドに指定されたglobは、パッケージのビルド時に含めないファイルの集合を特定します。</p>
 <p>パッケージの管理にVCSを使っている場合は、excludeフィールドはVCSの除外設定 (例えばgitの <code>.gitignore</code>) を元に作られます。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="c1"># ...</span>
 <span class="n">include</span> <span class="o">=</span> <span class="k">[&quot;CHANGELOG.md&quot;]</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="n">exclude</span> <span class="o">=</span> <span class="k">[&quot;my_package/excluded.py&quot;]</span>
+<div class="highlight"><pre><span></span><code><span class="n">exclude</span> <span class="o">=</span> <span class="k">[&quot;my_package/excluded.py&quot;]</span>
 </code></pre></div>
-
 <h2 id="dependencies-dev-dependencies"><code>dependencies</code> と <code>dev-dependencies</code><a class="headerlink" href="#dependencies-dev-dependencies" title="Permanent link">🔗</a></h2>
 <p>Poetryは、デフォルトでは <a href="https://pypi.org">PyPi</a> の依存関係を探すよう設定されています。
 その場合では、パッケージ名とバージョン文字列だけが要求されます。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.dependencies]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry.dependencies]</span>
 <span class="n">requests</span> <span class="o">=</span> <span class="s">&quot;^2.13.0&quot;</span>
 </code></pre></div>
-
 <p>プライベートレポジトリを使いたい場合は、次のように <code>pyproject.toml</code> ファイルに追加できます:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[[tool.poetry.source]]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[[tool.poetry.source]]</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;private&#39;</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://example.com/simple&#39;</span>
 </code></pre></div>
-
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p>パッケージと互換性のあるPythonバージョンの宣言は
 義務であることに気を付けてください:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.dependencies]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry.dependencies]</span>
 <span class="n">python</span> <span class="o">=</span> <span class="s">&quot;^3.6&quot;</span>
 </code></pre></div>
-
 </div>
 <h2 id="scripts"><code>scripts</code><a class="headerlink" href="#scripts" title="Permanent link">🔗</a></h2>
-<p>この節は、パッケージをインストールするときにインストールされるスクリプトや実行可能ファイルについて解説します</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
+<p>この節では、パッケージのインストール時に一緒にインストールされるスクリプトと実行可能ファイルについて解説します</p>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
 <span class="n">poetry</span> <span class="o">=</span> <span class="s">&#39;poetry.console:run&#39;</span>
 </code></pre></div>
-
 <p>ほら、これで <code>poetry</code> バッケージにある <code>console.run</code> を実行する <code>poetry</code> スクリプトがインストールされました。</p>
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p>スクリプトが追加あるいは更新されたときは、 <code>poetry install</code> を実行してプロジェクトの仮想環境で使えるようにします。</p>
+</div>
 <h2 id="extras"><code>extras</code><a class="headerlink" href="#extras" title="Permanent link">🔗</a></h2>
 <p>Poetryは次の表現を可能にするために追加の依存関係をサポートしています:</p>
 <ul>
 <li>パッケージを拡張するものだが必須ではない、オプションの依存関係</li>
 <li>オプションの依存関係のパッケージ群</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span>
 
 <span class="k">[tool.poetry.dependencies]</span>
@@ -857,48 +865,45 @@ excludeフィールドに指定されたglobは、パッケージのビルド時
 <span class="n">mysql</span> <span class="o">=</span> <span class="k">[&quot;mysqlclient&quot;]</span>
 <span class="n">pgsql</span> <span class="o">=</span> <span class="k">[&quot;psycopg2&quot;]</span>
 </code></pre></div>
-
 <p>パッケージをインストールするときに、 <code>-E|--extras</code> オプションを使って追加分だと指定できます:</p>
-<div class="codehilite"><pre><span></span><code>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
+<div class="highlight"><pre><span></span><code>poetry install --extras <span class="s2">&quot;mysql pgsql&quot;</span>
 poetry install -E mysql -E pgsql
 </code></pre></div>
-
 <h2 id="plugins"><code>plugins</code><a class="headerlink" href="#plugins" title="Permanent link">🔗</a></h2>
 <p>Poetryは
 <a href="http://setuptools.readthedocs.io/en/latest/setuptools.html">setuptoolsのエントリーポイント</a>
 と同じように動作する任意のプラグインをサポートしています。
 setuptoolsのドキュメントにある例に合わせると、次のように使います:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">tool</span><span class="p">.</span><span class="n">poetry</span><span class="p">.</span><span class="n">plugins</span><span class="p">]</span> <span class="c1"># Optional super table</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">tool</span><span class="p">.</span><span class="n">poetry</span><span class="p">.</span><span class="n">plugins</span><span class="p">]</span> <span class="c1"># Optional super table</span>
 
 <span class="k">[tool.poetry.plugins.&quot;blogtool.parsers&quot;]</span>
 <span class="s">&quot;.rst&quot;</span> <span class="o">=</span> <span class="s">&quot;some_module:SomeClass&quot;</span>
 </code></pre></div>
-
 <h2 id="urls"><code>urls</code><a class="headerlink" href="#urls" title="Permanent link">🔗</a></h2>
 <p>基本的なurl (<code>homepage</code>, <code>repository</code>, <code>documentation</code>) に加えて、<code>urls</code>
 節には独自のurlを指定できます。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.urls]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry.urls]</span>
 <span class="s">&quot;Bug Tracker&quot;</span> <span class="o">=</span> <span class="s">&quot;https://github.com/python-poetry/poetry/issues&quot;</span>
 </code></pre></div>
-
 <p>PyPIにパッケージを公開した場合、urlたちは <code>Project Links</code> 節に出てきます。</p>
 <h2 id="poetrypep-517">PoetryとPEP-517<a class="headerlink" href="#poetrypep-517" title="Permanent link">🔗</a></h2>
 <p><a href="https://www.python.org/dev/peps/pep-0517/">PEP-517</a>
 は、Pythonプロジェクトをビルドする別のビルドシステムを定義する標準的な方法を導入します。</p>
-<p>PoetryはPEP-517に準拠しているので、Poetryを使ってPythonプロジェクトを管理していたなら、次のように
+<p>Poetryは軽量なcoreライブラリを提供することでPEP-517に準拠しているので、Poetryを使ってPythonプロジェクトを管理していたなら、次のように
 <code>pyproject.toml</code> ファイルの <code>build-system</code> 節で目にするはずです:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[build-system]</span>
-<span class="n">requires</span> <span class="o">=</span> <span class="k">[&quot;poetry&gt;=0.12&quot;]</span>
-<span class="n">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.masonry.api&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="k">[build-system]</span>
+<span class="n">requires</span> <span class="o">=</span> <span class="k">[&quot;poetry_core&gt;=1.0.0&quot;]</span>
+<span class="n">build-backend</span> <span class="o">=</span> <span class="s">&quot;poetry.core.masonry.api&quot;</span>
 </code></pre></div>
-
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
 <p><code>new</code> コマンドや <code>init</code> コマンドを使うときには、この節は自動的に追加されます。</p>
 </div>
-                
-                  
-                
+<div class="admonition 注意">
+<p class="admonition-title">注意</p>
+<p><code>pyproject.toml</code> ファイルが未だにビルドバックエンドとして <code>poetry</code> ディレクトリを参照している場合は、
+そのやり方を更新して <code>poetry_core</code> を代わりに参照するべきです。</p>
+</div>
                 
               
               
@@ -909,55 +914,54 @@ setuptoolsのドキュメントにある例に合わせると、次のように�
             </article>
           </div>
         </div>
+        
       </main>
       
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../dependency-specification/" title="依存関係仕様" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                依存関係仕様
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../dependency-specification/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
               </span>
+              依存関係仕様
             </div>
-          </a>
-        
-        
-          <a href="../contributing/" title="コントリビュート" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                コントリビュート
+          </div>
+        </a>
+      
+      
+        <a href="../contributing/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
               </span>
+              コントリビュート
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
+        Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
+          Material for MkDocs
+        </a>
+        
       </div>
       
     </div>
@@ -965,10 +969,13 @@ setuptoolsのドキュメントにある例に合わせると、次のように�
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": 2.0}</script>
     
-      <script src="../assets/javascripts/application.c33a9706.js"></script>
-      
-      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+    
+      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>

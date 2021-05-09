@@ -1,40 +1,18 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Poetry documentation translated into Japanese">
       
       
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -42,117 +20,112 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
       
-    
-    
-      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-117662275-2", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117662275-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#contributing-to-poetry" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contributing-to-poetry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Poetry documentation (日本語訳)" aria-label="Poetry documentation (日本語訳)" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Poetry documentation (日本語訳)
-            </span>
-            <span class="md-header-nav__topic">
-              
-                コントリビュート
-              
-            </span>
-          
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Poetry documentation (日本語訳)" class="md-header__button md-logo" aria-label="Poetry documentation (日本語訳)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Poetry documentation (日本語訳)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              コントリビュート
+            
+          </span>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -160,31 +133,34 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
       
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Poetry documentation (日本語訳)" class="md-nav__button md-logo">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Poetry documentation (日本語訳)" class="md-nav__button md-logo" aria-label="Poetry documentation (日本語訳)" data-md-component="logo">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Poetry documentation (日本語訳)
   </label>
@@ -195,108 +171,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="入門" class="md-nav__link">
-      入門
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../basic-usage/" title="基本的な使い方" class="md-nav__link">
-      基本的な使い方
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../libraries/" title="ライブラリ" class="md-nav__link">
-      ライブラリ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../cli/" title="コマンド" class="md-nav__link">
-      コマンド
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../configuration/" title="設定" class="md-nav__link">
-      設定
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../repositories/" title="レポジトリ" class="md-nav__link">
-      レポジトリ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../managing-environments/" title="環境管理" class="md-nav__link">
-      環境管理
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../dependency-specification/" title="依存関係仕様" class="md-nav__link">
-      依存関係仕様
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../pyproject/" title="pyproject.toml ファイル" class="md-nav__link">
-      pyproject.toml ファイル
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        入門
+      </a>
+    </li>
+  
 
     
       
@@ -304,32 +187,160 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-usage/" class="md-nav__link">
+        基本的な使い方
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libraries/" class="md-nav__link">
+        ライブラリ
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        コマンド
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        設定
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repositories/" class="md-nav__link">
+        レポジトリ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-environments/" class="md-nav__link">
+        環境管理
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-specification/" class="md-nav__link">
+        依存関係仕様
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyproject/" class="md-nav__link">
+        pyproject.toml ファイル
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          コントリビュート
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         コントリビュート
-      </label>
-    
-    <a href="./" title="コントリビュート" class="md-nav__link md-nav__link--active">
-      コントリビュート
-    </a>
-    
+      </a>
       
-<nav class="md-nav md-nav--secondary">
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#table-of-contents" class="md-nav__link">
@@ -343,7 +354,7 @@
     How to contribute
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="How to contribute">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -351,7 +362,7 @@
     Reporting bugs
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Reporting bugs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -378,7 +389,7 @@
     Suggesting enhancements
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Suggesting enhancements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -401,12 +412,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#contributing-to-documentation" class="md-nav__link">
+    Contributing to documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#contributing-to-code" class="md-nav__link">
     Contributing to code
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contributing to code">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-an-issue" class="md-nav__link">
+    Picking an issue
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#local-development" class="md-nav__link">
@@ -427,32 +452,86 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#issue-triage" class="md-nav__link">
+    Issue triage
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue triage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triage-steps" class="md-nav__link">
+    Triage steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-versions" class="md-nav__link">
+    Multiple versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-workflow" class="md-nav__link">
+    Git Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-branch" class="md-nav__link">
+    Release branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fix-branch" class="md-nav__link">
+    Bug fix branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../faq/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -462,18 +541,23 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#table-of-contents" class="md-nav__link">
@@ -487,7 +571,7 @@
     How to contribute
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="How to contribute">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -495,7 +579,7 @@
     Reporting bugs
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Reporting bugs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -522,7 +606,7 @@
     Suggesting enhancements
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Suggesting enhancements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -545,12 +629,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#contributing-to-documentation" class="md-nav__link">
+    Contributing to documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#contributing-to-code" class="md-nav__link">
     Contributing to code
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contributing to code">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-an-issue" class="md-nav__link">
+    Picking an issue
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#local-development" class="md-nav__link">
@@ -571,14 +669,64 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#issue-triage" class="md-nav__link">
+    Issue triage
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue triage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triage-steps" class="md-nav__link">
+    Triage steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-versions" class="md-nav__link">
+    Multiple versions
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-      
-      
-      
-      
+        
+          <li class="md-nav__item">
+  <a href="#git-workflow" class="md-nav__link">
+    Git Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-branch" class="md-nav__link">
+    Release branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fix-branch" class="md-nav__link">
+    Bug fix branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -588,7 +736,7 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -601,23 +749,26 @@
 <ul>
 <li><a href="#reporting-bugs">Reporting bugs</a></li>
 <li><a href="#suggesting-enhancements">Suggesting enhancements</a></li>
+<li><a href="#contributing-to-documentation">Contributing to documentation</a></li>
 <li><a href="#contributing-to-code">Contributing to code</a></li>
+<li><a href="#issue-triage">Issue triage</a></li>
+<li><a href="#git-workflow">Git workflow</a></li>
 </ul>
 <h2 id="how-to-contribute">How to contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">🔗</a></h2>
 <h3 id="reporting-bugs">Reporting bugs<a class="headerlink" href="#reporting-bugs" title="Permanent link">🔗</a></h3>
 <p>This section guides you through submitting a bug report for Poetry.
 Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.</p>
-<p>Before creating bug reports, please check <a href="#before-submitting-a-bug-report">this list</a> to be sure that you need to create one. When you are creating a bug report, please include as many details as possible. Fill out the <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/1_Bug_report.md">required template</a>, the information it asks helps the maintainers resolve the issue faster.</p>
+<p>Before creating bug reports, please check <a href="#before-submitting-a-bug-report">this list</a> to be sure that you need to create one. When you are creating a bug report, please include as many details as possible. Fill out the <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/---bug-report.md">required template</a>, the information it asks helps the maintainers resolve the issue faster.</p>
 <blockquote>
 <p><strong>Note:</strong> If you find a <strong>Closed</strong> issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.</p>
 </blockquote>
 <h4 id="before-submitting-a-bug-report">Before submitting a bug report<a class="headerlink" href="#before-submitting-a-bug-report" title="Permanent link">🔗</a></h4>
 <ul>
-<li><strong>Check the <a href="https://python-poetry.org">FAQs on the official website</a></strong> for a list of common questions and problems.</li>
+<li><strong>Check the <a href="https://python-poetry.org/docs/faq">FAQs on the official website</a></strong> for a list of common questions and problems.</li>
 <li><strong>Check that your issue does not already exist in the <a href="https://github.com/python-poetry/poetry/issues">issue tracker</a></strong>.</li>
 </ul>
 <h4 id="how-do-i-submit-a-bug-report">How do I submit a bug report?<a class="headerlink" href="#how-do-i-submit-a-bug-report" title="Permanent link">🔗</a></h4>
-<p>Bugs are tracked on the <a href="https://github.com/python-poetry/poetry/issues">official issue tracker</a> where you can create a new one and provide the following information by filling in <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/1_Bug_report.md">the template</a>.</p>
+<p>Bugs are tracked on the <a href="https://github.com/python-poetry/poetry/issues">official issue tracker</a> where you can create a new one and provide the following information by filling in <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/---bug-report.md">the template</a>.</p>
 <p>Explain the problem and include additional details to help maintainers reproduce the problem:</p>
 <ul>
 <li><strong>Use a clear and descriptive title</strong> for the issue to identify the problem.</li>
@@ -642,11 +793,11 @@ Following these guidelines helps maintainers and the community understand your r
 </ul>
 <h3 id="suggesting-enhancements">Suggesting enhancements<a class="headerlink" href="#suggesting-enhancements" title="Permanent link">🔗</a></h3>
 <p>This section guides you through submitting an enhancement suggestion for Poetry, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.</p>
-<p>Before creating enhancement suggestions, please check <a href="#before-submitting-an-enhancement-suggestion">this list</a> as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please <a href="#how-do-i-submit-an-enhancement-suggestion">include as many details as possible</a>. Fill in <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/2_Feature_request.md">the template</a>, including the steps that you imagine you would take if the feature you're requesting existed.</p>
+<p>Before creating enhancement suggestions, please check <a href="#before-submitting-an-enhancement-suggestion">this list</a> as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please <a href="#how-do-i-submit-an-enhancement-suggestion">include as many details as possible</a>. Fill in <a href="https://github.com/python-poetry/poetry/blob/master/.github/ISSUE_TEMPLATE/---feature-request.md">the template</a>, including the steps that you imagine you would take if the feature you're requesting existed.</p>
 <h4 id="before-submitting-an-enhancement-suggestion">Before submitting an enhancement suggestion<a class="headerlink" href="#before-submitting-an-enhancement-suggestion" title="Permanent link">🔗</a></h4>
 <ul>
-<li>**Check the <a href="https://python-poetry.org">FAQs on the official website</a> for a list of common questions and problems.</li>
-<li>**Check that your issue does not already exist in the <a href="https://github.com/python-poetry/poetry/issues">issue tracker</a>.</li>
+<li><strong>Check the <a href="https://python-poetry.org/docs/faq">FAQs on the official website</a></strong> for a list of common questions and problems.</li>
+<li><strong>Check that your issue does not already exist in the <a href="https://github.com/python-poetry/poetry/issues">issue tracker</a></strong>.</li>
 </ul>
 <h4 id="how-do-i-submit-an-enhancement-suggestion">How do I submit an Enhancement suggestion?<a class="headerlink" href="#how-do-i-submit-an-enhancement-suggestion" title="Permanent link">🔗</a></h4>
 <p>Enhancement suggestions are tracked on the <a href="https://github.com/python-poetry/poetry/issues">official issue tracker</a> where you can create a new one and provide the following information:</p>
@@ -656,33 +807,49 @@ Following these guidelines helps maintainers and the community understand your r
 <li><strong>Provide specific examples to demonstrate the steps</strong>..</li>
 <li><strong>Describe the current behavior</strong> and <strong>explain which behavior you expected to see instead</strong> and why.</li>
 </ul>
+<h3 id="contributing-to-documentation">Contributing to documentation<a class="headerlink" href="#contributing-to-documentation" title="Permanent link">🔗</a></h3>
+<p>One of the simplest ways to get started contributing to a project is through improving documentation. Poetry is constantly evolving, this means that sometimes our documentation has gaps. You can help by
+adding missing sections, editing the existing content so it is more accessible or creating new content (tutorials, FAQs, etc).</p>
+<blockquote>
+<p><strong>Note:</strong> A great way to understand Poetry's design and how it all fits together, is to add FAQ entries for commonly
+asked questions. Poetry members usually mark issues with <a href="https://github.com/python-poetry/poetry/issues?q=is%3Aissue+label%3Acandidate%2Ffaq+">candidate/faq</a> to indicate that the issue either contains a response
+that explains how something works or might benefit from an entry in the FAQ.</p>
+</blockquote>
+<p>Issues pertaining to the documentation are usually marked with the <a href="https://github.com/python-poetry/poetry/labels/Documentation">Documentation</a> label.</p>
 <h3 id="contributing-to-code">Contributing to code<a class="headerlink" href="#contributing-to-code" title="Permanent link">🔗</a></h3>
+<h4 id="picking-an-issue">Picking an issue<a class="headerlink" href="#picking-an-issue" title="Permanent link">🔗</a></h4>
+<blockquote>
+<p><strong>Note:</strong> If you are a first time contributor, and are looking for an issue to take on, you might want to look for <a href="https://github.com/python-poetry/poetry/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Issue%22">Good First Issue</a>
+labelled issues. We do our best to label such issues, however we might fall behind at times. So, ask us.</p>
+</blockquote>
+<p>If you would like to take on an issue, feel free to comment on the issue tagging <code>@python-poetry/triage</code>. We are more than happy to discuss solutions on the issue. If you would like help with navigating
+the code base, join us on our <a href="https://discordapp.com/invite/awxPgve">Discord Server</a>.</p>
 <h4 id="local-development">Local development<a class="headerlink" href="#local-development" title="Permanent link">🔗</a></h4>
 <p>You will need Poetry to start contributing on the Poetry codebase. Refer to the <a href="https://python-poetry.org/docs/#introduction">documentation</a> to start using Poetry.</p>
 <p>You will first need to clone the repository using <code>git</code> and place yourself in its directory:</p>
-<div class="codehilite"><pre><span></span><code>$ git clone git@github.com:python-poetry/poetry.git
+<div class="highlight"><pre><span></span><code>$ git clone git@github.com:python-poetry/poetry.git
 $ <span class="nb">cd</span> poetry
 </code></pre></div>
-
+<blockquote>
+<p><strong>Note:</strong> We recommend that you use a personal <a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo">fork</a> for this step. If you are new to GitHub collaboration,
+you can refer to the <a href="https://guides.github.com/activities/forking/">Forking Projects Guide</a>.</p>
+</blockquote>
 <p>Now, you will need to install the required dependency for Poetry and be sure that the current
 tests are passing on your machine:</p>
-<div class="codehilite"><pre><span></span><code>$ poetry install
+<div class="highlight"><pre><span></span><code>$ poetry install
 $ poetry run pytest tests/
 </code></pre></div>
-
-<p>Poetry uses the <a href="https://github.com/ambv/black">black</a> coding style and you must ensure that your
+<p>Poetry uses the <a href="https://github.com/psf/black">black</a> coding style and you must ensure that your
 code follows it. If not, the CI will fail and your Pull Request will not be merged.</p>
 <p>Similarly, the import statements are sorted with <a href="https://github.com/timothycrosley/isort">isort</a>
 and special care must be taken to respect it. If you don't, the CI will fail as well.</p>
 <p>To make sure that you don't accidentally commit code that does not follow the coding style, you can
 install a pre-commit hook that will check that everything is in order:</p>
-<div class="codehilite"><pre><span></span><code>$ poetry run pre-commit install
+<div class="highlight"><pre><span></span><code>$ poetry run pre-commit install
 </code></pre></div>
-
 <p>You can also run it anytime using:</p>
-<div class="codehilite"><pre><span></span><code>$ poetry run pre-commit run --all-files
+<div class="highlight"><pre><span></span><code>$ poetry run pre-commit run --all-files
 </code></pre></div>
-
 <p>Your code must always be accompanied by corresponding tests, if tests are not present your code
 will not be merged.</p>
 <h4 id="pull-requests">Pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">🔗</a></h4>
@@ -691,9 +858,83 @@ will not be merged.</p>
 <li>Be sure that your pull request contains tests that cover the changed or added code.</li>
 <li>If your changes warrant a documentation change, the pull request must also update the documentation.</li>
 </ul>
-                
-                  
-                
+<blockquote>
+<p><strong>Note:</strong> Make sure your branch is <a href="https://docs.github.com/en/free-pro-team@latest/github/using-git/about-git-rebase">rebased</a> against the latest main branch. A maintainer might ask you to ensure the branch is
+up-to-date prior to merging your Pull Request if changes have conflicts.</p>
+</blockquote>
+<p>All pull requests, unless otherwise instructed, need to be first accepted into the main branch (<code>master</code>).</p>
+<h3 id="issue-triage">Issue triage<a class="headerlink" href="#issue-triage" title="Permanent link">🔗</a></h3>
+<blockquote>
+<p><strong>Note:</strong> If you have an issue that hasn't had any attention, you can ping us <code>@python-poetry/triage</code> on the issue. Please, give us reasonable time to get to your issue first, spamming us with messages
+does not help anyone.</p>
+</blockquote>
+<p>If you are helping with the triage of reported issues, this section provides some useful information to assist you in your contribution.</p>
+<h4 id="triage-steps">Triage steps<a class="headerlink" href="#triage-steps" title="Permanent link">🔗</a></h4>
+<ol>
+<li>If <code>pyproject.toml</code> is missing or <code>-vvv</code> debug logs (with stack trace) is not provided and required, request that the issue author provides it.</li>
+<li>Attempt to reproduce the issue with the reported Poetry version or request further clarification from the issue author.</li>
+<li>Ensure the issue is not already resolved. You can attempt to reproduce using the latest preview release and/or poetry from the main branch.</li>
+<li>If the issue cannot be reproduced,</li>
+<li>clarify with the issue's author,</li>
+<li>close the issue or notify <code>@python-poetry/triage</code>.</li>
+<li>If the issue can be reproduced,</li>
+<li>comment on the issue confirming so</li>
+<li>notify <code>@python-poetry/triage</code>.</li>
+<li>if possible, identify the root cause of the issue.</li>
+<li>if interested, attempt to fix it via a pull request.</li>
+</ol>
+<h4 id="multiple-versions">Multiple versions<a class="headerlink" href="#multiple-versions" title="Permanent link">🔗</a></h4>
+<p>Often times you would want to attempt to reproduce issues with multiple versions of <code>poetry</code> at the same time. For these use cases, the <a href="https://pipxproject.github.io/pipx/">pipx project</a> is useful.</p>
+<p>You can set your environment up like so.</p>
+<div class="highlight"><pre><span></span><code>pipx install --suffix @1.0.10 <span class="s1">&#39;poetry==1.0.10&#39;</span>
+pipx install --suffix @1.1.0rc1 <span class="s1">&#39;poetry==1.1.0rc1&#39;</span>
+pipx install --suffix @master <span class="s1">&#39;poetry @ git+https://github.com/python-poetry/poetry&#39;</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Hint:</strong> Do not forget to update your <code>poetry@master</code> installation in sync with upstream.</p>
+</blockquote>
+<p>For <code>@local</code> it is recommended that you do something similar to the following as editable installs are not supported for PEP 517 projects.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># note this will not work for Windows, and we assume you have already run `poetry install`</span>
+<span class="nb">cd</span> /path/to/python-poetry/poetry
+ln -sf <span class="k">$(</span>poetry run which poetry<span class="k">)</span> ~/.local/bin/poetry@local
+</code></pre></div>
+<blockquote>
+<p><strong>Hint:</strong> This mechanism can also be used to test pull requests.</p>
+</blockquote>
+<h3 id="git-workflow">Git Workflow<a class="headerlink" href="#git-workflow" title="Permanent link">🔗</a></h3>
+<p>All development work is performed against Poetry's main branch (<code>master</code>). All changes are expected to be submitted and accepted to this
+branch.</p>
+<h4 id="release-branch">Release branch<a class="headerlink" href="#release-branch" title="Permanent link">🔗</a></h4>
+<p>When a release is ready, the following are required before a release is tagged.</p>
+<ol>
+<li>A release branch with the prefix <code>release-</code>, eg: <code>release-1.1.0rc1</code>.</li>
+<li>A pull request from the release branch to the main branch (<code>master</code>) if it's a minor or major release. Otherwise, to the bug fix branch (eg: <code>1.0</code>).</li>
+<li>The pull request description MUST include the change log corresponding to the release (eg: <a href="https://github.com/python-poetry/poetry/pull/2971">#2971</a>).</li>
+<li>The pull request must contain a commit that updates <a href="CHANGELOG.md">CHANGELOG.md</a> and bumps the project version (eg: <a href="https://github.com/python-poetry/poetry/pull/2971/commits/824e7b79defca435cf1d765bb633030b71b9a780">#2971</a>).</li>
+<li>The pull request must have the <code>Release</code> label specified.</li>
+</ol>
+<p>Once the branch pull-request is ready and approved, a member of <code>@python-poetry/core</code> will,</p>
+<ol>
+<li>Tag the branch with the version identifier (eg: <code>1.1.0rc1</code>).</li>
+<li>Merge the pull request once the release is created and assets are uploaded by the CI.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> In this case, we prefer a merge commit instead of squash or rebase merge.</p>
+</blockquote>
+<h4 id="bug-fix-branch">Bug fix branch<a class="headerlink" href="#bug-fix-branch" title="Permanent link">🔗</a></h4>
+<p>Once a minor version (eg: <code>1.1.0</code>) is released, a new branch for the minor version (eg: <code>1.1</code>) is created for the bug fix releases. Changes identified
+or acknowledged by the Poetry team as requiring a bug fix can be submitted as a pull requests against this branch.</p>
+<p>At the time of writing only issues meeting the following criteria may be accepted into a bug fix branch. Trivial fixes may be accepted on a
+case-by-case basis.</p>
+<ol>
+<li>The issue breaks a core functionality and/or is a critical regression.</li>
+<li>The change set does not introduce a new feature or changes an existing functionality.</li>
+<li>A new minor release is not expected within a reasonable time frame.</li>
+<li>If the issue affects the next minor/major release, a corresponding fix has been accepted into the main branch.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> This is subject to the interpretation of a maintainer within the context of the issue.</p>
+</blockquote>
                 
               
               
@@ -704,55 +945,54 @@ will not be merged.</p>
             </article>
           </div>
         </div>
+        
       </main>
       
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../pyproject/" title="pyproject.toml ファイル" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                pyproject.toml ファイル
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../pyproject/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
               </span>
+              pyproject.toml ファイル
             </div>
-          </a>
-        
-        
-          <a href="../faq/" title="FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                FAQ
+          </div>
+        </a>
+      
+      
+        <a href="../faq/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
               </span>
+              FAQ
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
+        Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
+          Material for MkDocs
+        </a>
+        
       </div>
       
     </div>
@@ -760,10 +1000,13 @@ will not be merged.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": 2.0}</script>
     
-      <script src="../assets/javascripts/application.c33a9706.js"></script>
-      
-      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+    
+      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>
